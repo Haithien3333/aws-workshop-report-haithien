@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Cleanup &amp; Advanced :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.8-cleanup-advanced/index.html</link>
+    <description>Cleanup &amp; Advanced Topics&#xD;1. Cleanup Resources&#xD;To prevent charges, always destroy the resources after you finish testing:&#xA;cdk destroy --all&#xD;2. Infrastructure Testing (Jest)&#xD;Verify stack resources properties automatically. Create test/infra.test.ts:</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.8-cleanup-advanced/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

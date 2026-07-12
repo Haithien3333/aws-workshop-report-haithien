@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Đơn giản hóa tích hợp AWS AppSync Events với Powertools :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/3-blogsposted/3.1-blog1/index.html</link>
+    <description>ĐƠN GIẢN HÓA TÍCH HỢP AWS APPSYNC EVENTS VỚI POWERTOOLS FOR AWS LAMBDA&#xD;Hệ sinh thái kiến trúc Serverless luôn đòi hỏi tối ưu hóa mã nguồn để đạt hiệu năng cao nhất. Việc Powertools for AWS Lambda vừa ra mắt tính năng mới AppSyncEventsResolver (hỗ trợ Python, TypeScript và .NET) là một bước tiến lớn, giúp đơn giản hóa quy trình tích hợp AWS AppSync Events cho các ứng dụng xử lý dữ liệu thời gian thực (real-time).</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/3-blogsposted/3.1-blog1/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

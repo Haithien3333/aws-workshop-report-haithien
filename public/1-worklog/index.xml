@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1. Nhật ký thực tập (Worklog) :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/1-worklog/index.html</link>
+    <description>NHẬT KÝ THỰC TẬP THEO TUẦN&#xD;Chương trình: Workforce Bootcamp - First Cloud AI Journey&#xA;Nơi ghi lại chi tiết các công việc, nội dung học tập, các buổi training và kết quả đạt được trong suốt 12 tuần thực tập tại AWS Việt Nam.&#xA;Tóm tắt lộ trình 12 tuần:&#xD;Tuần 1 - Tuần 4: Nghiên cứu tổng quan, làm quen hệ thống, cấu hình IAM, VPC cơ bản. Tuần 5 - Tuần 8: Triển khai các dịch vụ nâng cao (S3, On-premise Network, Endpoint, Policies). Tuần 9 - Tuần 12: Đánh giá bảo mật, tối ưu hóa hệ thống, viết Blog và hoàn thiện báo cáo. Chọn từng tuần ở menu bên trái hoặc bấm vào danh sách bên dưới để xem chi tiết.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/1-worklog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Tuần 1</title>
+      <link>http://localhost:1313/1-worklog/1.1-week1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.1-week1/index.html</guid>
+      <description>Tuần 1: Khởi tạo &amp; Làm quen (20/04 - 26/04)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Làm quen môi trường công ty, quy trình làm việc nhóm 20/04/2026 20/04/2026 - 3 Khởi tạo tài khoản AWS 21/04/2026 21/04/2026 - 4 Tìm hiểu cơ bản về dịch vụ EC2 22/04/2026 22/04/2026 - 5 Tìm hiểu cơ bản về dịch vụ S3 23/04/2026 23/04/2026 - 6 Tổng kết tuần, ghi chú các khái niệm cơ bản 24/04/2026 24/04/2026 - Kết quả đạt được:&#xD;Hoàn tất giới thiệu và nắm bắt quy trình làm việc tại công ty. Khởi tạo thành công tài khoản AWS để phục vụ quá trình thực tập. Hiểu rõ kiến thức nền tảng về dịch vụ EC2 và S3.</description>
+    </item>
+    <item>
+      <title>Tuần 2</title>
+      <link>http://localhost:1313/1-worklog/1.2-week2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.2-week2/index.html</guid>
+      <description>Tuần 2: Cấu hình EC2 (27/04 - 03/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Cấu hình Security Group, mở port 27/04/2026 27/04/2026 - 3 Cấu hình kết nối SSH 28/04/2026 28/04/2026 - 4 Cài đặt môi trường Node.js trên EC2 29/04/2026 29/04/2026 - 5 Triển khai ứng dụng demo 30/04/2026 30/04/2026 - 6 Kiểm tra lỗi, tối ưu 01/05/2026 01/05/2026 - Kết quả đạt được:&#xD;Nắm vững kỹ thuật cấu hình EC2, hiểu rõ cách quản lý quyền truy cập qua Security Group và SSH. Triển khai thành công môi trường chạy ứng dụng Node.js trên server Linux. Rèn luyện kỹ năng xử lý lỗi phát sinh trong quá trình deploy demo ban đầu.</description>
+    </item>
+    <item>
+      <title>Tuần 3</title>
+      <link>http://localhost:1313/1-worklog/1.3-week3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.3-week3/index.html</guid>
+      <description>Tuần 3: S3 &amp; Git (04/05 - 10/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Thực hành quản lý dữ liệu S3 04/05/2026 04/05/2026 - 3 Tìm hiểu phân quyền IAM 05/05/2026 05/05/2026 - 4 Sử dụng Git quản lý source code 06/05/2026 06/05/2026 - 5 Theo dõi EC2 qua CloudWatch 07/05/2026 07/05/2026 - 6 Kiểm tra tổng quát tuần 08/05/2026 08/05/2026 - Kết quả đạt được:&#xD;Hiểu sâu về cơ chế lưu trữ dữ liệu đám mây với S3 và nguyên lý phân quyền chặt chẽ của IAM. Làm chủ quy trình quản lý phiên bản mã nguồn chuyên nghiệp với Git (commit, push, pull). Hình thành tư duy giám sát hệ thống chủ động thông qua việc theo dõi metrics trên CloudWatch.</description>
+    </item>
+    <item>
+      <title>Tuần 4</title>
+      <link>http://localhost:1313/1-worklog/1.4-week4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.4-week4/index.html</guid>
+      <description>Tuần 4: Hạ tầng mạng (VPC) (11/05 - 17/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Tìm hiểu cấu hình VPC 11/05/2026 11/05/2026 - 3 Thiết lập Subnet 12/05/2026 12/05/2026 - 4 Cấu hình Security Group 13/05/2026 13/05/2026 - 5 Kiểm tra kết nối mạng 14/05/2026 14/05/2026 - 6 Cập nhật ứng dụng demo 15/05/2026 15/05/2026 - Kết quả đạt được:&#xD;Xây dựng được tư duy về hạ tầng mạng (Networking) trên AWS, hiểu rõ tầm quan trọng của việc phân tách mạng bằng VPC và Subnet. Biết cách thiết lập lớp bảo mật mạng (Network Security) hiệu quả để cô lập và bảo vệ các instance bên trong.</description>
+    </item>
+    <item>
+      <title>Tuần 5</title>
+      <link>http://localhost:1313/1-worklog/1.5-week5/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.5-week5/index.html</guid>
+      <description>Tuần 5: Load Balancer &amp; Docker (18/05 - 24/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Cấu hình Cân bằng tải (ELB) 18/05/2026 18/05/2026 - 3 Cấu hình Auto Scaling Group 19/05/2026 19/05/2026 - 4 Đóng gói Docker 20/05/2026 20/05/2026 - 5 Chạy thử nghiệm trên EC2 21/05/2026 21/05/2026 - 6 Kiểm tra log, tối ưu 22/05/2026 22/05/2026 - Kết quả đạt được:&#xD;Nắm vững kỹ thuật cân bằng tải (ELB) để tối ưu hóa lưu lượng truy cập và Auto Scaling để đảm bảo tính sẵn sàng cao (High Availability). Hiểu rõ lợi ích của Docker trong việc đóng gói ứng dụng, giúp đảm bảo tính nhất quán của môi trường chạy code giữa Dev và Production.</description>
+    </item>
+    <item>
+      <title>Tuần 6</title>
+      <link>http://localhost:1313/1-worklog/1.6-week6/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.6-week6/index.html</guid>
+      <description>Tuần 6: Database (RDS) (25/05 - 31/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Khởi tạo AWS RDS 25/05/2026 25/05/2026 - 3 Cấu hình Subnet Group 26/05/2026 26/05/2026 - 4 Kết nối database RDS 27/05/2026 27/05/2026 - 5 Import dữ liệu mẫu 28/05/2026 28/05/2026 - 6 Review mã nguồn kết nối 29/05/2026 29/05/2026 - Kết quả đạt được:&#xD;Thiết lập thành công cơ sở dữ liệu quan hệ trên AWS RDS, đảm bảo kết nối ổn định giữa ứng dụng và database. Nắm được kỹ thuật quản lý cấu hình mạng cho DB (Subnet Group) và bảo mật kết nối với Security Group. Rèn luyện kỹ năng xử lý dữ liệu và cấu hình môi trường kết nối backend-database.</description>
+    </item>
+    <item>
+      <title>Tuần 7</title>
+      <link>http://localhost:1313/1-worklog/1.7-week7/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.7-week7/index.html</guid>
+      <description>Tuần 7: Dự án Website Saxophone (01/06 - 07/06)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Họp nhóm thống nhất đề tài 01/06/2026 01/06/2026 - 3 Phân chia kiến trúc dự án 02/06/2026 02/06/2026 - 4 Khởi tạo Git Repo 03/06/2026 03/06/2026 - 5 Cấu hình Gitflow 04/06/2026 04/06/2026 - 6 Review quy trình làm việc 05/06/2026 05/06/2026 - Kết quả đạt được:&#xD;Xây dựng khung kiến trúc dự án (Architecture Design) logic và phù hợp với yêu cầu bài toán. Thiết lập quy trình làm việc nhóm chuẩn hóa với Gitflow, giúp quản lý branch code hiệu quả và tránh xung đột khi làm việc cùng team.</description>
+    </item>
+    <item>
+      <title>Tuần 8</title>
+      <link>http://localhost:1313/1-worklog/1.8-week8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.8-week8/index.html</guid>
+      <description>Tuần 8: Triển khai hạ tầng dự án (08/06 - 14/06)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Thống nhất sơ đồ AWS 08/06/2026 08/06/2026 - 3 Triển khai hạ tầng mạng 09/06/2026 09/06/2026 - 4 Dockerize source code 10/06/2026 10/06/2026 - 5 Khởi tạo EC2 (Dev/Staging) 11/06/2026 11/06/2026 - 6 Kiểm tra môi trường 12/06/2026 12/06/2026 - Kết quả đạt được:&#xD;Triển khai thành công hạ tầng mạng và server cho môi trường Dev/Staging, đảm bảo tính đồng nhất với kiến trúc thiết kế ban đầu. Hoàn thiện quy trình đóng gói ứng dụng bằng Docker, giúp việc triển khai lên các môi trường trở nên nhanh chóng và tin cậy hơn.</description>
+    </item>
+    <item>
+      <title>Tuần 9</title>
+      <link>http://localhost:1313/1-worklog/1.9-week9/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.9-week9/index.html</guid>
+      <description>Tuần 9: Phân quyền &amp; Logic (15/06 - 21/06)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Kết nối Code với RDS 15/06/2026 15/06/2026 - 3 Thiết kế logic User/Admin 16/06/2026 16/06/2026 - 4 Sử dụng IAM phân quyền 17/06/2026 17/06/2026 - 5 Cấu hình IAM Role cho EC2 18/06/2026 18/06/2026 - 6 Test chức năng phân quyền 19/06/2026 19/06/2026 - Kết quả đạt được:&#xD;Xây dựng được hệ thống phân quyền logic (RBAC) chặt chẽ giữa các đối tượng User và Admin. Tối ưu hóa bảo mật bằng cách sử dụng IAM Role thay vì hard-code các thông tin bảo mật, nâng cao tính an toàn cho hệ thống EC2.</description>
+    </item>
+    <item>
+      <title>Tuần 10</title>
+      <link>http://localhost:1313/1-worklog/1.10-week10/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.10-week10/index.html</guid>
+      <description>Tuần 10: Storage &amp; CDN (22/06 - 28/06)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Triển khai S3 cho hình ảnh 22/06/2026 22/06/2026 - 3 Tích hợp Upload SDK 23/06/2026 23/06/2026 - 4 Cấu hình CloudFront (CDN) 24/06/2026 24/06/2026 - 5 Tối ưu cache 25/06/2026 25/06/2026 - 6 Kiểm tra tốc độ load 26/06/2026 26/06/2026 - Kết quả đạt được:&#xD;Tối ưu hóa trải nghiệm người dùng cuối bằng cách kết hợp S3 (lưu trữ) và CloudFront (CDN), giúp giảm độ trễ khi truy xuất tài nguyên tĩnh. Hoàn thiện kỹ thuật tích hợp upload file qua SDK, đảm bảo dữ liệu được lưu trữ an toàn và có khả năng mở rộng.</description>
+    </item>
+    <item>
+      <title>Tuần 11</title>
+      <link>http://localhost:1313/1-worklog/1.11-week11/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.11-week11/index.html</guid>
+      <description>Tuần 11: CI/CD &amp; Hoàn thiện (29/06 - 05/07)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Xây dựng CI/CD (GitHub Actions) 29/06/2026 29/06/2026 - 3 Thiết lập zero-downtime 30/06/2026 30/06/2026 - 4 Chạy thử nghiệm toàn bộ 01/07/2026 01/07/2026 - 5 Rà soát lỗi (CloudWatch) 02/07/2026 02/07/2026 - 6 Đóng gói hồ sơ, báo cáo 03/07/2026 03/07/2026 - Kết quả đạt được:&#xD;Tự động hóa thành công toàn bộ quy trình CI/CD với GitHub Actions, giúp giảm thiểu sai sót thủ công và tăng tốc độ release. Triển khai kỹ thuật deploy không gián đoạn (Zero-downtime), đảm bảo hệ thống luôn sẵn sàng phục vụ người dùng trong suốt quá trình cập nhật.</description>
+    </item>
+    <item>
+      <title>Tuần 12</title>
+      <link>http://localhost:1313/1-worklog/1.12-week12/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/1.12-week12/index.html</guid>
+      <description>Tuần 12: Tổng kết thực tập (06/07 - 10/07)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Tổng hợp nhật ký thực tập 06/07/2026 06/07/2026 - 3 Hoàn thiện báo cáo thực tập 07/07/2026 07/07/2026 - 4 Gửi báo cáo cho giảng viên 08/07/2026 08/07/2026 - 5 Chuẩn bị cho buổi bảo vệ 09/07/2026 09/07/2026 - 6 Hoàn thành kỳ thực tập 10/07/2026 10/07/2026 - Kết quả đạt được:&#xD;Tổng hợp và hệ thống hóa toàn bộ kiến thức, kinh nghiệm tích lũy được trong suốt quá trình thực tập. Hoàn thiện báo cáo thực tập với đầy đủ minh chứng thực tế, sẵn sàng cho kỳ bảo vệ và đánh giá kết quả thực tập tốt nghiệp.</description>
+    </item>
+  </channel>
+</rss>

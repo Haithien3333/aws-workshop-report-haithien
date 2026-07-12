@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Giới thiệu :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.1-workshop-overview/index.html</link>
+    <description>Giới thiệu về VPC Endpoint&#xD;Điểm cuối VPC (endpoint) là thiết bị ảo. Chúng là các thành phần VPC có thể mở rộng theo chiều ngang, dự phòng và có tính sẵn sàng cao. Chúng cho phép giao tiếp giữa tài nguyên điện toán của bạn và dịch vụ AWS mà không gây ra rủi ro về tính sẵn sàng. Tài nguyên điện toán đang chạy trong VPC có thể truy cập Amazon S3 bằng cách sử dụng điểm cuối Gateway. Interface Endpoint PrivateLink có thể được sử dụng bởi tài nguyên chạy trong VPC hoặc tại TTDL. Tổng quan về workshop&#xD;Trong workshop này, bạn sẽ sử dụng hai VPC.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.1-workshop-overview/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Workshop Overview :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.1-overview/index.html</link>
+    <description>Workshop Overview&#xD;1. Why AWS CDK?&#xD;Traditionally, Infrastructure as Code (IaC) relied on static YAML/JSON templates. AWS CDK allows developers to define cloud resources using familiar programming languages like TypeScript. This brings strong typing, autocompletion, inheritance, and code reuse to cloud infrastructure definition.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.1-overview/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module 4: Serverless Backend :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.html</link>
+    <description>Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)&#xD;In this module, you will implement the asynchronous data ingestion and event processing logic using AWS SDK v3 in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.&#xA;Part 1: Overview &amp; Prerequisites&#xD;1. Architectural Flow&#xD;To support high-throughput, decoupled, and reliable request processing, the platform implements an event-driven architecture:</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

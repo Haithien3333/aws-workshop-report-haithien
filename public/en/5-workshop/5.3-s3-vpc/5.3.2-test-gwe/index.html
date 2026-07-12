@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="Create S3 bucketNavigate to S3 management console In the Bucket console, choose Create bucket In the Create bucket console Name the bucket: choose a name that hasn’t been given to any bucket globally (hint: lab number and your name)">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Test the Gateway Endpoint :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="Create S3 bucketNavigate to S3 management console In the Bucket console, choose Create bucket In the Create bucket console Name the bucket: choose a name that hasn’t been given to any bucket globally (hint: lab number and your name)">
+    <meta property="og:url" content="http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="Test the Gateway Endpoint :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="Create S3 bucketNavigate to S3 management console In the Bucket console, choose Create bucket In the Create bucket console Name the bucket: choose a name that hasn’t been given to any bucket globally (hint: lab number and your name)">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Test the Gateway Endpoint :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="Create S3 bucketNavigate to S3 management console In the Bucket console, choose Create bucket In the Create bucket console Name the bucket: choose a name that hasn’t been given to any bucket globally (hint: lab number and your name)">
+    <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="wordCount" content="442">
+    <title>Test the Gateway Endpoint :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" rel="alternate" hreflang="en">
+    <link href="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.xml" rel="alternate" type="application/rss+xml" title="Test the Gateway Endpoint :: Báo cáo AWS Workshop">
+    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
+    <script src="/js/search-lunr.js?1783864412" defer></script>
+    <script src="/js/search.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1783864412";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
+    <link href="/css/theme.css?1783864412" rel="stylesheet">
+    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/en\/5-workshop\/5.3-s3-vpc\/5.3.2-test-gwe\/index.html';
+      window.relearn.relBasePath='..\/..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/index.html"><span itemprop="name">AWS Workshop Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/5-workshop/5.3-s3-vpc/index.html"><span itemprop="name">Access S3 from VPC</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Test the Gateway Endpoint</span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html" title="Create a gateway endpoint (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.4-module2-compute/index.html" title="Module 2: Compute & API (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 5-workshop" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="test-the-gateway-endpoint">Test the Gateway Endpoint</h1>
+
+<h4 id="create-s3-bucket">Create S3 bucket<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Navigate to <strong>S3 management console</strong></li>
+<li>In the Bucket console, choose <strong>Create bucket</strong></li>
+</ol>
+<p><a href="#R-image-b4b947ecb5db71ad6ae48f27650f4e06" class="lightbox-link"><img alt="Create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/create-bucket.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b4b947ecb5db71ad6ae48f27650f4e06"><img alt="Create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/create-bucket.png"></a></p>
+<ol start="3">
+<li>In <strong>the Create bucket console</strong></li>
+</ol>
+<ul>
+<li><strong>Name the bucket</strong>: choose a name that hasn&rsquo;t been given to any bucket globally (hint: lab number and your name)</li>
+</ul>
+<p><a href="#R-image-18b9933a407d97f7df28ac189fb7207e" class="lightbox-link"><img alt="Bucket name" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/bucket-name.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18b9933a407d97f7df28ac189fb7207e"><img alt="Bucket name" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/bucket-name.png"></a></p>
+<ul>
+<li>Leave other fields as they are (default)</li>
+<li>Scroll down and choose <strong>Create bucket</strong></li>
+</ul>
+<p><a href="#R-image-fac41ba10405f7e81d3454b62cd5ffc8" class="lightbox-link"><img alt="Create" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/create-button.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-fac41ba10405f7e81d3454b62cd5ffc8"><img alt="Create" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/create-button.png"></a></p>
+<ul>
+<li>Successfully create S3 bucket.</li>
+</ul>
+<p><a href="#R-image-9cf57bbe5e95a3eea82c2f812639fbe9" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/bucket-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-9cf57bbe5e95a3eea82c2f812639fbe9"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/bucket-success.png"></a></p>
+<h4 id="connect-to-ec2-with-session-manager">Connect to EC2 with session manager<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ul>
+<li>
+<p>For this workshop, you will use <strong>AWS Session Manager</strong> to access several <strong>EC2 instances</strong>. <strong>Session Manager</strong> is a fully managed <strong>AWS Systems Manager</strong> capability that allows you to manage your <strong>Amazon EC2 instances</strong>  and on-premises virtual machines (VMs) through an interactive one-click browser-based shell. Session Manager provides secure and auditable instance management without the need to open inbound ports, maintain bastion hosts, or manage SSH keys.</p>
+</li>
+<li>
+<p>First Cloud AI Journey <a href="https://000058.awsstudygroup.com/1-introduce/" rel="external">Lab</a> for indepth understanding of Session manager.</p>
+</li>
+</ul>
+<ol>
+<li>In the <strong>AWS Management Console</strong>, start typing <code>Systems Manager</code> in the quick search box and press <strong>Enter</strong>:</li>
+</ol>
+<p><a href="#R-image-61b6855a16b5e6c4f9af7cbe5c9f42bd" class="lightbox-link"><img alt="system manager" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/sm.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-61b6855a16b5e6c4f9af7cbe5c9f42bd"><img alt="system manager" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/sm.png"></a></p>
+<ol start="2">
+<li>From the <strong>Systems Manager</strong> menu, find <strong>Node Management</strong> in the left menu and click <strong>Session Manager</strong>:</li>
+</ol>
+<p><a href="#R-image-b97f07dfb41142ed76b5c35b30f59fba" class="lightbox-link"><img alt="system manager" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/sm1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b97f07dfb41142ed76b5c35b30f59fba"><img alt="system manager" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/sm1.png"></a></p>
+<ol start="3">
+<li>Click <strong>Start Session</strong>, and select <strong>the EC2 instance</strong> named <strong>Test-Gateway-Endpoint</strong>.
+
+<details open class="box cstyle notices info">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-info-circle"></i> 
+    Info
+  </summary>
+  <div class="box-content">
+<p>This EC2 instance is already running in &ldquo;VPC Cloud&rdquo; and will be used to test connectivity to Amazon S3 through the Gateway endpoint you just created (s3-gwe).</p>
+  </div>
+</details></li>
+</ol>
+<p><a href="#R-image-904af41a8a0d6b49f15d0bc1b4217f43" class="lightbox-link"><img alt="Start session" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/start-session.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-904af41a8a0d6b49f15d0bc1b4217f43"><img alt="Start session" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/start-session.png"></a></p>
+<p><strong>Session Manager</strong> will open a new browser tab with a shell prompt: sh-4.2 $</p>
+<p><a href="#R-image-ddfe41bad95e8a85279d0693693bd5d1" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/start-session-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ddfe41bad95e8a85279d0693693bd5d1"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/start-session-success.png"></a></p>
+<p>You have successfully start a session - connect to the EC2 instance in VPC cloud. In the next step, we will create a S3 bucket and a file in it.</p>
+<h4 id="create-a-file-and-upload-to-s3-bucket">Create a file and upload to s3 bucket<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Change to the ssm-user&rsquo;s home directory by typing <code>cd ~</code> in the CLI</li>
+</ol>
+<p><a href="#R-image-32f800a023f61ec8748a161561601632" class="lightbox-link"><img alt="Change user&rsquo;s dir" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/cli1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32f800a023f61ec8748a161561601632"><img alt="Change user&rsquo;s dir" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/cli1.png"></a></p>
+<ol start="2">
+<li>Create a new file to use for testing with the command <code>fallocate -l 1G testfile.xyz</code>, which will create a file of 1GB size named &ldquo;testfile.xyz&rdquo;.</li>
+</ol>
+<p><a href="#R-image-4e7cbd90cd210307b73fe18862c8ccbf" class="lightbox-link"><img alt="Create file" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/cli-file.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4e7cbd90cd210307b73fe18862c8ccbf"><img alt="Create file" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/cli-file.png"></a></p>
+<ol start="3">
+<li>Upload file to S3 bucket with command <code>aws s3 cp testfile.xyz s3://your-bucket-name</code>. Replace your-bucket-name with the name of S3 bucket that you created earlier.</li>
+</ol>
+<p><a href="#R-image-e77fab8abe5f59f3d89251e1c8975a44" class="lightbox-link"><img alt="Uploaded" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/uploaded.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-e77fab8abe5f59f3d89251e1c8975a44"><img alt="Uploaded" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/uploaded.png"></a></p>
+<p>You have successfully uploaded the file to your S3 bucket. You can now terminate the session.</p>
+<h4 id="check-object-in-s3-bucket">Check object in S3 bucket<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Navigate to S3 console.</li>
+<li>Click the name of your s3 bucket</li>
+<li>In the Bucket console, you will see the file you have uploaded to your S3 bucket</li>
+</ol>
+<p><a href="#R-image-5d15a3b2818fb459bc9602e2dfa95b4a" class="lightbox-link"><img alt="Check S3" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/check-s3-bucket.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5d15a3b2818fb459bc9602e2dfa95b4a"><img alt="Check S3" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/check-s3-bucket.png"></a></p>
+<h4 id="section-summary">Section summary<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Congratulation on completing access to S3 from VPC. In this section, you created a Gateway endpoint for Amazon S3, and used the AWS CLI to upload an object. The upload worked because the Gateway endpoint allowed communication to S3, without needing an Internet Gateway attached to &ldquo;VPC Cloud&rdquo;. This demonstrates the functionality of the Gateway endpoint as a secure path to S3 without traversing the Public Internet.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 1, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/en/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/en/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/en/index.html"><a class="padding" href="/en/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/en/1-worklog/index.html"><a class="padding default-animation" href="/en/1-worklog/index.html">1. Internship Worklog</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/2-proposal/index.html"><a class="padding" href="/en/2-proposal/index.html"> <b> 2. </b> Proposal</a></li>
+            <li class="" data-nav-id="/en/3-blogsposted/index.html"><a class="padding default-animation" href="/en/3-blogsposted/index.html"> <b> 3. </b> Blogs Posted</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/4-eventparticipated/index.html"><a class="padding default-animation" href="/en/4-eventparticipated/index.html">4. Participated Events</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/en/5-workshop/index.html"><a class="padding default-animation" href="/en/5-workshop/index.html"> <b> 5. </b> Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu">
+            <li class="" data-nav-id="/en/5-workshop/5.1-overview/index.html"><a class="padding" href="/en/5-workshop/5.1-overview/index.html"> <b> 5.1. </b> Workshop Overview</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.1-workshop-overview/index.html"><a class="padding" href="/en/5-workshop/5.1-workshop-overview/index.html"> <b> 5.1. </b> Introduction</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.2-prerequisites/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequisites/index.html"> <b> 5.2. </b> Prerequisites &amp; Setup</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.2-prerequiste/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequiste/index.html"> <b> 5.2. </b> Prerequiste</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.3-module1-storage/index.html"><a class="padding" href="/en/5-workshop/5.3-module1-storage/index.html"> <b> 5.3. </b> Module 1: Storage &amp; Database</a></li>
+            <li class="parent alwaysopen " data-nav-id="/en/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/en/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Access S3 from VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu">
+            <li class="" data-nav-id="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html"><a class="padding" href="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html"> <b> 5.3.1 </b> Create a gateway endpoint</a></li>
+            <li class="active " data-nav-id="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html"><a class="padding" href="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html"> <b> 5.3.2 </b> Test the Gateway Endpoint</a></li></ul></li>
+            <li class="" data-nav-id="/en/5-workshop/5.4-module2-compute/index.html"><a class="padding" href="/en/5-workshop/5.4-module2-compute/index.html"> <b> 5.4. </b> Module 2: Compute &amp; API</a></li>
+            <li class="alwaysopen " data-nav-id="/en/5-workshop/5.4-s3-onprem/index.html"><a class="padding default-animation" href="/en/5-workshop/5.4-s3-onprem/index.html"> <b> 5.4. </b> Access S3 from on-premises</a><ul id="R-subsections-c81e91f8aeb754aea188a2aafe827ae0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/5-workshop/5.5-module3-security/index.html"><a class="padding" href="/en/5-workshop/5.5-module3-security/index.html"> <b> 5.5. </b> Module 3: Security &amp; Roles</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.5-policy/index.html"><a class="padding" href="/en/5-workshop/5.5-policy/index.html"> <b> 5.5. </b> VPC Endpoint Policies</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.6-module4-serverless/index.html"><a class="padding" href="/en/5-workshop/5.6-module4-serverless/index.html"> <b> 5.6. </b> Module 4: Serverless Backend</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/en/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Clean up</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/en/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Deployment &amp; Testing</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/en/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Cleanup &amp; Advanced</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.9-references/index.html"><a class="padding" href="/en/5-workshop/5.9-references/index.html">5.9 </a></li></ul></li>
+            <li class="" data-nav-id="/en/6-selfassessment/index.html"><a class="padding" href="/en/6-selfassessment/index.html">6. Self-Assessment</a></li>
+            <li class="" data-nav-id="/en/7-sharing-and-feedback/index.html"><a class="padding" href="/en/7-sharing-and-feedback/index.html">7. Sharing and Feedback</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Language</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" lang="vi-vn">Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" lang="en" selected data-selected>English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
+    <script src="/js/theme.js?1783864412" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

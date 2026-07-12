@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 9 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/1.9-week9/index.html</link>
+    <description>Week 9: Permissions &amp; Logic (15/06 - 21/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Connect Code to RDS 15/06/2026 15/06/2026 - Tue Design User/Admin logic 16/06/2026 16/06/2026 - Wed Use IAM for authorization 17/06/2026 17/06/2026 - Thu Configure IAM Role for EC2 18/06/2026 18/06/2026 - Fri Test authorization functionality 19/06/2026 19/06/2026 - Key Achievements:&#xD;Built a robust logical Role-Based Access Control (RBAC) system between User and Admin objects. Optimized security by using IAM Roles instead of hard-coding security credentials, enhancing the overall safety of the EC2 system.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/1-worklog/1.9-week9/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

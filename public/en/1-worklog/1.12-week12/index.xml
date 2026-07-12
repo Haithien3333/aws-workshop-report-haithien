@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 12 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/1.12-week12/index.html</link>
+    <description>Week 12: Internship Summary (06/07 - 10/07)&#xD;Day Tasks Start Date Completion Date Source Material Mon Synthesize internship log 06/07/2026 06/07/2026 - Tue Finalize internship report 07/07/2026 07/07/2026 - Wed Submit report to instructor 08/07/2026 08/07/2026 - Thu Prepare for defense 09/07/2026 09/07/2026 - Fri Complete internship 10/07/2026 10/07/2026 - Key Achievements:&#xD;Synthesized and systematized all knowledge and experience accumulated throughout the internship. Completed the internship report with full practical evidence, ready for the defense and evaluation of graduation internship results.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/1-worklog/1.12-week12/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>1. Internship Worklog :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/index.html</link>
+    <description>WEEKLY INTERNSHIP WORKLOG&#xD;Program: Workforce Bootcamp - First Cloud AI Journey&#xA;A detailed record of tasks, learning modules, training sessions, and achievements throughout the 12-week internship at AWS Vietnam.&#xA;12-Week Roadmap Summary:&#xD;Week 1 - Week 4: Initialization, familiarization with the AWS environment, and research into foundational services (EC2, S3, Git, VPC). Week 5 - Week 8: Advanced infrastructure deployment (Load Balancer, Auto Scaling, RDS, Docker) and design of the Website project architecture. Week 9 - Week 12: System authorization (IAM Roles), optimization (CDN, CI/CD), finalization of project features, and completion of the internship report. Select a specific week from the left menu or click on the list below to view details.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 01 Jan 0001 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/1-worklog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Week 1</title>
+      <link>http://localhost:1313/en/1-worklog/1.1-week1/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.1-week1/index.html</guid>
+      <description>Week 1: Initialization &amp; Orientation (20/04 - 26/04)&#xD;Day Tasks Start Date Completion Date Source Material Mon Orientation to company environment, team workflow 20/04/2026 20/04/2026 - Tue AWS account setup 21/04/2026 21/04/2026 - Wed Basic understanding of EC2 service 22/04/2026 22/04/2026 - Thu Basic understanding of S3 service 23/04/2026 23/04/2026 - Fri Weekly review, note-taking of basic concepts 24/04/2026 24/04/2026 - Key Achievements:&#xD;Completed orientation and grasped the company’s workflow. Successfully initialized AWS account for the internship. Thoroughly understood the fundamental knowledge of EC2 and S3 services.</description>
+    </item>
+    <item>
+      <title>Week 2</title>
+      <link>http://localhost:1313/en/1-worklog/1.2-week2/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.2-week2/index.html</guid>
+      <description>Week 2: EC2 Configuration (27/04 - 03/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Configure Security Group, open ports 27/04/2026 27/04/2026 - Tue Configure SSH connection 28/04/2026 28/04/2026 - Wed Install Node.js environment on EC2 29/04/2026 29/04/2026 - Thu Deploy demo application 30/04/2026 30/04/2026 - Fri Check for errors, optimize 01/05/2026 01/05/2026 - Key Achievements:&#xD;Mastered EC2 configuration techniques, clearly understanding how to manage access permissions via Security Groups and SSH. Successfully deployed the Node.js application environment on a Linux server. Honed troubleshooting skills for errors arising during the initial demo deployment process.— title: “Week 2” weight: 2 draft: false Week 2: EC2 Configuration (27/04 - 03/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Configure Security Group, open ports 27/04/2026 27/04/2026 - Tue Configure SSH connection 28/04/2026 28/04/2026 - Wed Install Node.js environment on EC2 29/04/2026 29/04/2026 - Thu Deploy demo application 30/04/2026 30/04/2026 - Fri Check for errors, optimize 01/05/2026 01/05/2026 - Key Achievements:&#xD;Mastered EC2 configuration techniques, clearly understanding how to manage access permissions via Security Groups and SSH. Successfully deployed the Node.js application environment on a Linux server. Honed troubleshooting skills for errors arising during the initial demo deployment process.</description>
+    </item>
+    <item>
+      <title>Week 3</title>
+      <link>http://localhost:1313/en/1-worklog/1.3-week3/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.3-week3/index.html</guid>
+      <description>Week 3: S3 &amp; Git (04/05 - 10/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Practice managing S3 data 04/05/2026 04/05/2026 - Tue Learn about IAM permissions 05/05/2026 05/05/2026 - Wed Use Git to manage source code 06/05/2026 06/05/2026 - Thu Monitor EC2 via CloudWatch 07/05/2026 07/05/2026 - Fri Weekly general review 08/05/2026 08/05/2026 - Key Achievements:&#xD;Deep understanding of cloud data storage mechanisms with S3 and the principles of strict IAM permissions. Mastered the professional source code version control process with Git (commit, push, pull). Formed a proactive system monitoring mindset through tracking metrics on CloudWatch.</description>
+    </item>
+    <item>
+      <title>Week 4</title>
+      <link>http://localhost:1313/en/1-worklog/1.4-week4/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.4-week4/index.html</guid>
+      <description>Week 4: VPC Network Infrastructure (11/05 - 17/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Learn about VPC configuration 11/05/2026 11/05/2026 - Tue Set up Subnets 12/05/2026 12/05/2026 - Wed Configure Security Group 13/05/2026 13/05/2026 - Thu Verify network connectivity 14/05/2026 14/05/2026 - Fri Update demo application 15/05/2026 15/05/2026 - Key Achievements:&#xD;Developed a mindset for network infrastructure on AWS, clearly understanding the importance of network segmentation using VPC and Subnets. Learned how to set up effective network security layers to isolate and protect instances within.</description>
+    </item>
+    <item>
+      <title>Week 5</title>
+      <link>http://localhost:1313/en/1-worklog/1.5-week5/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.5-week5/index.html</guid>
+      <description>Week 5: Load Balancer &amp; Docker (18/05 - 24/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Configure Elastic Load Balancer (ELB) 18/05/2026 18/05/2026 - Tue Configure Auto Scaling Group 19/05/2026 19/05/2026 - Wed Docker containerization 20/05/2026 20/05/2026 - Thu Run tests on EC2 21/05/2026 21/05/2026 - Fri Check logs, optimize 22/05/2026 22/05/2026 - Key Achievements:&#xD;Mastered Load Balancer (ELB) techniques to optimize traffic and Auto Scaling to ensure High Availability. Clearly understood the benefits of Docker in application containerization, helping to ensure the consistency of the code execution environment between Dev and Production.</description>
+    </item>
+    <item>
+      <title>Week 6</title>
+      <link>http://localhost:1313/en/1-worklog/1.6-week6/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.6-week6/index.html</guid>
+      <description>Week 6: Database (RDS) (25/05 - 31/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Initialize AWS RDS 25/05/2026 25/05/2026 - Tue Configure Subnet Group 26/05/2026 26/05/2026 - Wed Connect to RDS database 27/05/2026 27/05/2026 - Thu Import sample data 28/05/2026 28/05/2026 - Fri Review connection source code 29/05/2026 29/05/2026 - Key Achievements:&#xD;Successfully set up a relational database on AWS RDS, ensuring a stable connection between the application and the database. Grasped network configuration techniques for DB (Subnet Groups) and connection security using Security Groups. Honed skills in data handling and configuring the backend-database connection environment.</description>
+    </item>
+    <item>
+      <title>Week 7</title>
+      <link>http://localhost:1313/en/1-worklog/1.7-week7/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.7-week7/index.html</guid>
+      <description>Week 7: Saxophone Website Project (01/06 - 07/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Team meeting to align on project topic 01/06/2026 01/06/2026 - Tue Define project architecture 02/06/2026 02/06/2026 - Wed Initialize Git Repo 03/06/2026 03/06/2026 - Thu Configure Gitflow 04/06/2026 04/06/2026 - Fri Review workflow 05/06/2026 05/06/2026 - Key Achievements:&#xD;Built a logical project architecture design suitable for the problem requirements. Established a standardized team workflow using Gitflow, enabling effective code branch management and avoiding conflicts when working within the team.</description>
+    </item>
+    <item>
+      <title>Week 8</title>
+      <link>http://localhost:1313/en/1-worklog/1.8-week8/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.8-week8/index.html</guid>
+      <description>Week 8: Project Infrastructure Deployment (08/06 - 14/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Agree on AWS architecture diagram 08/06/2026 08/06/2026 - Tue Deploy network infrastructure 09/06/2026 09/06/2026 - Wed Dockerize source code 10/06/2026 10/06/2026 - Thu Initialize EC2 (Dev/Staging) 11/06/2026 11/06/2026 - Fri Test environment 12/06/2026 12/06/2026 - Key Achievements:&#xD;Successfully deployed network infrastructure and servers for the Dev/Staging environment, ensuring consistency with the original design architecture. Completed the application containerization process using Docker, making deployment across environments faster and more reliable.</description>
+    </item>
+    <item>
+      <title>Week 9</title>
+      <link>http://localhost:1313/en/1-worklog/1.9-week9/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.9-week9/index.html</guid>
+      <description>Week 9: Permissions &amp; Logic (15/06 - 21/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Connect Code to RDS 15/06/2026 15/06/2026 - Tue Design User/Admin logic 16/06/2026 16/06/2026 - Wed Use IAM for authorization 17/06/2026 17/06/2026 - Thu Configure IAM Role for EC2 18/06/2026 18/06/2026 - Fri Test authorization functionality 19/06/2026 19/06/2026 - Key Achievements:&#xD;Built a robust logical Role-Based Access Control (RBAC) system between User and Admin objects. Optimized security by using IAM Roles instead of hard-coding security credentials, enhancing the overall safety of the EC2 system.</description>
+    </item>
+    <item>
+      <title>Week 10</title>
+      <link>http://localhost:1313/en/1-worklog/1.10-week10/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.10-week10/index.html</guid>
+      <description>Week 10: Storage &amp; CDN (22/06 - 28/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Deploy S3 for images 22/06/2026 22/06/2026 - Tue Integrate Upload SDK 23/06/2026 23/06/2026 - Wed Configure CloudFront (CDN) 24/06/2026 24/06/2026 - Thu Optimize cache 25/06/2026 25/06/2026 - Fri Check load speed 26/06/2026 26/06/2026 - Key Achievements:&#xD;Optimized end-user experience by combining S3 (storage) and CloudFront (CDN), helping to reduce latency when accessing static resources. Completed the file upload integration technique via SDK, ensuring data is stored securely and is scalable.</description>
+    </item>
+    <item>
+      <title>Week 11</title>
+      <link>http://localhost:1313/en/1-worklog/1.11-week11/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.11-week11/index.html</guid>
+      <description>Week 11: CI/CD &amp; Finalization (29/06 - 05/07)&#xD;Day Tasks Start Date Completion Date Source Material Mon Set up CI/CD (GitHub Actions) 29/06/2026 29/06/2026 - Tue Configure zero-downtime deployment 30/06/2026 30/06/2026 - Wed Run comprehensive tests 01/07/2026 01/07/2026 - Thu Review logs and errors (CloudWatch) 02/07/2026 02/07/2026 - Fri Package documentation and report 03/07/2026 03/07/2026 - Key Achievements:&#xD;Successfully automated the entire CI/CD process with GitHub Actions, helping to minimize manual errors and accelerate release speed. Implemented zero-downtime deployment techniques, ensuring the system remains available to serve users throughout the update process.</description>
+    </item>
+    <item>
+      <title>Week 12</title>
+      <link>http://localhost:1313/en/1-worklog/1.12-week12/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/1.12-week12/index.html</guid>
+      <description>Week 12: Internship Summary (06/07 - 10/07)&#xD;Day Tasks Start Date Completion Date Source Material Mon Synthesize internship log 06/07/2026 06/07/2026 - Tue Finalize internship report 07/07/2026 07/07/2026 - Wed Submit report to instructor 08/07/2026 08/07/2026 - Thu Prepare for defense 09/07/2026 09/07/2026 - Fri Complete internship 10/07/2026 10/07/2026 - Key Achievements:&#xD;Synthesized and systematized all knowledge and experience accumulated throughout the internship. Completed the internship report with full practical evidence, ready for the defense and evaluation of graduation internship results.</description>
+    </item>
+  </channel>
+</rss>

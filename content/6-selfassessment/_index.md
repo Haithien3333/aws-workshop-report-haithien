@@ -1,0 +1,27 @@
+---
+title: "6. Tự đánh giá (Self-Assessment)"
+weight: 6
+date: 2026-07-09
+draft: false
+---
+
+## BẢNG TỰ ĐÁNH GIÁ KẾT QUẢ THỰC TẬP
+
+Trong suốt thời gian thực tập tại **Công ty TNHH Amazon Web Services Việt Nam**, em đã nghiêm túc tham gia học tập, thực hành và tự đánh giá năng lực của bản thân dựa trên các tiêu chí chuẩn hóa của chương trình:
+
+### 📊 Bảng Đánh Giá Chi Tiết
+
+| STT | Tiêu chí đánh giá | Mô tả chi tiết | Tốt (Good) | Khá (Fair) | Trung bình (Average) |
+|:---:|:---|:---|:---:|:---:|:---:|
+| 1 | **Kiến thức & Kỹ năng chuyên môn** | Hiểu biết về lĩnh vực, áp dụng kiến thức vào thực tế, thành thạo công cụ, chất lượng công việc | 🔲| 🔲 | ✅ |
+| 2 | **Khả năng học hỏi** | Khả năng tiếp thu kiến thức mới và học hỏi nhanh chóng | 🔲 | 🔲 |✅ |
+| 3 | **Sự chủ động trong công việc** | Tự giác, chủ động tìm kiếm và thực hiện nhiệm vụ không đợi nhắc nhở | 🔲| 🔲 | ✅ |
+| 4 | **Tinh thần trách nhiệm** | Hoàn thành công việc đúng hạn và đảm bảo chất lượng đầu ra | ✅ | 🔲 | 🔲 |
+| 5 | **Tính kỷ luật** | Tuân thủ lịch trình, các quy định và quy trình làm việc đề ra | ✅ | 🔲 |🔲 |
+| 6 | **Tư duy cầu tiến** | Sẵn sàng đón nhận các góp ý và chủ động hoàn thiện bản thân | ✅ | 🔲 | 🔲 |
+| 7 | **Kỹ năng giao tiếp** | Trình bày ý tưởng rõ ràng, báo cáo tiến độ công việc mạch lạc | 🔲 | 🔲 | ✅ |
+| 8 | **Khả năng làm việc nhóm** | Phối hợp hiệu quả với các thành viên và thế hệ thực tập sinh | 🔲 | ✅ | 🔲 |
+| 9 | **Tác phong chuyên nghiệp** | Tôn trọng đồng nghiệp, đối tác và môi trường làm việc công sở | ✅ | 🔲 | 🔲 |
+| 10 | **Kỹ năng giải quyết vấn đề** | Xác định đúng lỗi hệ thống, đề xuất giải pháp xử lý linh hoạt | 🔲 | ✅ | 🔲 |
+| 11 | **Đóng góp cho dự án/nhóm** | Hiệu quả công việc thực tế, đưa ra các ý tưởng cải tiến được ghi nhận | 🔲 | ✅ | 🔲 |
+| 12 | **Đánh giá tổng quan** | Nhìn nhận chung về toàn bộ nỗ lực trong suốt kỳ thực tập | 🔲 | ✅ | 🔲 |

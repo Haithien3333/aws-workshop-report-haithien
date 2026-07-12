@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="SYSTEM ARCHITECTURE PROPOSALPROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE1. INTRODUCTION &amp; PROBLEM STATEMENT1.1. Cloud-native and Decoupled Architecture TrendsEntering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Proposal :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="SYSTEM ARCHITECTURE PROPOSALPROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE1. INTRODUCTION &amp; PROBLEM STATEMENT1.1. Cloud-native and Decoupled Architecture TrendsEntering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.">
+    <meta property="og:url" content="http://localhost:1313/en/2-proposal/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="Proposal :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="SYSTEM ARCHITECTURE PROPOSALPROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE1. INTRODUCTION &amp; PROBLEM STATEMENT1.1. Cloud-native and Decoupled Architecture TrendsEntering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Proposal :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="SYSTEM ARCHITECTURE PROPOSALPROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE1. INTRODUCTION &amp; PROBLEM STATEMENT1.1. Cloud-native and Decoupled Architecture TrendsEntering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.">
+    <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="wordCount" content="1835">
+    <title>Proposal :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/2-proposal/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/2-proposal/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/2-proposal/index.html" rel="alternate" hreflang="en">
+    <link href="/en/2-proposal/index.xml" rel="alternate" type="application/rss+xml" title="Proposal :: Báo cáo AWS Workshop">
+    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
+    <script src="/js/search-lunr.js?1783864412" defer></script>
+    <script src="/js/search.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1783864412";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
+    <link href="/css/theme.css?1783864412" rel="stylesheet">
+    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/en\/2-proposal\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/en/2-proposal/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#project-ai-e-commerce-platform--aws-serverless-architecture">PROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE</a>
+      <ul>
+        <li><a href="#1-introduction--problem-statement">1. INTRODUCTION &amp; PROBLEM STATEMENT</a></li>
+        <li><a href="#2-project-objectives">2. PROJECT OBJECTIVES</a></li>
+        <li><a href="#3-proposed-system-architecture">3. PROPOSED SYSTEM ARCHITECTURE</a></li>
+        <li><a href="#4-team-division--workload">4. TEAM DIVISION &amp; WORKLOAD</a></li>
+        <li><a href="#5-budget-estimation-monthly-developmentlab-scale">5. BUDGET ESTIMATION (Monthly Development/Lab Scale)</a></li>
+        <li><a href="#6-risk-assessment--mitigation">6. RISK ASSESSMENT &amp; MITIGATION</a></li>
+        <li><a href="#7-acceptance-criteria">7. ACCEPTANCE CRITERIA</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/index.html"><span itemprop="name">AWS Workshop Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Proposal</span><meta itemprop="position" content="2"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/1-worklog/1.12-week12/index.html" title="Week 12 (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/3-blogsposted/index.html" title="Blogs Posted (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 2-proposal" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="proposal">Proposal</h1>
+
+<h1 id="system-architecture-proposal">SYSTEM ARCHITECTURE PROPOSAL<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<h2 id="project-ai-e-commerce-platform--aws-serverless-architecture">PROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<hr>
+<h3 id="1-introduction--problem-statement">1. INTRODUCTION &amp; PROBLEM STATEMENT<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="11-cloud-native-and-decoupled-architecture-trends">1.1. Cloud-native and Decoupled Architecture Trends<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Entering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to <strong>Cloud-native</strong> and <strong>decoupled/event-driven architectures</strong>. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.</p>
+<p>A decoupled architecture separates the user interface (Frontend) from the core business logic (Backend). By integrating event-driven design patterns, the system can asynchronously process heavy computational workloads, avoiding blocking synchronous interactions, thereby achieving maximum fault tolerance and system resilience.</p>
+<h4 id="12-pain-points-of-traditional-architectures">1.2. Pain Points of Traditional Architectures<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>When operating conventional e-commerce systems—often deployed on self-managed virtual machines or monolithic relational databases—organizations frequently encounter key challenges:</p>
+<ul>
+<li><strong>Connection Limits under Spike Traffic:</strong> During flash sales or marketing campaigns, traffic surges can exhaust database and web server connection limits, causing bottlenecks and rendering the site unresponsive.</li>
+<li><strong>High Idle Costs and Resource Waste:</strong> Infrastructure must be provisioned to handle peak capacities, leading to significant resource idling and high costs during off-peak hours.</li>
+<li><strong>Double Charging Risks:</strong> Flaky network connections or rapid multiple clicks on payment buttons can trigger duplicate payment transactions because of a lack of idempotency mechanisms, damaging brand reputation.</li>
+<li><strong>Security Vulnerabilities:</strong> Managing infrastructure manually increases vulnerability to DDoS attacks, web application exploits (SQL Injection, XSS), and data breaches due to the absence of edge filtering and fine-grained access control.</li>
+<li><strong>Complex Order State Management and Syncing:</strong> In tightly-coupled systems, a failure in the notification or catalog updating services can directly block the user checkout flow, resulting in lost sales and decreased conversion rates.</li>
+</ul>
+<hr>
+<h3 id="2-project-objectives">2. PROJECT OBJECTIVES<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To address these critical challenges, this project proposes the design and implementation of an <strong>AI E-Commerce Platform</strong> leveraging AWS Serverless infrastructure with the following goals:</p>
+<ul>
+<li><strong>Autoscaling Capabilities:</strong> Ensure the system scales seamlessly in real-time to support sudden traffic bursts without manual operational intervention.</li>
+<li><strong>Pay-as-you-go Pricing:</strong> Utilize a cost-optimized model based on actual resource consumption, eliminating idle-time infrastructure expenses.</li>
+<li><strong>Robust Core Business Workflows:</strong>
+<ul>
+<li>Fast catalog listing and product image delivery via Amazon S3 integrated with a CDN.</li>
+<li>Secure identity verification, sign-up, sign-in, and authorization using Amazon Cognito (issuing JWT tokens).</li>
+<li>Decoupled, asynchronous order management to offload processing tasks from frontend clients.</li>
+<li>Secure payment processing via Stripe Sandbox, preventing duplicate payments via <code>Idempotency-Key</code> and securing webhook integration with signature validation.</li>
+<li>AI-driven shopping assistance with Amazon Lex chatbot and asynchronous multi-channel notification handlers (Email/Push/In-app).</li>
+</ul>
+</li>
+</ul>
+<hr>
+<h3 id="3-proposed-system-architecture">3. PROPOSED SYSTEM ARCHITECTURE<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="31-rationale-for-aws-serverless-architecture">3.1. Rationale for AWS Serverless Architecture<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Instead of using containerized microservices (such as ECS or EKS) which require heavy container orchestration and OS maintenance, this project adopts an <strong>Advanced AWS Serverless Architecture (v3)</strong>:</p>
+<ul>
+<li><strong>Reduced Blast Radius:</strong> Each serverless function (AWS Lambda) is isolated and focused on a single business domain. A failure in one service (e.g., notification delivery) is isolated and does not disrupt core checkout or catalog lookup flows.</li>
+<li><strong>Enhanced Developer Experience (DX):</strong> Developers focus entirely on core business logic rather than network configuration, OS patching, or provisioning load balancers. Infrastructure as Code (IaC) via AWS CDK enables unified, reproducible deployments and automated CI/CD.</li>
+<li><strong>High Availability &amp; Durability:</strong> Automated multi-AZ replication is built natively into services like API Gateway, Lambda, SQS, EventBridge, and DynamoDB.</li>
+</ul>
+<h4 id="32-official-system-architecture-diagram-v3">3.2. Official System Architecture Diagram (v3)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><a href="#R-image-0c7e67a483341ae78f8084cfc4f3d690" class="lightbox-link"><img alt="AWS Serverless E-commerce Architecture v3" class="lazy lightbox figure-image" loading="lazy" src="/images/2-Proposal/architecture.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0c7e67a483341ae78f8084cfc4f3d690"><img alt="AWS Serverless E-commerce Architecture v3" class="lazy lightbox lightbox-image" loading="lazy" src="/images/2-Proposal/architecture.png"></a></p>
+<blockquote>
+<p><strong>Implementation Note:</strong> AWS WAF is logically bound at the edge to protect API endpoints and content delivery, linking with AWS Amplify&rsquo;s CloudFront distribution and Amazon API Gateway REST endpoints.</p>
+</blockquote>
+<h4 id="33-detailed-data-flow">3.3. Detailed Data Flow<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>The architecture executes 7 primary, optimized data flows:</p>
+<ol>
+<li><strong>Flow 1 - Website Access:</strong> User resolves domain via Route 53 -&gt; AWS WAF evaluates traffic via managed rule groups and rate limits -&gt; AWS Amplify serves Next.js SSR/Static assets via CDN.</li>
+<li><strong>Flow 2 - Authentication:</strong> Users sign up/in using Cognito Hosted UI or SDK -&gt; Cognito issues a secure JWT -&gt; Frontend sends JWT in <code>Authorization: Bearer &lt;token&gt;</code> headers -&gt; API Gateway Cognito Authorizer validates JWT before routing to Lambda.</li>
+<li><strong>Flow 3 - Catalog Query:</strong> Frontend requests <code>GET /products</code> -&gt; API Gateway -&gt; Product Service (Lambda) queries metadata from DynamoDB and generates secure S3 pre-signed URLs for product images.</li>
+<li><strong>Flow 4 - Async Order Flow:</strong> User requests order placement -&gt; API Gateway -&gt; Order Service (Lambda) records initial state in DynamoDB -&gt; Publishes message to <strong>SQS Order Queue</strong> -&gt; Consumer Lambda processes and deletes message on success -&gt; Message goes to <strong>Order DLQ</strong> on persistent failure.</li>
+<li><strong>Flow 5 - Checkout &amp; Payment:</strong> Frontend initiates <code>POST /checkout/payment-intent</code> -&gt; Checkout Service (Lambda) evaluates cart and talks to Stripe API -&gt; Creates Stripe Payment Intent using a unique <code>Idempotency-Key</code> -&gt; Stores reference in DynamoDB -&gt; Stripe Webhook returns payment status (verified via webhook signature) -&gt; Checkout Service publishes <code>order.placed</code> event to Amazon EventBridge.</li>
+<li><strong>Flow 6 - Event-Driven Updates &amp; Notifications:</strong> EventBridge Custom Bus routes <code>order.placed</code> events to targets:
+<ul>
+<li>Rule 1: Order Service updates status to &ldquo;Paid&rdquo; in DynamoDB.</li>
+<li>Rule 2: Sends message to <strong>Notification Queue</strong> -&gt; Notification Lambda delivers message -&gt; Failed attempts go to <strong>Notification DLQ</strong>.</li>
+</ul>
+</li>
+<li><strong>Flow 7 - AI Chatbot:</strong> User queries Chatbot UI -&gt; API Gateway -&gt; Chatbot Backend (Lambda) -&gt; Invokes Amazon Lex Runtime to resolve intents and replies to frontend, querying internal APIs securely via restricted IAM roles when database lookup is needed.</li>
+</ol>
+<h4 id="34-security-control-points">3.4. Security Control Points<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ul>
+<li><strong>Cognito Authorizer:</strong> Protects private endpoints at the API Gateway level.</li>
+<li><strong>Encryption at Rest &amp; Transit:</strong> Enforced using AWS KMS for DynamoDB, S3, and Lambda environment variables.</li>
+<li><strong>Threat Detection:</strong> Amazon GuardDuty monitors API calls, CloudTrail logs, and network behavior to detect active threats.</li>
+<li><strong>Least Privilege:</strong> Each Lambda function has a dedicated IAM Role with minimal necessary permissions.</li>
+<li><strong>Secrets Management:</strong> Sensitive keys (Stripe API Keys) are stored in AWS Secrets Manager and never committed to version control.</li>
+</ul>
+<hr>
+<h3 id="4-team-division--workload">4. TEAM DIVISION &amp; WORKLOAD<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Workload is distributed equitably among the 5 team members to ensure parallel progress:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Member</th>
+					<th>Role</th>
+					<th>Key Responsibilities</th>
+					<th>Deliverables</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Member 1</strong></td>
+					<td><strong>Frontend &amp; Identity Engineer</strong></td>
+					<td>- Build Next.js UI hosted on AWS Amplify.<!-- raw HTML omitted -->- Integrate Cognito Hosted UI and SDK for auth workflows.<!-- raw HTML omitted -->- Create Cart, Checkout, and Chatbot UI components.<!-- raw HTML omitted -->- Implement client-side route protection.</td>
+					<td>- Frontend codebase.<!-- raw HTML omitted -->- Complete sign-in/up UI flow.<!-- raw HTML omitted -->- Checkout &amp; chatbot interface.<!-- raw HTML omitted -->- Amplify deployment pipelines.</td>
+			</tr>
+			<tr>
+					<td><strong>Member 2</strong></td>
+					<td><strong>API &amp; Compute Engineer</strong></td>
+					<td>- Configure REST API Gateway and Cognito Authorizer.<!-- raw HTML omitted -->- Develop Product Service Lambda (CRUD).<!-- raw HTML omitted -->- Develop Order Service REST API.<!-- raw HTML omitted -->- Implement incoming request body validation.</td>
+					<td>- OpenAPI contract specs.<!-- raw HTML omitted -->- Product &amp; Order Lambda codebase.<!-- raw HTML omitted -->- API Gateway configurations.<!-- raw HTML omitted -->- Unit testing reports.</td>
+			</tr>
+			<tr>
+					<td><strong>Member 3</strong></td>
+					<td><strong>Data &amp; Messaging Engineer</strong></td>
+					<td>- Design DynamoDB Single-Table Schema &amp; GSIs.<!-- raw HTML omitted -->- Structure S3 product asset storage.<!-- raw HTML omitted -->- Configure SQS Order Queue + DLQ.<!-- raw HTML omitted -->- Wire EventBridge Custom Bus &amp; Routing rules.<!-- raw HTML omitted -->- Setup automated DynamoDB backup policies via AWS Backup.</td>
+					<td>- DynamoDB single-table design docs.<!-- raw HTML omitted -->- SQS, DLQ &amp; EventBridge configuration script.<!-- raw HTML omitted -->- Data storage layout.<!-- raw HTML omitted -->- SQS recovery/restore logs &amp; AWS Backup configuration.</td>
+			</tr>
+			<tr>
+					<td><strong>Member 4</strong></td>
+					<td><strong>Payment, AI &amp; Notification Engineer</strong></td>
+					<td>- Develop Checkout Service Lambda and Stripe webhook integration.<!-- raw HTML omitted -->- Train Amazon Lex Intents, Utterances, and Slots.<!-- raw HTML omitted -->- Develop Notification Service and Lambda consumers.</td>
+					<td>- Checkout Lambda &amp; Webhook handler codebase.<!-- raw HTML omitted -->- Configured Amazon Lex chatbot model.<!-- raw HTML omitted -->- Notification consumer handler code.<!-- raw HTML omitted -->- Payment &amp; notification integration tests.</td>
+			</tr>
+			<tr>
+					<td><strong>Member 5</strong></td>
+					<td><strong>DevSecOps &amp; Observability (Team Lead / PM)</strong></td>
+					<td>- Manage IaC templates via AWS CDK.<!-- raw HTML omitted -->- Enforce least privilege IAM profiles.<!-- raw HTML omitted -->- Configure edge security: AWS WAF, Route 53, and Secrets Manager.<!-- raw HTML omitted -->- Build CI/CD pipelines (GitHub Actions).<!-- raw HTML omitted -->- Configure CloudWatch dashboards, alarms, X-Ray tracing, and GuardDuty.<!-- raw HTML omitted -->- Manage project timelines, sync sessions, and final demos.</td>
+					<td>- CDK IaC codebase.<!-- raw HTML omitted -->- Automated CI/CD GitHub workflows.<!-- raw HTML omitted -->- CloudWatch dashboards &amp; alert metrics.<!-- raw HTML omitted -->- Security reports (GuardDuty, WAF).<!-- raw HTML omitted -->- Project management assets (Runbook, Release Plan).</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h3 id="5-budget-estimation-monthly-developmentlab-scale">5. BUDGET ESTIMATION (Monthly Development/Lab Scale)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The following estimate details cost projection for 1 month of lab development to prove Serverless economy:</p>
+<table>
+	<thead>
+			<tr>
+					<th>AWS Service</th>
+					<th>Estimated Usage / Month</th>
+					<th>Billing Formula</th>
+					<th>Estimated Cost / Month</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>AWS Amplify</strong></td>
+					<td>- 100 build minutes/month<!-- raw HTML omitted -->- 1 GB storage, 5 GB bandwidth</td>
+					<td>- Build: $0.01/min<!-- raw HTML omitted -->- Host: $0.02/GB storage, $0.15/GB traffic</td>
+					<td>$1.00 - $1.75</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon Cognito</strong></td>
+					<td>- 50 Monthly Active Users (MAU)</td>
+					<td>- Free Tier (up to 50,000 MAU)</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon API Gateway</strong></td>
+					<td>- 20,000 requests/month</td>
+					<td>- $3.50 per million REST API requests</td>
+					<td>$0.07</td>
+			</tr>
+			<tr>
+					<td><strong>AWS Lambda</strong></td>
+					<td>- 30,000 executions (500ms avg, 512MB RAM)</td>
+					<td>- Free Tier (1M requests &amp; 400,000 GB-s)</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon DynamoDB</strong></td>
+					<td>- 2 GB data storage<!-- raw HTML omitted -->- 100,000 read/write requests (On-demand)</td>
+					<td>- Storage: $0.25/GB<!-- raw HTML omitted -->- Requests: $1.25/M writes, $0.25/M reads</td>
+					<td>$0.50</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon S3</strong></td>
+					<td>- 5 GB product media storage<!-- raw HTML omitted -->- 5,000 request ops</td>
+					<td>- Storage: $0.023/GB<!-- raw HTML omitted -->- Requests: $0.005/1,000 PUT, $0.0004/1,000 GET</td>
+					<td>$0.15</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon SQS &amp; DLQ</strong></td>
+					<td>- 10,000 messages/month</td>
+					<td>- Free Tier (first 1M messages)</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon EventBridge</strong></td>
+					<td>- 5,000 events/month</td>
+					<td>- Free Tier (first 1M custom events)</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>AWS Secrets Manager</strong></td>
+					<td>- 1 active secret (Stripe key)</td>
+					<td>- $0.40/secret/month<!-- raw HTML omitted -->- $0.05/10,000 API calls</td>
+					<td>$0.45</td>
+			</tr>
+			<tr>
+					<td><strong>AWS WAF</strong></td>
+					<td>- 1 Web ACL + 2 Rules (short-term testing)</td>
+					<td>- $5.00/Web ACL/month (pro-rated)<!-- raw HTML omitted -->- $1.00/Rule/month (pro-rated)</td>
+					<td>$1.00 - $2.00 (Enabled for demos only)</td>
+			</tr>
+			<tr>
+					<td><strong>AWS Backup &amp; KMS</strong></td>
+					<td>- Backup for 2 GB DynamoDB table</td>
+					<td>- $0.10/GB backup storage</td>
+					<td>$0.20</td>
+			</tr>
+			<tr>
+					<td><strong>Amazon GuardDuty</strong></td>
+					<td>- Lab scale monitoring</td>
+					<td>- 30-day Free Trial</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>AWS X-Ray</strong></td>
+					<td>- 20,000 traces/month</td>
+					<td>- Free Tier (first 100,000 traces)</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>Stripe Sandbox</strong></td>
+					<td>- Simulate Stripe payments</td>
+					<td>- Free of charge</td>
+					<td>$0.00</td>
+			</tr>
+			<tr>
+					<td><strong>TOTAL</strong></td>
+					<td></td>
+					<td></td>
+					<td><strong>~ $3.37 - $5.12 USD / Month</strong> (Highly economical)</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h3 id="6-risk-assessment--mitigation">6. RISK ASSESSMENT &amp; MITIGATION<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Key technical risks and their associated mitigation strategies are analyzed below:</p>
+<table>
+	<thead>
+			<tr>
+					<th>Technical Risk</th>
+					<th>Impact</th>
+					<th>Mitigating Controls</th>
+					<th>Contingency Plan</th>
+			</tr>
+	</thead>
+	<tbody>
+			<tr>
+					<td><strong>Database Connection Limits</strong> under peak load</td>
+					<td>Medium</td>
+					<td>Use <strong>Amazon DynamoDB</strong> (serverless NoSQL database) which supports auto-scaling and scales connection pools transparently.</td>
+					<td>Alarm on high write capacity utilization to trigger manual throughput audits.</td>
+			</tr>
+			<tr>
+					<td><strong>Data Loss from Webhook Failures or Double Charges</strong></td>
+					<td>High</td>
+					<td>- Use unique <strong>Stripe Idempotency-Keys</strong>.<!-- raw HTML omitted -->- Validate Stripe-Signature Headers on incoming Webhooks.<!-- raw HTML omitted -->- Apply <strong>DynamoDB Conditional Writes</strong> on state transitions.<!-- raw HTML omitted -->- Buffer through <strong>SQS DLQ</strong> on delivery failures.</td>
+					<td>Admin script to re-drive messages from DLQ to SQS queue after root cause resolution.</td>
+			</tr>
+			<tr>
+					<td><strong>Credential Leakage</strong></td>
+					<td>High</td>
+					<td>Never commit credential configurations (e.g., <code>.env</code>) to GitHub. Store keys in <strong>AWS Secrets Manager</strong>.</td>
+					<td>Configure Secrets Manager automatic credential rotation; revoke leaked keys instantly.</td>
+			</tr>
+			<tr>
+					<td><strong>Project Delay due to Architecture Complexity</strong></td>
+					<td>High</td>
+					<td>Frame a clear MVP focused on Product catalog, Checkout, and Lex Chatbot. Notification systems can be mocked if schedule slips.</td>
+					<td>Short daily sync meetings (10 min) to clear blockers.</td>
+			</tr>
+	</tbody>
+</table>
+<hr>
+<h3 id="7-acceptance-criteria">7. ACCEPTANCE CRITERIA<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>The platform is accepted upon meeting these technical criteria:</p>
+<ol>
+<li><strong>Edge &amp; Frontend:</strong> Route 53 domain loads frontend over HTTPS. WAF rejects requests exceeding 100 reqs/min. Frontend auto-deploys via Amplify.</li>
+<li><strong>Identity:</strong> Users sign up/in, receive email confirmations, and obtain valid JWT tokens. Cognito Authorizer blocks access on unauthorized requests (401).</li>
+<li><strong>Catalog &amp; Orders:</strong> Products display descriptions and images fetched from S3. Order requests queue in SQS asynchronously. Persistent order errors migrate to DLQ.</li>
+<li><strong>Checkout &amp; Events:</strong> Payments succeed in Stripe Sandbox. Idempotent keys prevent double transactions. Webhook verifies signatures. EventBridge routes events to notification queues.</li>
+<li><strong>Chatbot:</strong> Interactive Lex UI functions on the frontend, resolving intents and returning database records.</li>
+<li><strong>Ops:</strong> CloudWatch logs system stats. X-Ray displays complete trace maps across API Gateway, Lambda, SQS, EventBridge, and DynamoDB.</li>
+<li><strong>Process:</strong> Infrastructure is completely defined using AWS CDK IaC. Pipelines build and test pull requests on Git merges.</li>
+</ol>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 1, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/en/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/en/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/en/index.html"><a class="padding" href="/en/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/en/1-worklog/index.html"><a class="padding default-animation" href="/en/1-worklog/index.html">1. Internship Worklog</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="active " data-nav-id="/en/2-proposal/index.html"><a class="padding" href="/en/2-proposal/index.html"> <b> 2. </b> Proposal</a></li>
+            <li class="" data-nav-id="/en/3-blogsposted/index.html"><a class="padding default-animation" href="/en/3-blogsposted/index.html"> <b> 3. </b> Blogs Posted</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/4-eventparticipated/index.html"><a class="padding default-animation" href="/en/4-eventparticipated/index.html">4. Participated Events</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/5-workshop/index.html"><a class="padding default-animation" href="/en/5-workshop/index.html"> <b> 5. </b> Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/6-selfassessment/index.html"><a class="padding" href="/en/6-selfassessment/index.html">6. Self-Assessment</a></li>
+            <li class="" data-nav-id="/en/7-sharing-and-feedback/index.html"><a class="padding" href="/en/7-sharing-and-feedback/index.html">7. Sharing and Feedback</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Language</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/2-proposal/index.html" lang="vi-vn">Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/2-proposal/index.html" lang="en" selected data-selected>English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
+    <script src="/js/theme.js?1783864412" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

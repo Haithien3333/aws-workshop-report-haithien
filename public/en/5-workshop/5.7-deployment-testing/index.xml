@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Deployment &amp; Testing :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.7-deployment-testing/index.html</link>
+    <description>Deployment &amp; Testing&#xD;1. Deployment Steps&#xD;Execute the following commands in the infrastructure project root:&#xA;# Initialize CDK bootstrap resources cdk bootstrap # Compile and compare diffs cdk diff # Deploy all stacks to AWS cdk deploy --all&#xD;2. Testing APIs&#xD;Once deploy completes, API Gateway outputs the endpoint URL. Use curl to test:</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.7-deployment-testing/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

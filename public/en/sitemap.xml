@@ -1,0 +1,324 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://localhost:1313/en/index.html</loc>
+    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/3-blogsposted/3.1-blog1/index.html</loc>
+    <lastmod>2026-06-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/3-blogsposted/3.1-blog1/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/3-blogsposted/3.1-blog1/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/3-blogsposted/3.1-blog1/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/index.html</loc>
+    <lastmod>2026-04-20T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.1-overview/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.1-overview/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.1-overview/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.1-overview/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.1-workshop-overview/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.1-workshop-overview/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.1-workshop-overview/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.1-workshop-overview/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.1-week1/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.1-week1/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.1-week1/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.1-week1/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/3-blogsposted/3.2-blog2/index.html</loc>
+    <lastmod>2026-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/3-blogsposted/3.2-blog2/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/3-blogsposted/3.2-blog2/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/3-blogsposted/3.2-blog2/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.2-prerequisites/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.2-prerequisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.2-prerequisites/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.2-prerequisites/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.2-prerequiste/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.2-prerequiste/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.2-prerequiste/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.2-prerequiste/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/2-proposal/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/2-proposal/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/2-proposal/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/2-proposal/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.2-week2/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.2-week2/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.2-week2/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.2-week2/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/3-blogsposted/index.html</loc>
+    <lastmod>2026-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/3-blogsposted/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/3-blogsposted/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/3-blogsposted/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/3-blogsposted/3.3-blog3/index.html</loc>
+    <lastmod>2026-06-30T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/3-blogsposted/3.3-blog3/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/3-blogsposted/3.3-blog3/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/3-blogsposted/3.3-blog3/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.3-module1-storage/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.3-module1-storage/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.3-module1-storage/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.3-module1-storage/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.3-s3-vpc/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.3-s3-vpc/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.3-s3-vpc/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.3-week3/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.3-week3/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.3-week3/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.3-week3/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/4-eventparticipated/index.html</loc>
+    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/4-eventparticipated/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/4-eventparticipated/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/4-eventparticipated/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-module2-compute/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-module2-compute/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-module2-compute/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-module2-compute/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-s3-onprem/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-s3-onprem/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-s3-onprem/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.4-week4/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.4-week4/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.4-week4/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.4-week4/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.5-module3-security/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.5-module3-security/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.5-module3-security/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.5-module3-security/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.5-policy/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.5-policy/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.5-policy/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.5-policy/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.5-week5/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.5-week5/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.5-week5/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.5-week5/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/6-selfassessment/index.html</loc>
+    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/6-selfassessment/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/6-selfassessment/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/6-selfassessment/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/4-eventparticipated/4.1-event1/index.html</loc>
+    <lastmod>2026-05-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/4-eventparticipated/4.1-event1/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/4-eventparticipated/4.1-event1/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/4-eventparticipated/4.1-event1/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.6-module4-serverless/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.6-module4-serverless/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.6-cleanup/index.html</loc>
+    <lastmod>2024-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.6-cleanup/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.6-cleanup/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.6-cleanup/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.6-week6/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.6-week6/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.6-week6/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.6-week6/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/7-sharing-and-feedback/index.html</loc>
+    <lastmod>2026-07-09T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/7-sharing-and-feedback/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/7-sharing-and-feedback/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/7-sharing-and-feedback/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/4-eventparticipated/4.2-event2/index.html</loc>
+    <lastmod>2026-05-30T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/4-eventparticipated/4.2-event2/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/4-eventparticipated/4.2-event2/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/4-eventparticipated/4.2-event2/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.7-deployment-testing/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.7-deployment-testing/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.7-deployment-testing/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.7-deployment-testing/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.7-week7/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.7-week7/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.7-week7/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.7-week7/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.8-cleanup-advanced/index.html</loc>
+    <lastmod>2026-01-01T00:00:00+00:00</lastmod>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.8-cleanup-advanced/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.8-cleanup-advanced/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.8-cleanup-advanced/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.8-week8/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.8-week8/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.8-week8/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.8-week8/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/5-workshop/5.9-references/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/5-workshop/5.9-references/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/5-workshop/5.9-references/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/5-workshop/5.9-references/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.9-week9/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.9-week9/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.9-week9/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.9-week9/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.10-week10/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.10-week10/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.10-week10/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.10-week10/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.11-week11/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.11-week11/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.11-week11/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.11-week11/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/1-worklog/1.12-week12/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/1-worklog/1.12-week12/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/1-worklog/1.12-week12/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/1-worklog/1.12-week12/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/categories/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/categories/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/categories/index.html" />
+  </url>
+  <url>
+    <loc>http://localhost:1313/en/tags/index.html</loc>
+    <xhtml:link rel="alternate" hreflang="x-default" href="http://localhost:1313/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="vi-vn" href="http://localhost:1313/tags/index.html" />
+    <xhtml:link rel="alternate" hreflang="en" href="http://localhost:1313/en/tags/index.html" />
+  </url>
+</urlset>

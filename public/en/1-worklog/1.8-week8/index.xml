@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 8 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/1.8-week8/index.html</link>
+    <description>Week 8: Project Infrastructure Deployment (08/06 - 14/06)&#xD;Day Tasks Start Date Completion Date Source Material Mon Agree on AWS architecture diagram 08/06/2026 08/06/2026 - Tue Deploy network infrastructure 09/06/2026 09/06/2026 - Wed Dockerize source code 10/06/2026 10/06/2026 - Thu Initialize EC2 (Dev/Staging) 11/06/2026 11/06/2026 - Fri Test environment 12/06/2026 12/06/2026 - Key Achievements:&#xD;Successfully deployed network infrastructure and servers for the Dev/Staging environment, ensuring consistency with the original design architecture. Completed the application containerization process using Docker, making deployment across environments faster and more reliable.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/1-worklog/1.8-week8/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

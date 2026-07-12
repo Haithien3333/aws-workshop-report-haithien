@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 11 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/1.11-week11/index.html</link>
+    <description>Week 11: CI/CD &amp; Finalization (29/06 - 05/07)&#xD;Day Tasks Start Date Completion Date Source Material Mon Set up CI/CD (GitHub Actions) 29/06/2026 29/06/2026 - Tue Configure zero-downtime deployment 30/06/2026 30/06/2026 - Wed Run comprehensive tests 01/07/2026 01/07/2026 - Thu Review logs and errors (CloudWatch) 02/07/2026 02/07/2026 - Fri Package documentation and report 03/07/2026 03/07/2026 - Key Achievements:&#xD;Successfully automated the entire CI/CD process with GitHub Actions, helping to minimize manual errors and accelerate release speed. Implemented zero-downtime deployment techniques, ensuring the system remains available to serve users throughout the update process.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/1-worklog/1.11-week11/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Blogs Posted :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/3-blogsposted/index.html</link>
+    <description>This section lists and introduces the blogs you have posted in the AWS Study Group.&#xA;Blog 1 - Simplify AWS AppSync Events integration with Powertools for AWS Lambda&#xD;This blog introduces a new AppSyncEventsResolver feature in Powertools for AWS Lambda (supported in Python, TypeScript, and .NET), which simplifies integration with AWS AppSync Events for real-time applications such as chat apps, dashboards, or IoT systems.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/3-blogsposted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Simplify AWS AppSync Events Integration with Powertools</title>
+      <link>http://localhost:1313/en/3-blogsposted/3.1-blog1/index.html</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/3-blogsposted/3.1-blog1/index.html</guid>
+      <description>SIMPLIFYING AWS APPSYNC EVENTS INTEGRATION WITH POWERTOOLS FOR AWS LAMBDA&#xD;Modern Serverless architectures require clean and optimized code to achieve peak operational efficiency. The recent release of the AppSyncEventsResolver utility in Powertools for AWS Lambda (supporting Python, TypeScript, and .NET) significantly simplifies data integration with AWS AppSync Events for real-time applications.&#xA;Info&#xD;Ideal Real-World Use Cases: Real-time Chat applications, live monitoring dashboards, or IoT data ingestion pipelines (e.g., a Serverless IoT Weather Platform).</description>
+    </item>
+    <item>
+      <title>Breaking AI Agent Stale Knowledge with Web Search on Amazon Bedrock AgentCore</title>
+      <link>http://localhost:1313/en/3-blogsposted/3.2-blog2/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/3-blogsposted/3.2-blog2/index.html</guid>
+      <description>BREAKING AI AGENT STALE KNOWLEDGE WITH WEB SEARCH ON AMAZON BEDROCK AGENTCORE&#xD;In the current wave of artificial intelligence development, AI Agents are increasingly expected to solve complex tasks autonomously and intelligently. However, one of the biggest limitations of modern large language models (LLMs) and AI Agents is “Stale Knowledge”. Since a model’s knowledge is frozen at the time training completes (training cutoff), AI Agents remain completely blind to real-time information such as today’s stock prices, sports scores, or newly published technical news.</description>
+    </item>
+    <item>
+      <title>Optimizing Multi-App Management with Unified Webhooks on AWS Amplify Hosting</title>
+      <link>http://localhost:1313/en/3-blogsposted/3.3-blog3/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/3-blogsposted/3.3-blog3/index.html</guid>
+      <description>OPTIMIZING MULTI-APP MANAGEMENT WITH UNIFIED WEBHOOKS ON AWS AMPLIFY HOSTING&#xD;In modern software engineering, the Monorepo architecture (managing multiple frontend apps and services in a single repository) is highly favored by developers due to easy code sharing and streamlined workspace management. However, when deploying these applications on AWS Amplify Hosting, developers often hit a painful barrier: Git Provider Webhook limits.</description>
+    </item>
+  </channel>
+</rss>

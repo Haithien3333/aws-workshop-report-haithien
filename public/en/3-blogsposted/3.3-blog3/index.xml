@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Optimizing Multi-App Management with Unified Webhooks on AWS Amplify Hosting :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/3-blogsposted/3.3-blog3/index.html</link>
+    <description>OPTIMIZING MULTI-APP MANAGEMENT WITH UNIFIED WEBHOOKS ON AWS AMPLIFY HOSTING&#xD;In modern software engineering, the Monorepo architecture (managing multiple frontend apps and services in a single repository) is highly favored by developers due to easy code sharing and streamlined workspace management. However, when deploying these applications on AWS Amplify Hosting, developers often hit a painful barrier: Git Provider Webhook limits.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/3-blogsposted/3.3-blog3/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

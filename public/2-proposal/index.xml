@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bản đề xuất :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/2-proposal/index.html</link>
+    <description>ĐỀ XUẤT KIẾN TRÚC HỆ THỐNG (SYSTEM ARCHITECTURE PROPOSAL)&#xD;DỰ ÁN: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE&#xD;1. INTRODUCTION &amp; PROBLEM STATEMENT (Giới thiệu &amp; Đặt vấn đề)&#xD;1.1. Xu hướng công nghệ Cloud-native và Decoupled Architecture&#xD;Bước sang năm 2026, ngành thương mại điện tử (TMĐT) toàn cầu đang chứng kiến sự chuyển dịch mạnh mẽ từ các kiến trúc nguyên khối (Monolithic) truyền thống sang các mô hình Cloud-native và kiến trúc phân rã (Decoupled/Event-Driven Architecture). Sự cạnh tranh khốc liệt đòi hỏi các nền tảng bán lẻ trực tuyến phải phản hồi cực nhanh trước thay đổi của thị trường, có khả năng mở rộng không giới hạn vào các dịp mua sắm cao điểm và giảm thiểu tối đa thời gian chết (downtime).</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/2-proposal/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

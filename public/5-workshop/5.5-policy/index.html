@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html id="R-html" lang="vi-vn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="Khi bạn tạo một Interface Endpoint hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="VPC Endpoint Policies :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="Khi bạn tạo một Interface Endpoint hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.">
+    <meta property="og:url" content="http://localhost:1313/5-workshop/5.5-policy/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="VPC Endpoint Policies :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="Khi bạn tạo một Interface Endpoint hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.">
+    <meta property="og:locale" content="vi_vn">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="VPC Endpoint Policies :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="Khi bạn tạo một Interface Endpoint hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.">
+    <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="wordCount" content="586">
+    <title>VPC Endpoint Policies :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="en">
+    <link href="/5-workshop/5.5-policy/index.xml" rel="alternate" type="application/rss+xml" title="VPC Endpoint Policies :: Báo cáo AWS Workshop">
+    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
+    <script src="/js/search-lunr.js?1783864412" defer></script>
+    <script src="/js/search.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.vi.js?1783864412";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['vi'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
+    <link href="/css/theme.css?1783864412" rel="stylesheet">
+    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/5-workshop\/5.5-policy\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Sao chép văn bản vào bảng tạm`;
+      window.T_Copied_to_clipboard = `Văn bản đã sao chép vào bảng tạm!`;
+      window.T_Link_copied_to_clipboard = `Liên kết đã sao chép vào bảng tạm!`;
+      window.T_Reset_view = `Đặt lại dạng xem`;
+      window.T_View_reset = `Xem đặt lại!`;
+      window.T_No_results_found = `Không tìm thấy kết quả nào cho "{0}"`;
+      window.T_N_results_found = `{1} kết quả được tìm thấy cho "{0}"`;
+      window.T_Browser_unsupported_feature = `Trình duyệt này không hỗ trợ tính năng này`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/5-workshop/5.5-policy/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Mục lục (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Báo cáo AWS Workshop</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">VPC Endpoint Policies</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.5-module3-security/index.html" title="Module 3: Bảo mật & Phân quyền (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.6-module4-serverless/index.html" title="Module 4: Serverless Backend (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Nội dung khác"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 5-workshop" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="vpc-endpoint-policies">VPC Endpoint Policies</h1>
+
+<p>Khi bạn tạo một Interface Endpoint  hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.</p>
+<p>Bạn có thể tạo chính sách chỉ hạn chế quyền truy cập vào các S3 bucket cụ thể. Điều này hữu ích nếu bạn chỉ muốn một số Bộ chứa S3 nhất định có thể truy cập được thông qua điểm cuối.</p>
+<p>Trong phần này, bạn sẽ tạo chính sách VPC Endpoint hạn chế quyền truy cập vào S3 bucket được chỉ định trong chính sách VPC Endpoint.</p>
+<p><a href="#R-image-b43b93bdb2af2ec4c248f37f1dc2a135" class="lightbox-link"><img alt="endpoint diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-b43b93bdb2af2ec4c248f37f1dc2a135"><img alt="endpoint diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png"></a></p>
+<h4 id="kết-nối-tới-ec2-và-xác-minh-kết-nối-tới-s3">Kết nối tới EC2 và xác minh kết nối tới S3.<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Bắt đầu một phiên AWS Session Manager mới trên máy chủ có tên là Test-Gateway-Endpoint. Từ phiên này, xác minh rằng bạn có thể liệt kê nội dung của bucket mà bạn đã tạo trong Phần 1: Truy cập S3 từ VPC.</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://&lt;your-bucket-name&gt;</code></pre></div>
+<p><a href="#R-image-a335ba576ac56deb0624c0855389727a" class="lightbox-link"><img alt="test" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a335ba576ac56deb0624c0855389727a"><img alt="test" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png"></a></p>
+<p>Nội dung của bucket bao gồm hai tệp có dung lượng 1GB đã được tải lên trước đó.</p>
+<ol start="2">
+<li>Tạo một bucket S3 mới; tuân thủ mẫu đặt tên mà bạn đã sử dụng trong Phần 1, nhưng thêm &lsquo;-2&rsquo; vào tên. Để các trường khác là mặc định và nhấp vào <strong>Create</strong>.</li>
+</ol>
+<p><a href="#R-image-c1543f93897740bb7a23596ed032e003" class="lightbox-link"><img alt="create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1543f93897740bb7a23596ed032e003"><img alt="create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png"></a></p>
+<ol start="3">
+<li>Tạo bucket thành công.</li>
+</ol>
+<p><a href="#R-image-18578c17b1bf415126e3277b4c6a78e8" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-18578c17b1bf415126e3277b4c6a78e8"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png"></a></p>
+<p>Policy mặc định cho phép truy cập vào tất cả các S3 Buckets thông qua VPC endpoint.</p>
+<ol start="4">
+<li>Trong giao diện <strong>Edit Policy</strong>, sao chép và dán theo policy sau, thay thế yourbucketname-2 với tên bucket thứ hai của bạn. Policy này sẽ cho phép truy cập đến bucket mới thông qua VPC endpoint, nhưng không cho phép truy cập đến các bucket còn lại. Chọn <strong>Save</strong> để kích hoạt policy.</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>{
+  &#34;Id&#34;: &#34;Policy1631305502445&#34;,
+  &#34;Version&#34;: &#34;2012-10-17&#34;,
+  &#34;Statement&#34;: [
+    {
+      &#34;Sid&#34;: &#34;Stmt1631305501021&#34;,
+      &#34;Action&#34;: &#34;s3:*&#34;,
+      &#34;Effect&#34;: &#34;Allow&#34;,
+      &#34;Resource&#34;: [
+      				&#34;arn:aws:s3:::yourbucketname-2&#34;,
+       				&#34;arn:aws:s3:::yourbucketname-2/*&#34;
+       ],
+      &#34;Principal&#34;: &#34;*&#34;
+    }
+  ]
+}</code></pre></div>
+<p><a href="#R-image-825366c7e915a7afb5dc144b98f6cdbe" class="lightbox-link"><img alt="custom policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-825366c7e915a7afb5dc144b98f6cdbe"><img alt="custom policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png"></a></p>
+<p>Cấu hình policy thành công.</p>
+<p><a href="#R-image-3e79af211e866246489b8020729aa4eb" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e79af211e866246489b8020729aa4eb"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png"></a></p>
+<ol start="5">
+<li>Từ session của bạn trên Test-Gateway-Endpoint instance, kiểm tra truy cập đến S3 bucket bạn tạo ở bước đầu</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://&lt;yourbucketname&gt;</code></pre></div>
+<p>Câu lệnh trả về lỗi bởi vì truy cập vào S3 bucket không có quyền trong VPC endpoint policy.</p>
+<p><a href="#R-image-c574594e8dce55fd9e318dc945bc7d78" class="lightbox-link"><img alt="error" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c574594e8dce55fd9e318dc945bc7d78"><img alt="error" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png"></a></p>
+<ol start="6">
+<li>Trở lại home directory của bạn trên EC2 instance <code>cd~</code></li>
+</ol>
+<ul>
+<li>Tạo file <code>fallocate -l 1G test-bucket2.xyz </code></li>
+<li>Sao chép file lên bucket thứ  2 <code>aws s3 cp test-bucket2.xyz s3://&lt;your-2nd-bucket-name&gt;</code></li>
+</ul>
+<p><a href="#R-image-178e779baf7f94b31f39eb4c039606ae" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-178e779baf7f94b31f39eb4c039606ae"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png"></a></p>
+<p>Thao tác này được cho phép bởi VPC endpoint policy.</p>
+<p><a href="#R-image-2667deb251b50227319ef7978e2da2dd" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2667deb251b50227319ef7978e2da2dd"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png"></a></p>
+<p>Sau đó chúng ta kiểm tra truy cập vào S3 bucket đầu tiên</p>
+<p><code>aws s3 cp test-bucket2.xyz s3://&lt;your-1st-bucket-name&gt;</code></p>
+<p><a href="#R-image-88a46b2478c632970cf0ce5879bf549d" class="lightbox-link"><img alt="fail" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-88a46b2478c632970cf0ce5879bf549d"><img alt="fail" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png"></a></p>
+<p>Câu lệnh xảy ra lỗi bởi vì bucket không có quyền truy cập bởi VPC endpoint policy.</p>
+<p>Trong phần này, bạn đã tạo chính sách VPC Endpoint cho Amazon S3 và sử dụng AWS CLI để kiểm tra chính sách. Các hoạt động AWS CLI liên quan đến bucket S3 ban đầu của bạn thất bại vì bạn áp dụng một chính sách chỉ cho phép truy cập đến bucket thứ hai mà bạn đã tạo. Các hoạt động AWS CLI nhắm vào bucket thứ hai của bạn thành công vì chính sách cho phép chúng. Những chính sách này có thể hữu ích trong các tình huống khi bạn cần kiểm soát quyền truy cập vào tài nguyên thông qua VPC Endpoint.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 1 thg 1, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Tìm kiếm...">
+            <button class="search-clear" type="button" data-search-clear="" title="Xóa tìm kiếm"><i class="fas fa-fw fa-times" title="Xóa tìm kiếm"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/1-worklog/index.html"><a class="padding default-animation" href="/1-worklog/index.html">1. Nhật ký thực tập (Worklog)</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/2-proposal/index.html"><a class="padding" href="/2-proposal/index.html"> <b> 2. </b> Bản đề xuất</a></li>
+            <li class="" data-nav-id="/3-blogsposted/index.html"><a class="padding default-animation" href="/3-blogsposted/index.html"> <b> 3. </b> Các bài blogs đã đăng</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/4-eventparticipated/index.html"><a class="padding default-animation" href="/4-eventparticipated/index.html">4. Sự kiện đã tham gia (Events)</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/5-workshop/index.html"><a class="padding default-animation" href="/5-workshop/index.html"> <b> 5. </b> Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu">
+            <li class="" data-nav-id="/5-workshop/5.1-overview/index.html"><a class="padding" href="/5-workshop/5.1-overview/index.html"> <b> 5.1. </b> Tổng quan Workshop</a></li>
+            <li class="" data-nav-id="/5-workshop/5.1-workshop-overview/index.html"><a class="padding" href="/5-workshop/5.1-workshop-overview/index.html"> <b> 5.1. </b> Giới thiệu</a></li>
+            <li class="" data-nav-id="/5-workshop/5.2-prerequisites/index.html"><a class="padding" href="/5-workshop/5.2-prerequisites/index.html"> <b> 5.2. </b> Chuẩn bị &amp; Khởi tạo</a></li>
+            <li class="" data-nav-id="/5-workshop/5.2-prerequiste/index.html"><a class="padding" href="/5-workshop/5.2-prerequiste/index.html"> <b> 5.2. </b> Các bước chuẩn bị</a></li>
+            <li class="" data-nav-id="/5-workshop/5.3-module1-storage/index.html"><a class="padding" href="/5-workshop/5.3-module1-storage/index.html"> <b> 5.3. </b> Module 1: Lưu trữ &amp; DB</a></li>
+            <li class="alwaysopen " data-nav-id="/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Truy cập S3 từ VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/5-workshop/5.4-module2-compute/index.html"><a class="padding" href="/5-workshop/5.4-module2-compute/index.html"> <b> 5.4. </b> Module 2: Tính toán &amp; API</a></li>
+            <li class="alwaysopen " data-nav-id="/5-workshop/5.4-s3-onprem/index.html"><a class="padding default-animation" href="/5-workshop/5.4-s3-onprem/index.html"> <b> 5.4. </b> Truy cập S3 từ môi trường truyền thống</a><ul id="R-subsections-c81e91f8aeb754aea188a2aafe827ae0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/5-workshop/5.5-module3-security/index.html"><a class="padding" href="/5-workshop/5.5-module3-security/index.html"> <b> 5.5. </b> Module 3: Bảo mật &amp; Phân quyền</a></li>
+            <li class="active " data-nav-id="/5-workshop/5.5-policy/index.html"><a class="padding" href="/5-workshop/5.5-policy/index.html"> <b> 5.5 </b> VPC Endpoint Policies</a></li>
+            <li class="" data-nav-id="/5-workshop/5.6-module4-serverless/index.html"><a class="padding" href="/5-workshop/5.6-module4-serverless/index.html"> <b> 5.6. </b> Module 4: Serverless Backend</a></li>
+            <li class="" data-nav-id="/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Dọn dẹp tài nguyên</a></li>
+            <li class="" data-nav-id="/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Triển khai &amp; Kiểm thử</a></li>
+            <li class="" data-nav-id="/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Dọn dẹp &amp; Nâng cao</a></li>
+            <li class="" data-nav-id="/5-workshop/5.9-references/index.html"><a class="padding" href="/5-workshop/5.9-references/index.html">5.9 </a></li></ul></li>
+            <li class="" data-nav-id="/6-selfassessment/index.html"><a class="padding" href="/6-selfassessment/index.html">6. Tự đánh giá (Self-Assessment)</a></li>
+            <li class="" data-nav-id="/7-sharing-and-feedback/index.html"><a class="padding" href="/7-sharing-and-feedback/index.html">7. Chia sẻ và Đóng góp ý kiến</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.5-policy/index.html" lang="vi-vn" selected data-selected>Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.5-policy/index.html" lang="en">English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
+    <script src="/js/theme.js?1783864412" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

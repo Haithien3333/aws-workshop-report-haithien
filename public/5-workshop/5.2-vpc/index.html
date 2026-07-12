@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html id="R-html" lang="vi-vn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC1. Mục tiêu bài thực hànhKhởi tạo một mạng ảo độc lập Amazon VPC an toàn trên Cloud. Phân chia dải mạng thành Public Subnet (vùng công cộng) và Private Subnet (vùng kín bảo mật). Cấu hình Internet Gateway (IGW) và Route Table để cấp quyền truy cập Internet hợp lý. 2. Các bước triển khai chi tiếtBước 2.1: Tạo Mạng ảo VPCTrên thanh tìm kiếm AWS Console, chọn dịch vụ VPC. Nhấn Create VPC -&gt; Chọn mục VPC only. Đặt tên: Thien-VPC. Điền dải địa chỉ IP (IPv4 CIDR block): 10.0.0.0/16. Nhấn Create. Bước 2.2: Phân chia các dải mạng con (Subnets)Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC1. Mục tiêu bài thực hànhKhởi tạo một mạng ảo độc lập Amazon VPC an toàn trên Cloud. Phân chia dải mạng thành Public Subnet (vùng công cộng) và Private Subnet (vùng kín bảo mật). Cấu hình Internet Gateway (IGW) và Route Table để cấp quyền truy cập Internet hợp lý. 2. Các bước triển khai chi tiếtBước 2.1: Tạo Mạng ảo VPCTrên thanh tìm kiếm AWS Console, chọn dịch vụ VPC. Nhấn Create VPC -&gt; Chọn mục VPC only. Đặt tên: Thien-VPC. Điền dải địa chỉ IP (IPv4 CIDR block): 10.0.0.0/16. Nhấn Create. Bước 2.2: Phân chia các dải mạng con (Subnets)Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:">
+    <meta property="og:url" content="http://localhost:1313/5-workshop/5.2-vpc/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC1. Mục tiêu bài thực hànhKhởi tạo một mạng ảo độc lập Amazon VPC an toàn trên Cloud. Phân chia dải mạng thành Public Subnet (vùng công cộng) và Private Subnet (vùng kín bảo mật). Cấu hình Internet Gateway (IGW) và Route Table để cấp quyền truy cập Internet hợp lý. 2. Các bước triển khai chi tiếtBước 2.1: Tạo Mạng ảo VPCTrên thanh tìm kiếm AWS Console, chọn dịch vụ VPC. Nhấn Create VPC -&gt; Chọn mục VPC only. Đặt tên: Thien-VPC. Điền dải địa chỉ IP (IPv4 CIDR block): 10.0.0.0/16. Nhấn Create. Bước 2.2: Phân chia các dải mạng con (Subnets)Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:">
+    <meta property="og:locale" content="vi_vn">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC1. Mục tiêu bài thực hànhKhởi tạo một mạng ảo độc lập Amazon VPC an toàn trên Cloud. Phân chia dải mạng thành Public Subnet (vùng công cộng) và Private Subnet (vùng kín bảo mật). Cấu hình Internet Gateway (IGW) và Route Table để cấp quyền truy cập Internet hợp lý. 2. Các bước triển khai chi tiếtBước 2.1: Tạo Mạng ảo VPCTrên thanh tìm kiếm AWS Console, chọn dịch vụ VPC. Nhấn Create VPC -&gt; Chọn mục VPC only. Đặt tên: Thien-VPC. Điền dải địa chỉ IP (IPv4 CIDR block): 10.0.0.0/16. Nhấn Create. Bước 2.2: Phân chia các dải mạng con (Subnets)Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:">
+    <meta itemprop="datePublished" content="2026-07-09T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2026-07-09T00:00:00+00:00">
+    <meta itemprop="wordCount" content="253">
+    <title>5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.2-vpc/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.2-vpc/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.2-vpc/index.html" rel="alternate" hreflang="en">
+    <link href="/5-workshop/5.2-vpc/index.xml" rel="alternate" type="application/rss+xml" title="5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop">
+    <link href="/css/auto-complete/auto-complete.min.css?1783665384" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783665384" defer></script>
+    <script src="/js/search-lunr.js?1783665384" defer></script>
+    <script src="/js/search.js?1783665384" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.vi.js?1783665384";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783665384" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783665384" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783665384" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1783665384" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['vi'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783665384" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783665384" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783665384" rel="stylesheet">
+    <link href="/css/theme.css?1783665384" rel="stylesheet">
+    <link href="/css/format-html.css?1783665384" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/5-workshop\/5.2-vpc\/index.html';
+      window.relearn.relBasePath='..\/..';
+      window.relearn.relBaseUri='..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Sao chép văn bản vào bảng tạm`;
+      window.T_Copied_to_clipboard = `Văn bản đã sao chép vào bảng tạm!`;
+      window.T_Link_copied_to_clipboard = `Liên kết đã sao chép vào bảng tạm!`;
+      window.T_Reset_view = `Đặt lại dạng xem`;
+      window.T_View_reset = `Xem đặt lại!`;
+      window.T_No_results_found = `Không tìm thấy kết quả nào cho "{0}"`;
+      window.T_N_results_found = `{1} kết quả được tìm thấy cho "{0}"`;
+      window.T_Browser_unsupported_feature = `Trình duyệt này không hỗ trợ tính năng này`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/5-workshop/5.2-vpc/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Mục lục (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#bài-lab-2-khởi-tạo-và-định-tuyến-hệ-thống-mạng-amazon-vpc">Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC</a>
+      <ul>
+        <li><a href="#1-mục-tiêu-bài-thực-hành">1. Mục tiêu bài thực hành</a></li>
+        <li><a href="#2-các-bước-triển-khai-chi-tiết">2. Các bước triển khai chi tiết</a></li>
+        <li><a href="#3-kết-quả-đạt-được--ảnh-minh-chứng">3. Kết quả đạt được &amp; Ảnh minh chứng</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Báo cáo AWS Workshop</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/5-workshop/index.html"><span itemprop="name">5. Các bài thực hành (Workshop Labs)</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">5.2 Thiết kế Hạ tầng Mạng với Amazon VPC</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.1-iam/index.html" title="5.1 Quản lý Định danh với AWS IAM (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.3-s3-endpoint/index.html" title="5.3 Lưu trữ S3 và Cấu hình VPC Endpoint (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Nội dung khác"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 5-workshop" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="52-thiết-kế-hạ-tầng-mạng-với-amazon-vpc">5.2 Thiết kế Hạ tầng Mạng với Amazon VPC</h1>
+
+<h2 id="bài-lab-2-khởi-tạo-và-định-tuyến-hệ-thống-mạng-amazon-vpc">Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-mục-tiêu-bài-thực-hành">1. Mục tiêu bài thực hành<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<ul>
+<li>Khởi tạo một mạng ảo độc lập <strong>Amazon VPC</strong> an toàn trên Cloud.</li>
+<li>Phân chia dải mạng thành <strong>Public Subnet</strong> (vùng công cộng) và <strong>Private Subnet</strong> (vùng kín bảo mật).</li>
+<li>Cấu hình <strong>Internet Gateway (IGW)</strong> và <strong>Route Table</strong> để cấp quyền truy cập Internet hợp lý.</li>
+</ul>
+<hr>
+<h3 id="2-các-bước-triển-khai-chi-tiết">2. Các bước triển khai chi tiết<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="bước-21-tạo-mạng-ảo-vpc">Bước 2.1: Tạo Mạng ảo VPC<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Trên thanh tìm kiếm AWS Console, chọn dịch vụ <strong>VPC</strong>.</li>
+<li>Nhấn <strong>Create VPC</strong> -&gt; Chọn mục <strong>VPC only</strong>.</li>
+<li>Đặt tên: <code>Thien-VPC</code>.</li>
+<li>Điền dải địa chỉ IP (IPv4 CIDR block): <code>10.0.0.0/16</code>. Nhấn <strong>Create</strong>.</li>
+</ol>
+<h4 id="bước-22-phân-chia-các-dải-mạng-con-subnets">Bước 2.2: Phân chia các dải mạng con (Subnets)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:</p>
+<ol>
+<li><strong>Public Subnet:</strong>
+<ul>
+<li>Tên: <code>Thien-Public-Subnet</code></li>
+<li>Dải IP (CIDR): <code>10.0.1.0/24</code></li>
+</ul>
+</li>
+<li><strong>Private Subnet:</strong>
+<ul>
+<li>Tên: <code>Thien-Private-Subnet</code></li>
+<li>Dải IP (CIDR): <code>10.0.2.0/24</code></li>
+</ul>
+</li>
+</ol>
+<h4 id="bước-23-cấu-hình-cổng-internet-gateway-và-định-tuyến">Bước 2.3: Cấu hình cổng Internet Gateway và Định tuyến<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Vào mục <strong>Internet Gateways</strong> -&gt; Nhấn <strong>Create internet gateway</strong> -&gt; Đặt tên <code>Thien-IGW</code>.</li>
+<li>Chọn IGW vừa tạo -&gt; Nhấn <strong>Actions</strong> -&gt; Chọn <strong>Attach to VPC</strong> -&gt; Chọn <code>Thien-VPC</code>.</li>
+<li>Vào mục <strong>Route Tables</strong>, chọn bảng định tuyến của Public Subnet, thêm một dòng Route:
+<ul>
+<li><strong>Destination:</strong> <code>0.0.0.0/0</code> (Toàn bộ Internet)</li>
+<li><strong>Target:</strong> Chọn <code>Internet Gateway</code> -&gt; Chọn <code>Thien-IGW</code>.</li>
+</ul>
+</li>
+</ol>
+<hr>
+<h3 id="3-kết-quả-đạt-được--ảnh-minh-chứng">3. Kết quả đạt được &amp; Ảnh minh chứng<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Hạ tầng mạng đã được thiết lập đúng cấu trúc phân tách giữa vùng mạng ngoài và vùng nội bộ.</p>
+<blockquote>
+<p>📸 <strong>Hình ảnh minh chứng sơ đồ hoặc danh sách Subnets trong VPC:</strong>
+<a href="#R-image-d4613b69fe2e07dc2cf04fc141d0d01c" class="lightbox-link"><img alt="Danh sách Subnets đã tạo" class="lazy lightbox figure-image" loading="lazy" src="/images/vpc-subnets-result.jpg?width=90%&align=center" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4613b69fe2e07dc2cf04fc141d0d01c"><img alt="Danh sách Subnets đã tạo" class="lazy lightbox lightbox-image" loading="lazy" src="/images/vpc-subnets-result.jpg?width=90%&align=center"></a></p>
+</blockquote>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 9 thg 7, 2026
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Tìm kiếm...">
+            <button class="search-clear" type="button" data-search-clear="" title="Xóa tìm kiếm"><i class="fas fa-fw fa-times" title="Xóa tìm kiếm"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/1-worklog/index.html"><a class="padding default-animation" href="/1-worklog/index.html">1. Nhật ký thực tập (Worklog)</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/2-proposal/index.html"><a class="padding" href="/2-proposal/index.html"> <b> 2. </b> Bản đề xuất</a></li>
+            <li class="" data-nav-id="/3-blogsposted/index.html"><a class="padding default-animation" href="/3-blogsposted/index.html"> <b> 3. </b> Các bài blogs đã đăng</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/4-eventparticipated/index.html"><a class="padding default-animation" href="/4-eventparticipated/index.html">4. Sự kiện đã tham gia (Events)</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/5-workshop/index.html"><a class="padding default-animation" href="/5-workshop/index.html">5. Các bài thực hành (Workshop Labs)</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu">
+            <li class="" data-nav-id="/5-workshop/5.1-iam/index.html"><a class="padding" href="/5-workshop/5.1-iam/index.html">5.1 Quản lý Định danh với AWS IAM</a></li>
+            <li class="active " data-nav-id="/5-workshop/5.2-vpc/index.html"><a class="padding" href="/5-workshop/5.2-vpc/index.html">5.2 Thiết kế Hạ tầng Mạng với Amazon VPC</a></li>
+            <li class="" data-nav-id="/5-workshop/5.3-s3-endpoint/index.html"><a class="padding" href="/5-workshop/5.3-s3-endpoint/index.html">5.3 Lưu trữ S3 và Cấu hình VPC Endpoint</a></li>
+            <li class="" data-nav-id="/5-workshop/5.4-bucket-policy/index.html"><a class="padding" href="/5-workshop/5.4-bucket-policy/index.html">5.4 Thắt chặt Bảo mật với S3 Bucket Policy</a></li></ul></li>
+            <li class="" data-nav-id="/6-selfassessment/index.html"><a class="padding" href="/6-selfassessment/index.html">6. Tự đánh giá (Self-Assessment)</a></li>
+            <li class="" data-nav-id="/7-sharing-and-feedback/index.html"><a class="padding" href="/7-sharing-and-feedback/index.html">7. Chia sẻ và Đóng góp ý kiến</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.2-vpc/index.html" lang="vi-vn" selected data-selected>Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.2-vpc/index.html" lang="en">English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783665384" defer></script>
+    <script src="/js/theme.js?1783665384" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

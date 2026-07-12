@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>4. Sự kiện đã tham gia (Events) :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/4-eventparticipated/index.html</link>
+    <description>CÁC SỰ KIỆN ĐÃ THAM GIA&#xD;Chương trình: Workforce Bootcamp - First Cloud AI Journey&#xA;Trong suốt thời gian thực tập tại AWS Việt Nam, bên cạnh việc tập trung nghiên cứu và thực hành kỹ thuật cá nhân, em đã có cơ hội tham gia vào các sự kiện lớn, các buổi hội thảo công nghệ và chương trình đào tạo chuyên sâu do AWS tổ chức.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Sat, 30 May 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/4-eventparticipated/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Báo cáo FCAJ Community Day</title>
+      <link>http://localhost:1313/4-eventparticipated/4.1-event1/index.html</link>
+      <pubDate>Sat, 09 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4-eventparticipated/4.1-event1/index.html</guid>
+      <description>Báo cáo tham gia: FCAJ Community Day&#xD;1. Thông tin sự kiện&#xD;Tên sự kiện: FCAJ Community Day Thời gian: 09/05/2026 Địa điểm: Tầng 26, Tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, Thành phố Hồ Chí Minh. Vai trò: Người tham dự 2. Nội dung sự kiện&#xD;Đây là buổi FCAJ Community Day đầu tiên trong chương trình AWS First Cloud Journey. Sự kiện được tổ chức với mục tiêu kết nối các thực tập sinh, mentor và cộng đồng quan tâm đến Cloud Computing.</description>
+    </item>
+    <item>
+      <title>Báo cáo FCAJ Community Day </title>
+      <link>http://localhost:1313/4-eventparticipated/4.2-event2/index.html</link>
+      <pubDate>Sat, 30 May 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4-eventparticipated/4.2-event2/index.html</guid>
+      <description>Báo cáo tham gia: FCAJ Community Day&#xD;1. Thông tin sự kiện&#xD;Tên sự kiện: FCAJ Community Day Thời gian: 30/05/2026 Địa điểm: Tầng 26, Tòa nhà Bitexco, số 02 đường Hải Triều, phường Sài Gòn, TP. Hồ Chí Minh. Vai trò: Người tham dự 2. Nội dung sự kiện&#xD;Buổi FCAJ Community Day lần thứ hai tập trung sâu vào kinh nghiệm triển khai dự án thực tế trên AWS. Nội dung bao gồm:</description>
+    </item>
+  </channel>
+</rss>

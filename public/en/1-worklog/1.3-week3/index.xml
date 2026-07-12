@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Week 3 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/1-worklog/1.3-week3/index.html</link>
+    <description>Week 3: S3 &amp; Git (04/05 - 10/05)&#xD;Day Tasks Start Date Completion Date Source Material Mon Practice managing S3 data 04/05/2026 04/05/2026 - Tue Learn about IAM permissions 05/05/2026 05/05/2026 - Wed Use Git to manage source code 06/05/2026 06/05/2026 - Thu Monitor EC2 via CloudWatch 07/05/2026 07/05/2026 - Fri Weekly general review 08/05/2026 08/05/2026 - Key Achievements:&#xD;Deep understanding of cloud data storage mechanisms with S3 and the principles of strict IAM permissions. Mastered the professional source code version control process with Git (commit, push, pull). Formed a proactive system monitoring mindset through tracking metrics on CloudWatch.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/1-worklog/1.3-week3/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

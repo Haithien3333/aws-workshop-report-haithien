@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Proposal :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/2-proposal/index.html</link>
+    <description>SYSTEM ARCHITECTURE PROPOSAL&#xD;PROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE&#xD;1. INTRODUCTION &amp; PROBLEM STATEMENT&#xD;1.1. Cloud-native and Decoupled Architecture Trends&#xD;Entering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/2-proposal/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

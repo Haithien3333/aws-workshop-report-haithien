@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>3. Bài viết Blog (Blogs Posted) :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/3-blogs-posted/index.html</link>
+    <description>BÀI VIẾT BLOG CÁ NHÂN&#xD;Việc viết blog kỹ thuật là cách để em hệ thống lại kiến thức đã học, đồng thời chia sẻ những trải nghiệm thực tế trong quá trình thực hành tại AWS. Đây không chỉ là tài liệu lưu trữ cá nhân mà còn là cầu nối để lan tỏa thông tin tới cộng đồng.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/3-blogs-posted/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

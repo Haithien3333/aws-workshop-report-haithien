@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Truy cập S3 từ môi trường truyền thống :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.4-s3-onprem/index.html</link>
+    <description>Tổng quan&#xD;Trong phần này, bạn sẽ tạo một Interface Endpoint để truy cập Amazon S3 từ môi trường truyền thống mô phỏng. Interface Endpoint sẽ cho phép bạn định tuyến đến Amazon S3 qua kết nối VPN từ môi trường truyền thống mô phỏng của bạn.&#xA;Tại sao nên sử dụng Interface Endpoint:</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.4-s3-onprem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Chuẩn bị tài nguyên</title>
+      <link>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html</guid>
+      <description>Để chuẩn bị cho phần này của workshop, bạn sẽ cần phải:&#xA;Triển khai CloudFormation stack Sửa đổi bảng định tuyến VPC. Các thành phần này hoạt động cùng nhau để mô phỏng DNS forwarding và name resolution.&#xA;Triển khai CloudFormation stack&#xD;Mẫu CloudFormation sẽ tạo các dịch vụ bổ sung để hỗ trợ mô phỏng môi trường truyền thống:</description>
+    </item>
+    <item>
+      <title>Tạo một S3 Interface endpoint</title>
+      <link>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html</guid>
+      <description>Trong phần này, bạn sẽ tạo và kiểm tra Interface Endpoint S3 bằng cách sử dụng môi trường truyền thống mô phỏng.&#xA;Quay lại Amazon VPC menu. Trong thanh điều hướng bên trái, chọn Endpoints, sau đó click Create Endpoint.&#xA;Trong Create endpoint console:&#xA;Đặt tên interface endpoint Trong Service category, chọn aws services Trong Search box, gõ S3 và nhấn Enter. Chọn endpoint có tên com.amazonaws.us-east-1.s3. Đảm bảo rằng cột Type có giá trị Interface.</description>
+    </item>
+    <item>
+      <title>Kiểm tra Interface Endpoint</title>
+      <link>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html</guid>
+      <description>Lấy regional DNS name (tên DNS khu vực) của S3 interface endpoint&#xD;Trong Amazon VPC menu, chọn Endpoints.&#xA;Click tên của endpoint chúng ta mới tạo ở mục 4.2: s3-interface-endpoint. Click details và lưu lại regional DNS name của endpoint (cái đầu tiên) vào text-editor của bạn để dùng ở các bước sau.</description>
+    </item>
+    <item>
+      <title>Mô phỏng On-premises DNS </title>
+      <link>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html</guid>
+      <description>AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.</description>
+    </item>
+  </channel>
+</rss>

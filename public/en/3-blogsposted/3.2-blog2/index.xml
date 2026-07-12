@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Breaking AI Agent Stale Knowledge with Web Search on Amazon Bedrock AgentCore :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/3-blogsposted/3.2-blog2/index.html</link>
+    <description>BREAKING AI AGENT STALE KNOWLEDGE WITH WEB SEARCH ON AMAZON BEDROCK AGENTCORE&#xD;In the current wave of artificial intelligence development, AI Agents are increasingly expected to solve complex tasks autonomously and intelligently. However, one of the biggest limitations of modern large language models (LLMs) and AI Agents is “Stale Knowledge”. Since a model’s knowledge is frozen at the time training completes (training cutoff), AI Agents remain completely blind to real-time information such as today’s stock prices, sports scores, or newly published technical news.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/3-blogsposted/3.2-blog2/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FCAJ Community Day Report :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/4-eventparticipated/4.1-event1/index.html</link>
+    <description>FCAJ Community Day Participation Report&#xD;1. Event Information&#xD;Event Name: FCAJ Community Day Date: May 9, 2026 Location: 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, District 1, Ho Chi Minh City. Role: Attendee 2. Event Overview&#xD;This was my first FCAJ Community Day as part of the AWS First Cloud Journey program. The event was organized to connect interns, mentors, and individuals interested in Cloud Computing.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/4-eventparticipated/4.1-event1/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

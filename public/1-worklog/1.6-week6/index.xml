@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tuần 6 :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/1-worklog/1.6-week6/index.html</link>
+    <description>Tuần 6: Database (RDS) (25/05 - 31/05)&#xD;Thứ Công việc Ngày bắt đầu Ngày hoàn thành Nguồn tài liệu 2 Khởi tạo AWS RDS 25/05/2026 25/05/2026 - 3 Cấu hình Subnet Group 26/05/2026 26/05/2026 - 4 Kết nối database RDS 27/05/2026 27/05/2026 - 5 Import dữ liệu mẫu 28/05/2026 28/05/2026 - 6 Review mã nguồn kết nối 29/05/2026 29/05/2026 - Kết quả đạt được:&#xD;Thiết lập thành công cơ sở dữ liệu quan hệ trên AWS RDS, đảm bảo kết nối ổn định giữa ứng dụng và database. Nắm được kỹ thuật quản lý cấu hình mạng cho DB (Subnet Group) và bảo mật kết nối với Security Group. Rèn luyện kỹ năng xử lý dữ liệu và cấu hình môi trường kết nối backend-database.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <atom:link href="http://localhost:1313/1-worklog/1.6-week6/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

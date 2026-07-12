@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Module 2: Tính toán &amp; API :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.4-module2-compute/index.html</link>
+    <description>Module 2: Compute &amp; API Gateway (Tính toán &amp; Giao diện API)&#xD;Thiết lập Lambda function và liên kết với API Gateway. Vì sử dụng kiến trúc Serverless thuần túy, Lambda sẽ chạy ở chế độ mặc định trên mạng AWS, cho phép gọi trực tiếp tới DynamoDB một cách nhanh chóng.&#xA;Tạo tệp lib/api-stack.ts:</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.4-module2-compute/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

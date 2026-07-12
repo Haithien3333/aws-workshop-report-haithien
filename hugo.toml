@@ -1,0 +1,18 @@
+baseURL = 'https://example.org/'
+locale = 'vi-vn' # Bạn có thể đổi locale thành vi-vn cho chuẩn
+theme = "hugo-theme-relearn"
+title = "Báo cáo AWS Workshop"
+
+
+defaultContentLanguage = "vi"
+
+[languages]
+  # 2. Đưa Tiếng Việt lên ưu tiên số 1
+  [languages.vi]
+    languageName = "Tiếng Việt"
+    weight = 1
+  
+  # 3. English là ngôn ngữ phụ
+  [languages.en]
+    languageName = "English"
+    weight = 2

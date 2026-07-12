@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.2 Thiết kế Hạ tầng Mạng với Amazon VPC :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.2-vpc/index.html</link>
+    <description>Bài Lab 2: Khởi tạo và Định tuyến Hệ thống Mạng Amazon VPC&#xD;1. Mục tiêu bài thực hành&#xD;Khởi tạo một mạng ảo độc lập Amazon VPC an toàn trên Cloud. Phân chia dải mạng thành Public Subnet (vùng công cộng) và Private Subnet (vùng kín bảo mật). Cấu hình Internet Gateway (IGW) và Route Table để cấp quyền truy cập Internet hợp lý. 2. Các bước triển khai chi tiết&#xD;Bước 2.1: Tạo Mạng ảo VPC&#xD;Trên thanh tìm kiếm AWS Console, chọn dịch vụ VPC. Nhấn Create VPC -&gt; Chọn mục VPC only. Đặt tên: Thien-VPC. Điền dải địa chỉ IP (IPv4 CIDR block): 10.0.0.0/16. Nhấn Create. Bước 2.2: Phân chia các dải mạng con (Subnets)&#xD;Tiến hành tạo 2 vùng mạng con trong VPC vừa tạo:</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.2-vpc/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

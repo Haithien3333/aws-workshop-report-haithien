@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html id="R-html" lang="vi-vn" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Mô phỏng On-premises DNS  :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.">
+    <meta property="og:url" content="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="Mô phỏng On-premises DNS  :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.">
+    <meta property="og:locale" content="vi_vn">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Mô phỏng On-premises DNS  :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.">
+    <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
+    <meta itemprop="wordCount" content="784">
+    <title>Mô phỏng On-premises DNS  :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" rel="alternate" hreflang="en">
+    <link href="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.xml" rel="alternate" type="application/rss+xml" title="Mô phỏng On-premises DNS  :: Báo cáo AWS Workshop">
+    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
+    <script src="/js/search-lunr.js?1783864412" defer></script>
+    <script src="/js/search.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.vi.js?1783864412";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['vi'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
+    <link href="/css/theme.css?1783864412" rel="stylesheet">
+    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/5-workshop\/5.4-s3-onprem\/5.4.4-dns-simulation\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Sao chép văn bản vào bảng tạm`;
+      window.T_Copied_to_clipboard = `Văn bản đã sao chép vào bảng tạm!`;
+      window.T_Link_copied_to_clipboard = `Liên kết đã sao chép vào bảng tạm!`;
+      window.T_Reset_view = `Đặt lại dạng xem`;
+      window.T_View_reset = `Xem đặt lại!`;
+      window.T_No_results_found = `Không tìm thấy kết quả nào cho "{0}"`;
+      window.T_N_results_found = `{1} kết quả được tìm thấy cho "{0}"`;
+      window.T_Browser_unsupported_feature = `Trình duyệt này không hỗ trợ tính năng này`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Mục lục (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper"> 
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/index.html"><span itemprop="name">Báo cáo AWS Workshop</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/5-workshop/5.4-s3-onprem/index.html"><span itemprop="name">Truy cập S3 từ môi trường truyền thống</span></a><meta itemprop="position" content="3">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Mô phỏng On-premises DNS </span><meta itemprop="position" content="4"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html" title="Kiểm tra Interface Endpoint (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/5-workshop/5.5-module3-security/index.html" title="Module 3: Bảo mật & Phân quyền (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Nội dung khác"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 5-workshop" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="mô-phỏng-on-premises-dns">Mô phỏng On-premises DNS </h1>
+
+<p>AWS PrivateLink endpoint có một địa chỉ IP cố định trong từng AZ nơi chúng được triển khai, trong suốt thời gian tồn tại của endpoint (cho đến khi endpoint bị xóa). Các địa chỉ IP này được gắn vào Elastic network interface (ENI). AWS khuyến nghị sử dụng DNS để resolve địa chỉ IP cho endpoint để các ứng dụng downstream sử dụng địa chỉ IP mới nhất khi ENIs được thêm vào AZ mới hoặc bị xóa theo thời gian.</p>
+<p>Trong phần này, bạn sẽ tạo một quy tắc chuyển tiếp (forwarding rule) để gửi các yêu cầu resolve DNS từ môi trường truyền thống (mô phỏng) đến Private Hosted Zone trên Route 53. Phần này tận dụng cơ sở hạ tầng do CloudFormation triển khai trong phần Chuẩn bị môi trường.</p>
+<h4 id="tạo-dns-alias-records-cho-interface-endpoint">Tạo DNS Alias Records cho Interface endpoint<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Click link để đi đến <a href="https://us-east-1.console.aws.amazon.com/route53/v2/hostedzones?region=us-east-1" rel="external">Route 53 management console</a> (Hosted Zones section).  Mẫu CloudFormation mà bạn triển khai trong phần Chuẩn bị môi trường đã tạo Private Hosted Zone này. Nhấp vào tên của Private Hosted Zone, s3.us-east-1.amazonaws.com:</li>
+</ol>
+<p><a href="#R-image-378dcc0e9159827edb1c46e97c8c3402" class="lightbox-link"><img alt="hosted zone" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/hosted-zone.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-378dcc0e9159827edb1c46e97c8c3402"><img alt="hosted zone" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/hosted-zone.png"></a></p>
+<ol start="2">
+<li>Tạo 1 record mới trong Private Hosted Zone:</li>
+</ol>
+<p><a href="#R-image-d290d10fd67483a1d08ec9e9dbad120a" class="lightbox-link"><img alt="Create record" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-record1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d290d10fd67483a1d08ec9e9dbad120a"><img alt="Create record" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-record1.png"></a></p>
+<ul>
+<li>Giữ nguyên Record name và record type</li>
+<li>Alias Button: click để enable</li>
+<li>Route traffic to: Alias to VPC Endpoint</li>
+<li>Region: US East (N. Virginia) [us-east-1]</li>
+<li>Chọn endpoint: Paste tên (Regional VPC Endpoint DNS) bạn đã lưu lại ở phần 4.3</li>
+</ul>
+<p><a href="#R-image-a7a66479e10f42f9cf5d637524bed9cd" class="lightbox-link"><img alt="record1" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/record1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a7a66479e10f42f9cf5d637524bed9cd"><img alt="record1" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/record1.png"></a></p>
+<ol start="3">
+<li>Click Add another record, và add 1 cái record thứ 2 sử dụng những thông số sau:</li>
+</ol>
+<ul>
+<li>Record name: *.</li>
+<li>Record type: giữ giá trị default (type A)</li>
+<li>Alias Button: Click để enable</li>
+<li>Route traffic to: Alias to VPC Endpoint</li>
+<li>Region: US East (N. Virginia) [us-east-1]</li>
+<li>Chọn endpoint: Paste tên (Regional VPC Endpoint DNS) bạn đã lưu lại ở phần 4.3</li>
+<li>Click <strong>Create records</strong></li>
+</ul>
+<p><a href="#R-image-a671e7bfc9e912d124ec73f23eb0d6a0" class="lightbox-link"><img alt="record 2" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/record2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a671e7bfc9e912d124ec73f23eb0d6a0"><img alt="record 2" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/record2.png"></a></p>
+<p>Record mới xuất hiện trên giao diện Route 53.</p>
+<p><a href="#R-image-2af4e9fd8f2da7caf2544e77fb2bf780" class="lightbox-link"><img alt="result" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/result.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2af4e9fd8f2da7caf2544e77fb2bf780"><img alt="result" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/result.png"></a></p>
+<h4 id="tạo-một-resolver-forwarding-rule">Tạo một Resolver Forwarding Rule<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p><strong>Route 53 Resolver Forwarding Rules</strong> cho phép bạn chuyển tiếp các DNS queries từ VPC của bạn đến các nguồn khác để resolve name. Bên ngoài môi trường workshop, bạn có thể sử dụng tính năng này để chuyển tiếp các DNS queries từ VPC của bạn đến các máy chủ DNS chạy trên on-premises. Trong phần này, bạn sẽ mô phỏng một on-premises conditional forwarder bằng cách tạo một forwarding rule để chuyển tiếp các DNS queries for Amazon S3 đến một Private Hosted Zone chạy trong &ldquo;VPC Cloud&rdquo; để resolve PrivateLink interface endpoint regional DNS name.</p>
+<ol>
+<li>
+<p>Từ giao diện  <strong>Route 53</strong>, chọn <strong>Inbound endpoints</strong> trên thanh bên trái</p>
+</li>
+<li>
+<p>Trong giao diện <strong>Inbound endpoint</strong>, Chọn ID của Inbound endpoint.</p>
+</li>
+</ol>
+<p><a href="#R-image-ca795259d7838582cbe680627340f97b" class="lightbox-link"><img alt="Inbound endpoint" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ca795259d7838582cbe680627340f97b"><img alt="Inbound endpoint" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-1.png"></a></p>
+<ol start="3">
+<li>Sao chép 2 địa chỉ IP trong danh sách vào trình chỉnh sửa.</li>
+</ol>
+<p><a href="#R-image-ef5bbda154def74c2576219e17adfd2d" class="lightbox-link"><img alt="Ip addresses" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ef5bbda154def74c2576219e17adfd2d"><img alt="Ip addresses" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-2.png"></a></p>
+<ol start="4">
+<li>Từ giao diện Route 53, chọn  <strong>Resolver</strong> &gt; <strong>Rules</strong> và chọn <strong>Create rule</strong></li>
+</ol>
+<p><a href="#R-image-f993b044e51e39469711de09acb3ebc4" class="lightbox-link"><img alt="Ip addresses" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f993b044e51e39469711de09acb3ebc4"><img alt="Ip addresses" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-3.png"></a></p>
+<ol start="5">
+<li>Trong giao diện <strong>Create rule</strong></li>
+</ol>
+<ul>
+<li>Name: myS3Rule</li>
+<li>Rule type: Forward</li>
+<li>Domain name: s3.us-east-1.amazonaws.com</li>
+</ul>
+<p><a href="#R-image-7a3eeea21f62bf0c4daae2828efeff74" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-4.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7a3eeea21f62bf0c4daae2828efeff74"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-4.png"></a></p>
+<ul>
+<li>VPC: VPC On-prem</li>
+<li>Outbound endpoint: VPCOnpremOutboundEndpoint</li>
+</ul>
+<p><a href="#R-image-32404910085baeb2196b8121af606cb0" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-5.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32404910085baeb2196b8121af606cb0"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-5.png"></a></p>
+<ul>
+<li>Target IP Addresses: điền cả hai IP bạn đã lưu trữ trên trình soạn thảo (inbound endpoint addresses) và sau đó chọn <strong>Submit</strong></li>
+</ul>
+<p><a href="#R-image-036855ef068a8b9d555378534b438d48" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-6.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-036855ef068a8b9d555378534b438d48"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-6.png"></a></p>
+<p>Bạn đã tạo thành công resolver forwarding rule.</p>
+<p><a href="#R-image-a849c25545bf3a5b402ad7ba7b8dc2a0" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-7.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a849c25545bf3a5b402ad7ba7b8dc2a0"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53-7.png"></a></p>
+<h4 id="kiểm-tra-on-premises-dns-mô-phỏng">Kiểm tra on-premises DNS mô phỏng.<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ol>
+<li>Kết nối đến <strong>Test-Interface-Endpoint EC2 instance</strong> với <strong>Session Manager</strong></li>
+</ol>
+<p><a href="#R-image-1b93bf4231ec97e55973da4e78b8c1fb" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/test1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-1b93bf4231ec97e55973da4e78b8c1fb"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/test1.png"></a></p>
+<ol start="2">
+<li>Kiểm tra DNS resolution. Lệnh dig sẽ trả về địa chỉ IP được gán cho VPC endpoint interface đang chạy trên VPC (địa chỉ IP của bạn sẽ khác):</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>dig +short s3.us-east-1.amazonaws.com </code></pre></div>
+
+<details open class="box cstyle notices note">
+  <summary class="box-label" tabindex="-1">
+    <i class="fa-fw fas fa-exclamation-circle"></i> 
+    Ghi chú
+  </summary>
+  <div class="box-content">
+<p>Các địa chỉ IP được trả về là các địa chỉ IP VPC enpoint, KHÔNG phải là các địa chỉ IP Resolver mà bạn đã dán từ trình chỉnh sửa văn bản của mình. Các địa chỉ IP của  Resolver endpoint  và  VPC endpoin trông giống nhau vì chúng đều từ khối CIDR VPC Cloud.</p>
+  </div>
+</details>
+<p><a href="#R-image-aa3639bae57dcb351400ac2aeef11a0a" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/dig.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-aa3639bae57dcb351400ac2aeef11a0a"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/dig.png"></a></p>
+<ol start="3">
+<li>Truy cập vào menu VPC (phần Endpoints), chọn S3 interface endpoint. Nhấp vào tab Subnets và xác nhận rằng các địa chỉ IP được trả về bởi lệnh Dig khớp với VPC endpoint:</li>
+</ol>
+<p><a href="#R-image-42af4130ca0d6546c3917f85b91ade2f" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/subnet.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-42af4130ca0d6546c3917f85b91ade2f"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/subnet.png"></a></p>
+<ol start="4">
+<li>Hãy quay lại shell của bạn và sử dụng AWS CLI để kiểm tra danh sách các bucket S3 của bạn:</li>
+</ol>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls --endpoint-url https://s3.us-east-1.amazonaws.com</code></pre></div>
+<p><a href="#R-image-894cffc097a1451cb9064cd54ecf21a0" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/endpoint.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-894cffc097a1451cb9064cd54ecf21a0"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/endpoint.png"></a></p>
+<ol start="5">
+<li>Kết thúc phiên làm việc của Session Manager của bạn:</li>
+</ol>
+<p><a href="#R-image-0a60ee172ca897f5155e72f9a421bbf5" class="lightbox-link"><img alt="create rule" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/terminal.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a60ee172ca897f5155e72f9a421bbf5"><img alt="create rule" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/terminal.png"></a></p>
+<p>Trong phần này, bạn đã tạo một  <strong>Interface Endpoint</strong>  cho Amazon S3. Điểm cuối này có thể được truy cập từ on-premises thông qua Site-to-Site VPN hoặc AWS Direct Connect. Các điểm cuối Route 53 Resolver outbound giả lập chuyển tiếp các yêu cầu DNS từ on-premises đến một Private Hosted Zone đang chạy trên đám mây. Các điểm cuối Route 53 inbound nhận yêu cầu giải quyết và trả về một phản hồi chứa địa chỉ IP của  <strong>Interface Endpoint</strong>  VPC. Sử dụng DNS để giải quyết các địa chỉ IP của điểm cuối cung cấp tính sẵn sàng cao trong trường hợp một Availability Zone gặp sự cố.</p>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> 1 thg 1, 2024
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Tìm kiếm (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Tìm kiếm</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Tìm kiếm...">
+            <button class="search-clear" type="button" data-search-clear="" title="Xóa tìm kiếm"><i class="fas fa-fw fa-times" title="Xóa tìm kiếm"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/index.html"><a class="padding" href="/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/1-worklog/index.html"><a class="padding default-animation" href="/1-worklog/index.html">1. Nhật ký thực tập (Worklog)</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/2-proposal/index.html"><a class="padding" href="/2-proposal/index.html"> <b> 2. </b> Bản đề xuất</a></li>
+            <li class="" data-nav-id="/3-blogsposted/index.html"><a class="padding default-animation" href="/3-blogsposted/index.html"> <b> 3. </b> Các bài blogs đã đăng</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/4-eventparticipated/index.html"><a class="padding default-animation" href="/4-eventparticipated/index.html">4. Sự kiện đã tham gia (Events)</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/5-workshop/index.html"><a class="padding default-animation" href="/5-workshop/index.html"> <b> 5. </b> Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu">
+            <li class="" data-nav-id="/5-workshop/5.1-overview/index.html"><a class="padding" href="/5-workshop/5.1-overview/index.html"> <b> 5.1. </b> Tổng quan Workshop</a></li>
+            <li class="" data-nav-id="/5-workshop/5.1-workshop-overview/index.html"><a class="padding" href="/5-workshop/5.1-workshop-overview/index.html"> <b> 5.1. </b> Giới thiệu</a></li>
+            <li class="" data-nav-id="/5-workshop/5.2-prerequisites/index.html"><a class="padding" href="/5-workshop/5.2-prerequisites/index.html"> <b> 5.2. </b> Chuẩn bị &amp; Khởi tạo</a></li>
+            <li class="" data-nav-id="/5-workshop/5.2-prerequiste/index.html"><a class="padding" href="/5-workshop/5.2-prerequiste/index.html"> <b> 5.2. </b> Các bước chuẩn bị</a></li>
+            <li class="" data-nav-id="/5-workshop/5.3-module1-storage/index.html"><a class="padding" href="/5-workshop/5.3-module1-storage/index.html"> <b> 5.3. </b> Module 1: Lưu trữ &amp; DB</a></li>
+            <li class="alwaysopen " data-nav-id="/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Truy cập S3 từ VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/5-workshop/5.4-module2-compute/index.html"><a class="padding" href="/5-workshop/5.4-module2-compute/index.html"> <b> 5.4. </b> Module 2: Tính toán &amp; API</a></li>
+            <li class="parent alwaysopen " data-nav-id="/5-workshop/5.4-s3-onprem/index.html"><a class="padding default-animation" href="/5-workshop/5.4-s3-onprem/index.html"> <b> 5.4. </b> Truy cập S3 từ môi trường truyền thống</a><ul id="R-subsections-c81e91f8aeb754aea188a2aafe827ae0" class="collapsible-menu">
+            <li class="" data-nav-id="/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html"><a class="padding" href="/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html"> <b> 5.4.1 </b> Chuẩn bị tài nguyên</a></li>
+            <li class="" data-nav-id="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html"><a class="padding" href="/5-workshop/5.4-s3-onprem/5.4.2-create-interface-enpoint/index.html"> <b> 5.4.2 </b> Tạo một S3 Interface endpoint</a></li>
+            <li class="" data-nav-id="/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html"><a class="padding" href="/5-workshop/5.4-s3-onprem/5.4.3-test-endpoint/index.html"> <b> 5.4.3 </b> Kiểm tra Interface Endpoint</a></li>
+            <li class="active " data-nav-id="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html"><a class="padding" href="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html"> <b> 5.4.4 </b> Mô phỏng On-premises DNS </a></li></ul></li>
+            <li class="" data-nav-id="/5-workshop/5.5-module3-security/index.html"><a class="padding" href="/5-workshop/5.5-module3-security/index.html"> <b> 5.5. </b> Module 3: Bảo mật &amp; Phân quyền</a></li>
+            <li class="" data-nav-id="/5-workshop/5.5-policy/index.html"><a class="padding" href="/5-workshop/5.5-policy/index.html"> <b> 5.5 </b> VPC Endpoint Policies</a></li>
+            <li class="" data-nav-id="/5-workshop/5.6-module4-serverless/index.html"><a class="padding" href="/5-workshop/5.6-module4-serverless/index.html"> <b> 5.6. </b> Module 4: Serverless Backend</a></li>
+            <li class="" data-nav-id="/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Dọn dẹp tài nguyên</a></li>
+            <li class="" data-nav-id="/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Triển khai &amp; Kiểm thử</a></li>
+            <li class="" data-nav-id="/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Dọn dẹp &amp; Nâng cao</a></li>
+            <li class="" data-nav-id="/5-workshop/5.9-references/index.html"><a class="padding" href="/5-workshop/5.9-references/index.html">5.9 </a></li></ul></li>
+            <li class="" data-nav-id="/6-selfassessment/index.html"><a class="padding" href="/6-selfassessment/index.html">6. Tự đánh giá (Self-Assessment)</a></li>
+            <li class="" data-nav-id="/7-sharing-and-feedback/index.html"><a class="padding" href="/7-sharing-and-feedback/index.html">7. Chia sẻ và Đóng góp ý kiến</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Ngôn ngữ</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" lang="vi-vn" selected data-selected>Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.4-s3-onprem/5.4.4-dns-simulation/index.html" lang="en">English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
+    <script src="/js/theme.js?1783864412" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

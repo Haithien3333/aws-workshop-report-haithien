@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>6. Self-Assessment :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/6-selfassessment/index.html</link>
+    <description>INTERNSHIP SELF-ASSESSMENT&#xD;Throughout my internship at Amazon Web Services Vietnam[cite: 1], I have actively engaged in learning and practical training, and I have assessed my performance based on the program’s standardized criteria:&#xA;📊 Detailed Assessment Table&#xD;No. Criteria Good Fair Average 1 Professional Knowledge &amp; Skills 🔲 🔲 ✅ 2 Learning Ability 🔲 🔲 ✅ 3 Proactivity 🔲 🔲 ✅ 4 Responsibility ✅ 🔲 🔲 5 Discipline ✅ 🔲 🔲 6 Growth Mindset ✅ 🔲 🔲 7 Communication Skills 🔲 🔲 ✅ 8 Teamwork 🔲 ✅ 🔲 9 Professionalism ✅ 🔲 🔲 10 Problem-Solving Skills 🔲 ✅ 🔲 11 Contribution to Team/Project 🔲 ✅ 🔲 12 Overall Evaluation 🔲 ✅ 🔲</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/6-selfassessment/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

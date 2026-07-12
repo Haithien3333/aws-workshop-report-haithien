@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Các bài blogs đã đăng :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/3-blogsposted/index.html</link>
+    <description>Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên AWS Study Group.&#xA;Blog 1 - ĐƠN GIẢN HÓA TÍCH HỢP AWS APPSYNC EVENTS VỚI POWERTOOLS FOR AWS LAMBDA&#xD;Blog này giới thiệu Powertools for AWS Lambda vừa ra mắt tính năng mới AppSyncEventsResolver (hỗ trợ Python, TypeScript và .NET), giúp đơn giản hóa việc tích hợp AWS AppSync Events cho các ứng dụng thời gian thực như ứng dụng chat, bảng điều khiển hoặc hệ thống IoT.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Tue, 30 Jun 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/3-blogsposted/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Đơn giản hóa tích hợp AWS AppSync Events với Powertools</title>
+      <link>http://localhost:1313/3-blogsposted/3.1-blog1/index.html</link>
+      <pubDate>Tue, 09 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3-blogsposted/3.1-blog1/index.html</guid>
+      <description>ĐƠN GIẢN HÓA TÍCH HỢP AWS APPSYNC EVENTS VỚI POWERTOOLS FOR AWS LAMBDA&#xD;Hệ sinh thái kiến trúc Serverless luôn đòi hỏi tối ưu hóa mã nguồn để đạt hiệu năng cao nhất. Việc Powertools for AWS Lambda vừa ra mắt tính năng mới AppSyncEventsResolver (hỗ trợ Python, TypeScript và .NET) là một bước tiến lớn, giúp đơn giản hóa quy trình tích hợp AWS AppSync Events cho các ứng dụng xử lý dữ liệu thời gian thực (real-time).</description>
+    </item>
+    <item>
+      <title>Đột phá stale knowledge của AI Agent với Web Search trên Amazon Bedrock AgentCore</title>
+      <link>http://localhost:1313/3-blogsposted/3.2-blog2/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3-blogsposted/3.2-blog2/index.html</guid>
+      <description>ĐỘT PHÁ STALE KNOWLEDGE CỦA AI AGENT VỚI WEB SEARCH TRÊN AMAZON BEDROCK AGENTCORE&#xD;Trong làn sóng phát triển trí tuệ nhân tạo hiện nay, các AI Agent ngày càng được kỳ vọng sẽ giải quyết các tác vụ phức tạp một cách tự động và thông minh. Tuy nhiên, một trong những giới hạn lớn nhất của các mô hình ngôn ngữ lớn (LLM) và AI Agent hiện tại là hiện tượng “Stale Knowledge” (Kiến thức bị đóng băng). Do kiến thức của mô hình chỉ giới hạn tại thời điểm kết thúc quá trình huấn luyện (training cutoff), AI Agent hoàn toàn “mù tịt” trước các thông tin mang tính thời gian thực (real-time) như giá cổ phiếu hôm nay, kết quả của một trận bóng đá vừa diễn ra, hay các tin tức công nghệ mới cập nhật.</description>
+    </item>
+    <item>
+      <title>Hướng dẫn tối ưu hóa Quản lý Đa ứng dụng với Unified Webhooks trên AWS Amplify Hosting</title>
+      <link>http://localhost:1313/3-blogsposted/3.3-blog3/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3-blogsposted/3.3-blog3/index.html</guid>
+      <description>HƯỚNG DẪN TỐI ƯU HÓA QUẢN LÝ ĐA ỨNG DỤNG (MULTI-APP) VỚI UNIFIED WEBHOOKS TRÊN AWS AMPLIFY HOSTING&#xD;Trong phát triển phần mềm hiện đại, kiến trúc Monorepo (quản lý nhiều ứng dụng, services trong cùng một repository) ngày càng được các team phát triển frontend ưa chuộng nhờ khả năng chia sẻ code dễ dàng và đơn giản hóa quy trình quản lý dự án. Tuy nhiên, khi triển khai deploy các ứng dụng này lên AWS Amplify Hosting, các kỹ sư thường phải đối mặt với một “nỗi đau” (pain point) rất lớn: Giới hạn số lượng Webhook của Git Provider.</description>
+    </item>
+  </channel>
+</rss>

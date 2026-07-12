@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.4 Thắt chặt Bảo mật với S3 Bucket Policy :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.4-bucket-policy/index.html</link>
+    <description>Bài Lab 4: Cấu hình Chính sách S3 Bucket Policy Kiểm soát Truy cập Nâng cao&#xD;1. Mục tiêu bài thực hành&#xD;Sử dụng S3 Bucket Policy viết bằng định dạng JSON để phân quyền chi tiết. Thiết lập cơ chế bảo mật nghiêm ngặt: Chỉ cho phép các yêu cầu (requests) xuất phát từ đúng mã VPC Endpoint nội bộ được quyền thao tác dữ liệu. Toàn bộ các truy cập từ Internet công cộng hoặc tài khoản ngoài sẽ bị chặn đứng (Deny). 2. Các bước triển khai chi tiết&#xD;Bước 4.1: Lấy thông tin ID của VPC Endpoint&#xD;Vào dịch vụ VPC -&gt; Chọn mục Endpoints. Tìm đến cái Thien-S3-Endpoint đã tạo ở bài Lab 3. Sao chép lại mã VPC Endpoint ID (Mã này thường có dạng là vpce-xxxxxxxxxxxxxxxxx). Bước 4.2: Cấu hình Bucket Policy trên S3&#xD;Chuyển sang dịch vụ S3 -&gt; Click chọn vào tên Bucket của bạn (thien-aws-workshop-bucket-2026). Chọn tab Permissions (Quyền truy cập) -&gt; Kéo xuống mục Bucket policy và nhấn Edit. Copy đoạn mã JSON dưới đây và dán vào trình biên tập (Nhớ thay thế các thông tin trong ngoặc nhọn &lt;&gt; bằng thông tin thực tế của bạn): { &#34;Version&#34;: &#34;2012-10-17&#34;, &#34;Statement&#34;: [ { &#34;Sid&#34;: &#34;Allow-Access-From-Specific-VPCE-Only&#34;, &#34;Effect&#34;: &#34;Deny&#34;, &#34;Principal&#34;: &#34;*&#34;, &#34;Action&#34;: &#34;s3:*&#34;, &#34;Resource&#34;: [ &#34;arn:aws:s3:::&lt;TÊN-BUCKET-CỦA-BẠN&gt;&#34;, &#34;arn:aws:s3:::&lt;TÊN-BUCKET-CỦA-BẠN&gt;/*&#34; ], &#34;Condition&#34;: { &#34;StringNotEquals&#34;: { &#34;aws:sourceVpce&#34;: &#34;&lt;ID-VPC-ENDPOINT-CỦA-BẠN&gt;&#34; } } } ] }</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.4-bucket-policy/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.1 Quản lý Định danh với AWS IAM :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.1-iam/index.html</link>
+    <description>Bài Lab 1: Thiết lập cấu hình bảo mật với AWS IAM&#xD;1. Mục tiêu bài thực hành&#xD;Tạo nhóm người dùng (IAM Groups) và phân quyền theo vai trò. Tạo người dùng cụ thể (IAM Users) và áp dụng nguyên tắc quyền hạn tối thiểu (Least Privilege). Thiết lập chính sách bảo mật mật khẩu mật độ cao. 2. Các bước triển khai chi tiết&#xD;Bước 2.1: Khởi tạo IAM Group và gắn Policy&#xD;Truy cập vào AWS Management Console, tìm kiếm dịch vụ IAM. Chọn Groups -&gt; Nhấn Create New Group. Đặt tên Group là Development-Group. Gắn chính sách AmazonEC2FullAccess và AmazonS3ReadOnlyAccess. Bước 2.2: Tạo IAM User và thêm vào Group&#xD;Chọn mục Users -&gt; Nhấn Add User. Đặt tên User là thien-developer. Chọn kiểu truy cập (Console Access), thiết lập mật khẩu tùy chọn và tích chọn bắt buộc đổi mật khẩu ở lần đăng nhập đầu tiên. Thêm user này vào nhóm Development-Group vừa tạo ở bước trên. 3. Kết quả đạt được &amp; Ảnh minh chứng&#xD;Hệ thống đã khởi tạo thành công tài khoản người dùng với các quyền hạn được cô lập an toàn.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.1-iam/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>AWS Workshop Report :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/index.html</link>
+    <description>Internship Information&#xD;Full Name: Nguyễn Hải Thiên&#xA;Student ID: 2280615299&#xA;Email Address: haithien016526@gmail.com&#xA;University: Ho Chi Minh City University of Technology (HUTECH)&#xA;Major: Information Technology&#xA;Class: 22DTHD7&#xA;Internship Company: Amazon Web Services Vietnam&#xA;Internship Position: Workforce Bootcamp - First Cloud AI Journey&#xA;Internship Duration: April 17, 2026 – July 30, 2026&#xA;Personal Portrait</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Internship Worklog</title>
+      <link>http://localhost:1313/en/1-worklog/index.html</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/1-worklog/index.html</guid>
+      <description>WEEKLY INTERNSHIP WORKLOG&#xD;Program: Workforce Bootcamp - First Cloud AI Journey&#xA;A detailed record of tasks, learning modules, training sessions, and achievements throughout the 12-week internship at AWS Vietnam.&#xA;12-Week Roadmap Summary:&#xD;Week 1 - Week 4: Initialization, familiarization with the AWS environment, and research into foundational services (EC2, S3, Git, VPC). Week 5 - Week 8: Advanced infrastructure deployment (Load Balancer, Auto Scaling, RDS, Docker) and design of the Website project architecture. Week 9 - Week 12: System authorization (IAM Roles), optimization (CDN, CI/CD), finalization of project features, and completion of the internship report. Select a specific week from the left menu or click on the list below to view details.</description>
+    </item>
+    <item>
+      <title>Proposal</title>
+      <link>http://localhost:1313/en/2-proposal/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/2-proposal/index.html</guid>
+      <description>SYSTEM ARCHITECTURE PROPOSAL&#xD;PROJECT: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE&#xD;1. INTRODUCTION &amp; PROBLEM STATEMENT&#xD;1.1. Cloud-native and Decoupled Architecture Trends&#xD;Entering 2026, the global e-commerce industry is witnessing a massive transition from traditional monolithic architectures to Cloud-native and decoupled/event-driven architectures. Fierce competition demands that online retail platforms adapt rapidly to market shifts, handle massive traffic spikes during peak sales seasons without downtime, and ensure high operational agility.</description>
+    </item>
+    <item>
+      <title>Blogs Posted</title>
+      <link>http://localhost:1313/en/3-blogsposted/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/3-blogsposted/index.html</guid>
+      <description>This section lists and introduces the blogs you have posted in the AWS Study Group.&#xA;Blog 1 - Simplify AWS AppSync Events integration with Powertools for AWS Lambda&#xD;This blog introduces a new AppSyncEventsResolver feature in Powertools for AWS Lambda (supported in Python, TypeScript, and .NET), which simplifies integration with AWS AppSync Events for real-time applications such as chat apps, dashboards, or IoT systems.</description>
+    </item>
+    <item>
+      <title>4. Participated Events</title>
+      <link>http://localhost:1313/en/4-eventparticipated/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/4-eventparticipated/index.html</guid>
+      <description>PARTICIPATED EVENTS&#xD;Program: Workforce Bootcamp - First Cloud AI Journey&#xA;During my internship at AWS Vietnam, alongside focusing on individual research and technical practice, I had the opportunity to participate in major events, technology workshops, and specialized training programs organized by AWS.&#xA;Key Events:&#xD;Event 1 Event Name: FCAJ Community Day Date: May 09, 2026 Location: 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, Ben Nghe Ward, District 1, Ho Chi Minh City. Role: Attendee</description>
+    </item>
+    <item>
+      <title>Workshop</title>
+      <link>http://localhost:1313/en/5-workshop/index.html</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/5-workshop/index.html</guid>
+      <description>AWS CDK &amp; Serverless Architecture: Building a Serverless Event-Driven Application&#xD;Welcome to the AWS hands-on lab! In this workshop, you will build and deploy a modern, scalable, and secure Serverless Event-Driven Architecture using AWS Cloud Development Kit (CDK) in TypeScript.&#xA;Workshop Contents&#xD;Workshop Overview Prerequisites &amp; Setup Module 1: Storage &amp; Database Module 2: Compute &amp; API Gateway Module 3: Security &amp; Permissions Module 4: Serverless Backend &amp; AWS SDK v3 Deployment &amp; Testing Clean-up Advanced</description>
+    </item>
+    <item>
+      <title>6. Self-Assessment</title>
+      <link>http://localhost:1313/en/6-selfassessment/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/6-selfassessment/index.html</guid>
+      <description>INTERNSHIP SELF-ASSESSMENT&#xD;Throughout my internship at Amazon Web Services Vietnam[cite: 1], I have actively engaged in learning and practical training, and I have assessed my performance based on the program’s standardized criteria:&#xA;📊 Detailed Assessment Table&#xD;No. Criteria Good Fair Average 1 Professional Knowledge &amp; Skills 🔲 🔲 ✅ 2 Learning Ability 🔲 🔲 ✅ 3 Proactivity 🔲 🔲 ✅ 4 Responsibility ✅ 🔲 🔲 5 Discipline ✅ 🔲 🔲 6 Growth Mindset ✅ 🔲 🔲 7 Communication Skills 🔲 🔲 ✅ 8 Teamwork 🔲 ✅ 🔲 9 Professionalism ✅ 🔲 🔲 10 Problem-Solving Skills 🔲 ✅ 🔲 11 Contribution to Team/Project 🔲 ✅ 🔲 12 Overall Evaluation 🔲 ✅ 🔲</description>
+    </item>
+    <item>
+      <title>7. Sharing and Feedback</title>
+      <link>http://localhost:1313/en/7-sharing-and-feedback/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/en/7-sharing-and-feedback/index.html</guid>
+      <description>SHARING AND FEEDBACK&#xD;This section records feedback from my mentors at AWS and my personal suggestions to help improve the Bootcamp program for future participants.&#xA;1. Mentor’s Feedback&#xD;Throughout the process of completing the Lab series and weekly reports, I have received valuable assessments and guidance from my technical mentors:</description>
+    </item>
+  </channel>
+</rss>

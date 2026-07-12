@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Chuẩn bị tài nguyên :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html</link>
+    <description>Để chuẩn bị cho phần này của workshop, bạn sẽ cần phải:&#xA;Triển khai CloudFormation stack Sửa đổi bảng định tuyến VPC. Các thành phần này hoạt động cùng nhau để mô phỏng DNS forwarding và name resolution.&#xA;Triển khai CloudFormation stack&#xD;Mẫu CloudFormation sẽ tạo các dịch vụ bổ sung để hỗ trợ mô phỏng môi trường truyền thống:</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

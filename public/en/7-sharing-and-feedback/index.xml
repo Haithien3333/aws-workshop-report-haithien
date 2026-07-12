@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>7. Sharing and Feedback :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/7-sharing-and-feedback/index.html</link>
+    <description>SHARING AND FEEDBACK&#xD;This section records feedback from my mentors at AWS and my personal suggestions to help improve the Bootcamp program for future participants.&#xA;1. Mentor’s Feedback&#xD;Throughout the process of completing the Lab series and weekly reports, I have received valuable assessments and guidance from my technical mentors:</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/7-sharing-and-feedback/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

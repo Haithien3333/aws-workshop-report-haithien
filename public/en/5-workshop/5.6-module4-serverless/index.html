@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html id="R-html" lang="en" dir="ltr" itemscope itemtype="http://schema.org/Article" data-r-output-format="html">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <meta charset="utf-8">
+    <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
+    <meta name="generator" content="Hugo 0.164.0">
+    <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
+    <meta name="description" content="Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)In this module, you will implement the asynchronous data ingestion and event processing logic using AWS SDK v3 in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.
+Part 1: Overview &amp; Prerequisites1. Architectural FlowTo support high-throughput, decoupled, and reliable request processing, the platform implements an event-driven architecture:">
+    <meta name="author" content="">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Module 4: Serverless Backend :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)In this module, you will implement the asynchronous data ingestion and event processing logic using AWS SDK v3 in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.
+Part 1: Overview &amp; Prerequisites1. Architectural FlowTo support high-throughput, decoupled, and reliable request processing, the platform implements an event-driven architecture:">
+    <meta property="og:url" content="http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.html">
+    <meta property="og:site_name" content="Báo cáo AWS Workshop">
+    <meta property="og:title" content="Module 4: Serverless Backend :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)In this module, you will implement the asynchronous data ingestion and event processing logic using AWS SDK v3 in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.
+Part 1: Overview &amp; Prerequisites1. Architectural FlowTo support high-throughput, decoupled, and reliable request processing, the platform implements an event-driven architecture:">
+    <meta property="og:locale" content="en">
+    <meta property="og:type" content="website">
+    <meta itemprop="name" content="Module 4: Serverless Backend :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)In this module, you will implement the asynchronous data ingestion and event processing logic using AWS SDK v3 in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.
+Part 1: Overview &amp; Prerequisites1. Architectural FlowTo support high-throughput, decoupled, and reliable request processing, the platform implements an event-driven architecture:">
+    <meta itemprop="datePublished" content="2026-01-01T00:00:00+00:00">
+    <meta itemprop="dateModified" content="2026-01-01T00:00:00+00:00">
+    <meta itemprop="wordCount" content="1759">
+    <title>Module 4: Serverless Backend :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.6-module4-serverless/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.6-module4-serverless/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.6-module4-serverless/index.html" rel="alternate" hreflang="en">
+    <link href="/en/5-workshop/5.6-module4-serverless/index.xml" rel="alternate" type="application/rss+xml" title="Module 4: Serverless Backend :: Báo cáo AWS Workshop">
+    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
+    <script src="/js/search-lunr.js?1783864412" defer></script>
+    <script src="/js/search.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.index_js_url="/searchindex.en.js?1783864412";
+    </script>
+    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1783864412" defer></script>
+    <script>
+      window.relearn = window.relearn || {};
+      window.relearn.contentLangs=['en'];
+    </script>
+    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
+    <link href="/css/theme.css?1783864412" rel="stylesheet">
+    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <script>
+      window.relearn = window.relearn || {};
+      // configuration
+      window.relearn.min = ``;
+      window.relearn.path='\/en\/5-workshop\/5.6-module4-serverless\/index.html';
+      window.relearn.relBasePath='..\/..\/..';
+      window.relearn.relBaseUri='..\/..\/..';
+      window.relearn.absBaseUri='http:\/\/localhost:1313';
+      window.relearn.disableInlineCopyToClipboard=false;
+      window.relearn.enableBlockCodeWrap=true;
+      // translations
+      window.T_Copy_to_clipboard = `Copy text to clipboard`;
+      window.T_Copied_to_clipboard = `Text copied to clipboard!`;
+      window.T_Link_copied_to_clipboard = `Link copied to clipboard!`;
+      window.T_Reset_view = `Reset view`;
+      window.T_View_reset = `View reset!`;
+      window.T_No_results_found = `No results found for "{0}"`;
+      window.T_N_results_found = `{1} results found for "{0}"`;
+      window.T_Browser_unsupported_feature = `This browser doesn't support this feature`;
+      // variant stuff
+      window.relearn.themevariants = [ 'auto' ];
+      window.relearn.customvariantprefix = "my-custom-";
+      window.relearn.changeVariant = function(variant) {
+        var oldVariant = document.documentElement.dataset.rThemeVariant;
+        window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        document.documentElement.dataset.rThemeVariant = variant;
+        if (oldVariant != variant) {
+          document.dispatchEvent( new CustomEvent('themeVariantLoaded', { detail: { variant, oldVariant } }) );
+          window.relearn.markVariant();
+        }
+      }
+      window.relearn.markVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant");
+        document.querySelectorAll(".R-variantswitcher select").forEach((select) => {select.value = variant;});
+      }
+      window.relearn.initVariant = function() {
+        var variant = window.localStorage.getItem(window.relearn.absBaseUri + "/variant") ?? "";
+        if( !variant ||
+            (!variant.startsWith(window.relearn.customvariantprefix) && !window.relearn.themevariants.includes(variant)) ||
+            (variant.startsWith(window.relearn.customvariantprefix) && !window.localStorage.getItem(window.relearn.absBaseUri + "/variantstylesheet-" + variant)) ){
+          variant = window.relearn.themevariants[0];
+          window.localStorage.setItem(window.relearn.absBaseUri + "/variant", variant);
+        }
+        document.documentElement.dataset.rThemeVariant = variant;
+      }
+      window.relearn.initVariant();
+      window.relearn.markVariant();
+    </script>
+  </head>
+  <body class="mobile-support html" data-origin="/en/5-workshop/5.6-module4-serverless/index.html">
+    <div id="R-body" class="default-animation">
+      <div id="R-body-overlay"></div>
+      <nav id="R-topbar" class="default-animation">
+        <div class="topbar-wrapper default-animation">
+          <div class="topbar-sidebar-divider default-animation"></div>
+          <div class="topbar-area topbar-area-start" data-area="start">
+            <div class="topbar-button topbar-button-sidebar default-animation" data-content-empty="disable" data-width-s="show" data-width-m="hide" data-width-l="hide">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleNav()" type="button" title="Menu (CTRL&#43;ALT&#43;n)"><i class="fa-fw fas fa-bars"></i></button></span>
+            </div>
+            <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#part-1-overview--prerequisites">Part 1: Overview &amp; Prerequisites</a>
+      <ul>
+        <li><a href="#1-architectural-flow">1. Architectural Flow</a></li>
+        <li><a href="#2-npm-dependencies">2. NPM Dependencies</a></li>
+      </ul>
+    </li>
+    <li><a href="#part-2-step-by-step-sdk-implementation">Part 2: Step-by-Step SDK Implementation</a>
+      <ul>
+        <li><a href="#1-ingestion-service-lambda-event-publisher">1. Ingestion Service Lambda (Event Publisher)</a></li>
+        <li><a href="#2-worker-lambda-consumer-sqs-consumer">2. Worker Lambda Consumer (SQS Consumer)</a></li>
+      </ul>
+    </li>
+    <li><a href="#part-3-iam-permissions--sqs-configurations">Part 3: IAM Permissions &amp; SQS Configurations</a>
+      <ul>
+        <li><a href="#1-iam-configurations-principle-of-least-privilege">1. IAM Configurations (Principle of Least Privilege)</a></li>
+        <li><a href="#2-sqs-timeout-and-visibility-settings">2. SQS Timeout and Visibility Settings</a></li>
+      </ul>
+    </li>
+    <li><a href="#part-4-testing--observability">Part 4: Testing &amp; Observability</a>
+      <ul>
+        <li><a href="#1-test-payloads">1. Test Payloads</a></li>
+        <li><a href="#2-observability--tracing">2. Observability &amp; Tracing</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+                </div>
+              </div>
+            </div>
+          </div>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/index.html"><span itemprop="name">AWS Workshop Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Module 4: Serverless Backend</span><meta itemprop="position" content="3"></li>
+          </ol>
+          <div class="topbar-area topbar-area-end" data-area="end">
+            <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.5-policy/index.html" title="VPC Endpoint Policies (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.6-cleanup/index.html" title="Clean up (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+            </div>
+            <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
+<span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
+              <div class="topbar-content">
+                <div class="topbar-content-wrapper">
+                  <div class="topbar-area topbar-area-more" data-area="more">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+      <div id="R-main-overlay"></div>
+      <main id="R-body-inner" class="highlightable 5-workshop" tabindex="-1">
+        <div class="flex-block-wrapper">
+<article class="default">
+  <header class="headline">
+  </header>
+
+<h1 id="module-4-serverless-backend">Module 4: Serverless Backend</h1>
+
+<h1 id="module-4-serverless-backend--application-programming-aws-sdk-v3">Module 4: Serverless Backend &amp; Application Programming (AWS SDK v3)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<p>In this module, you will implement the asynchronous data ingestion and event processing logic using <strong>AWS SDK v3</strong> in TypeScript. This decoupled architecture uses API Gateway, Lambda, DynamoDB, Amazon SQS, and Amazon EventBridge.</p>
+<hr>
+<h2 id="part-1-overview--prerequisites">Part 1: Overview &amp; Prerequisites<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-architectural-flow">1. Architectural Flow<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To support high-throughput, decoupled, and reliable request processing, the platform implements an <strong>event-driven architecture</strong>:</p>
+<ol>
+<li>The <strong>Ingestion Lambda</strong> receives a request from API Gateway.</li>
+<li>It performs a <strong>DynamoDB Conditional Write</strong> to store the initial state as &ldquo;PENDING&rdquo; and registers the client-provided <code>Idempotency-Key</code> to prevent duplicate processing.</li>
+<li>It integrates with an external third-party service (simulated).</li>
+<li>Upon success, it publishes a <code>data.received</code> event to an <strong>Amazon EventBridge Custom Bus</strong>.</li>
+<li>EventBridge routes this event to an <strong>SQS Processing Queue</strong>.</li>
+<li>The <strong>Worker Lambda (SQS Consumer)</strong> polls the queue, checks for duplicates, updates the DynamoDB record to &ldquo;COMPLETED&rdquo;, and handles failures.</li>
+<li>Any persistently failing messages are sent to the <strong>Dead-Letter Queue (DLQ)</strong>.</li>
+</ol>
+<pre class="mermaid actionbar-wrapper align-center ">graph LR
+    Client --&gt;|1. POST /ingest| APIGW[API Gateway]
+    APIGW --&gt;|2. Invoke| IngestionLambda[Ingestion Lambda]
+    IngestionLambda --&gt;|3. Conditional Write| DDB[(DynamoDB Single-Table)]
+    IngestionLambda --&gt;|4. Publish Event| EB[EventBridge Custom Bus]
+    EB --&gt;|5. Route Event| SQS[SQS Processing Queue]
+    SQS --&gt;|6. Poll Batch| WorkerLambda[Worker Lambda]
+    WorkerLambda --&gt;|7. Update Status| DDB
+    WorkerLambda -.-&gt;|Failed Messages| DLQ[SQS Dead-Letter Queue]</pre>
+<h3 id="2-npm-dependencies">2. NPM Dependencies<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>AWS SDK v3 is modular, meaning you only install the client libraries you actually use. This reduces the Lambda package size and improves cold-start times.</p>
+<p>Run the following command in your Lambda service directory:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npm install @aws-sdk/client-dynamodb @aws-sdk/client-sqs @aws-sdk/client-eventbridge @aws-sdk/lib-dynamodb
+</span></span><span style="display:flex;"><span>npm install --save-dev @types/aws-lambda typescript</span></span></code></pre></div>
+<hr>
+<h2 id="part-2-step-by-step-sdk-implementation">Part 2: Step-by-Step SDK Implementation<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-ingestion-service-lambda-event-publisher">1. Ingestion Service Lambda (Event Publisher)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Create the ingestion function to validate the request, save the initial state with conditional constraints to avoid duplicates, and publish the event.</p>
+<p>Create <code>services/ingestion/index.ts</code>:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">APIGatewayProxyEvent</span>, <span style="color:#a6e22e">APIGatewayProxyResult</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-lambda&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">DynamoDBClient</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@aws-sdk/client-dynamodb&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">DynamoDBDocumentClient</span>, <span style="color:#a6e22e">PutCommand</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@aws-sdk/lib-dynamodb&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">EventBridgeClient</span>, <span style="color:#a6e22e">PutEventsCommand</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@aws-sdk/client-eventbridge&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Initialize SDK clients (Clients are reused across Lambda invocations)
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ddbClient</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DynamoDBClient</span>({});
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">DynamoDBDocumentClient</span>.<span style="color:#66d9ef">from</span>(<span style="color:#a6e22e">ddbClient</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">eventBridgeClient</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">EventBridgeClient</span>({});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">TABLE_NAME</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">TABLE_NAME</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">EVENT_BUS_NAME</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">EVENT_BUS_NAME</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>: <span style="color:#66d9ef">APIGatewayProxyEvent</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">APIGatewayProxyResult</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">&#34;Received event:&#34;</span>, <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">stringify</span>(<span style="color:#a6e22e">event</span>));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">body</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">400</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>({ <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Missing request body&#34;</span> }),
+</span></span><span style="display:flex;"><span>      };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">userId</span>, <span style="color:#a6e22e">dataPayload</span>, <span style="color:#a6e22e">idempotencyKey</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">id</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">userId</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">dataPayload</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">idempotencyKey</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">400</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>({ <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Missing required fields: id, userId, dataPayload, idempotencyKey&#34;</span> }),
+</span></span><span style="display:flex;"><span>      };
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 1. Store initial status with DynamoDB Conditional Write
+</span></span></span><span style="display:flex;"><span>    <span style="color:#75715e">// Use the idempotencyKey to prevent duplicate creations
+</span></span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">pk</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`INGESTION#</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">sk</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#34;METADATA&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Attempting conditional write for PK: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">pk</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">docClient</span>.<span style="color:#a6e22e">send</span>(
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PutCommand</span>({
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">TableName</span>: <span style="color:#66d9ef">TABLE_NAME</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">Item</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">PK</span>: <span style="color:#66d9ef">pk</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">SK</span>: <span style="color:#66d9ef">sk</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">userId</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">dataPayload</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;PENDING&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">idempotencyKey</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">createdAt</span>: <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>(),
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">updatedAt</span>: <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>(),
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>          <span style="color:#75715e">// Ensure we don&#39;t overwrite if PK &amp; SK already exist (guarantees idempotency)
+</span></span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">ConditionExpression</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attribute_not_exists(PK)&#34;</span>,
+</span></span><span style="display:flex;"><span>        })
+</span></span><span style="display:flex;"><span>      );
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">dbError</span>: <span style="color:#66d9ef">any</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">dbError</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;ConditionalCheckFailedException&#34;</span>) {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">`Duplicate submission detected for ID: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">409</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>({ <span style="color:#a6e22e">error</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Request already exists or is being processed&#34;</span> }),
+</span></span><span style="display:flex;"><span>        };
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">dbError</span>;
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 2. Simulate 3rd Party Integration
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Processing simulated integration for payload ID: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isIntegrationSuccessful</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">simulateThirdPartyCall</span>(<span style="color:#a6e22e">id</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isIntegrationSuccessful</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">&#34;External service integration failed&#34;</span>);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// 3. Publish data.received event to EventBridge Custom Bus
+</span></span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Publishing data.received event to custom bus: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">EVENT_BUS_NAME</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">eventPayload</span> <span style="color:#f92672">=</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">userId</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">dataPayload</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;INGESTED&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">idempotencyKey</span>,
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">eventBridgeClient</span>.<span style="color:#a6e22e">send</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PutEventsCommand</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Entries</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>          {
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Source</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;app.ingestion&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">DetailType</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;data.received&#34;</span>,
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">Detail</span>: <span style="color:#66d9ef">JSON.stringify</span>(<span style="color:#a6e22e">eventPayload</span>),
+</span></span><span style="display:flex;"><span>            <span style="color:#a6e22e">EventBusName</span>: <span style="color:#66d9ef">EVENT_BUS_NAME</span>,
+</span></span><span style="display:flex;"><span>          },
+</span></span><span style="display:flex;"><span>        ],
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">201</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#34;Access-Control-Allow-Origin&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;*&#34;</span> },
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Request ingested successfully&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">id</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;PENDING&#34;</span>,
+</span></span><span style="display:flex;"><span>      }),
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">error</span>: <span style="color:#66d9ef">any</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">&#34;Error in ingestion handler:&#34;</span>, <span style="color:#a6e22e">error</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">statusCode</span>: <span style="color:#66d9ef">500</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">body</span>: <span style="color:#66d9ef">JSON.stringify</span>({ <span style="color:#a6e22e">error</span>: <span style="color:#66d9ef">error.message</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;Internal Server Error&#34;</span> }),
+</span></span><span style="display:flex;"><span>    };
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Simulated external API call
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">simulateThirdPartyCall</span>(<span style="color:#a6e22e">id</span>: <span style="color:#66d9ef">string</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">boolean</span>&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Simulate network latency
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">Promise</span>((<span style="color:#a6e22e">resolve</span>) <span style="color:#f92672">=&gt;</span> <span style="color:#a6e22e">setTimeout</span>(<span style="color:#a6e22e">resolve</span>, <span style="color:#ae81ff">500</span>));
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Fail integration if ID contains &#34;fail&#34; for testing
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">id</span>.<span style="color:#a6e22e">includes</span>(<span style="color:#e6db74">&#34;fail&#34;</span>)) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">false</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">true</span>;
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<h3 id="2-worker-lambda-consumer-sqs-consumer">2. Worker Lambda Consumer (SQS Consumer)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>Create the asynchronous processing worker that reads SQS message batches, updates DynamoDB, and handles idempotency check at the consumer level.</p>
+<p>Create <code>services/worker/index.ts</code>:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">SQSEvent</span>, <span style="color:#a6e22e">SQSBatchResponse</span>, <span style="color:#a6e22e">SQSRecord</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-lambda&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">DynamoDBClient</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@aws-sdk/client-dynamodb&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> { <span style="color:#a6e22e">DynamoDBDocumentClient</span>, <span style="color:#a6e22e">UpdateCommand</span>, <span style="color:#a6e22e">PutCommand</span> } <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;@aws-sdk/lib-dynamodb&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ddbClient</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">DynamoDBClient</span>({});
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">docClient</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">DynamoDBDocumentClient</span>.<span style="color:#66d9ef">from</span>(<span style="color:#a6e22e">ddbClient</span>);
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">TABLE_NAME</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">process</span>.<span style="color:#a6e22e">env</span>.<span style="color:#a6e22e">TABLE_NAME</span> <span style="color:#f92672">||</span> <span style="color:#e6db74">&#34;&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">export</span> <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">handler</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">event</span>: <span style="color:#66d9ef">SQSEvent</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">SQSBatchResponse</span>&gt; <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Processing batch of </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">Records</span>.<span style="color:#a6e22e">length</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> records`</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">batchItemFailures</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">itemIdentifier</span>: <span style="color:#66d9ef">string</span> }[] <span style="color:#f92672">=</span> [];
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">for</span> (<span style="color:#66d9ef">const</span> <span style="color:#a6e22e">record</span> <span style="color:#66d9ef">of</span> <span style="color:#a6e22e">event</span>.<span style="color:#a6e22e">Records</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">processMessage</span>(<span style="color:#a6e22e">record</span>);
+</span></span><span style="display:flex;"><span>    } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">err</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">error</span>(<span style="color:#e6db74">`Failed to process message </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">:`</span>, <span style="color:#a6e22e">err</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#75715e">// Track failed message IDs to return to SQS for retry
+</span></span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">batchItemFailures</span>.<span style="color:#a6e22e">push</span>({ <span style="color:#a6e22e">itemIdentifier</span>: <span style="color:#66d9ef">record.messageId</span> });
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Returning batchItemFailures tells SQS only to retry the failed messages,
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">// preventing reprocessing of successful messages in this batch.
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">return</span> { <span style="color:#a6e22e">batchItemFailures</span> };
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#66d9ef">function</span> <span style="color:#a6e22e">processMessage</span>(<span style="color:#a6e22e">record</span>: <span style="color:#66d9ef">SQSRecord</span>)<span style="color:#f92672">:</span> <span style="color:#a6e22e">Promise</span>&lt;<span style="color:#f92672">void</span>&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">messageBody</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">JSON</span>.<span style="color:#a6e22e">parse</span>(<span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">body</span>);
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Extract custom event data forwarded from EventBridge
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">details</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">messageBody</span>.<span style="color:#a6e22e">detail</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">details</span> <span style="color:#f92672">||</span> <span style="color:#f92672">!</span><span style="color:#a6e22e">details</span>.<span style="color:#a6e22e">id</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">`Invalid message schema, skipping. Message ID: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">id</span>, <span style="color:#a6e22e">userId</span>, <span style="color:#a6e22e">dataPayload</span> } <span style="color:#f92672">=</span> <span style="color:#a6e22e">details</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 1. Idempotent Consumer Pattern: Save message process tracking key
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Avoid duplicate processing of the same SQS message
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">idempotencyPk</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`IDEMPOTENCY#MSG#</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">idempotencySk</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">`INGESTION#</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">try</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">docClient</span>.<span style="color:#a6e22e">send</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">PutCommand</span>({
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">TableName</span>: <span style="color:#66d9ef">TABLE_NAME</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">Item</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">PK</span>: <span style="color:#66d9ef">idempotencyPk</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">SK</span>: <span style="color:#66d9ef">idempotencySk</span>,
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">processedAt</span>: <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>(),
+</span></span><span style="display:flex;"><span>          <span style="color:#a6e22e">ttl</span>: <span style="color:#66d9ef">Math.floor</span>(Date.<span style="color:#a6e22e">now</span>() <span style="color:#f92672">/</span> <span style="color:#ae81ff">1000</span>) <span style="color:#f92672">+</span> <span style="color:#ae81ff">86400</span>, <span style="color:#75715e">// 24-hour retention
+</span></span></span><span style="display:flex;"><span>        },
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">ConditionExpression</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;attribute_not_exists(PK)&#34;</span>,
+</span></span><span style="display:flex;"><span>      })
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>  } <span style="color:#66d9ef">catch</span> (<span style="color:#a6e22e">dbError</span>: <span style="color:#66d9ef">any</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">dbError</span>.<span style="color:#a6e22e">name</span> <span style="color:#f92672">===</span> <span style="color:#e6db74">&#34;ConditionalCheckFailedException&#34;</span>) {
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">warn</span>(<span style="color:#e6db74">`SQS Message already processed: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">record</span>.<span style="color:#a6e22e">messageId</span><span style="color:#e6db74">}</span><span style="color:#e6db74">. Skipping.`</span>);
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">return</span>; <span style="color:#75715e">// Skip execution safely
+</span></span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#a6e22e">dbError</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 2. Simulate Failure Scenario for DLQ Testing
+</span></span></span><span style="display:flex;"><span>  <span style="color:#75715e">// If dataPayload contains a failProcessing flag, force fail processing to trigger retry -&gt; DLQ
+</span></span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">dataPayload</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">dataPayload</span>.<span style="color:#a6e22e">failProcessing</span> <span style="color:#f92672">===</span> <span style="color:#66d9ef">true</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> Error(<span style="color:#e6db74">`[SIMULATED_FAILURE] Processing failed for request </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74"> due to failProcessing flag`</span>);
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// 3. Update Status to &#34;COMPLETED&#34; in DynamoDB
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Updating status to COMPLETED for ingestion ID: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">docClient</span>.<span style="color:#a6e22e">send</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">UpdateCommand</span>({
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">TableName</span>: <span style="color:#66d9ef">TABLE_NAME</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">Key</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">PK</span><span style="color:#f92672">:</span> <span style="color:#e6db74">`INGESTION#</span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">SK</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;METADATA&#34;</span>,
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">UpdateExpression</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;SET status = :status, updatedAt = :updatedAt&#34;</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">ExpressionAttributeValues</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;:status&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;COMPLETED&#34;</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#e6db74">&#34;:updatedAt&#34;</span><span style="color:#f92672">:</span> <span style="color:#66d9ef">new</span> Date().<span style="color:#a6e22e">toISOString</span>(),
+</span></span><span style="display:flex;"><span>      },
+</span></span><span style="display:flex;"><span>    })
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#e6db74">`Successfully completed processing for ID: </span><span style="color:#e6db74">${</span><span style="color:#a6e22e">id</span><span style="color:#e6db74">}</span><span style="color:#e6db74">`</span>);
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<hr>
+<h2 id="part-3-iam-permissions--sqs-configurations">Part 3: IAM Permissions &amp; SQS Configurations<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-iam-configurations-principle-of-least-privilege">1. IAM Configurations (Principle of Least Privilege)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>To ensure the Lambda functions only have access to what they need, declare explicit IAM roles instead of administrative permissions.</p>
+<p>Here is the configuration logic represented in <strong>AWS CDK</strong>:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">iam</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-cdk-lib/aws-iam&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">sqs</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-cdk-lib/aws-sqs&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">lambda</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-cdk-lib/aws-lambda&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">dynamodb</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-cdk-lib/aws-dynamodb&#34;</span>;
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">import</span> <span style="color:#f92672">*</span> <span style="color:#66d9ef">as</span> <span style="color:#a6e22e">events</span> <span style="color:#66d9ef">from</span> <span style="color:#e6db74">&#34;aws-cdk-lib/aws-events&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// A. Ingestion Lambda Role Permissions
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ingestionLambda</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">lambda</span>.Function(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;IngestionLambda&#34;</span>, { <span style="color:#75715e">/* ... */</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Grant Ingestion Lambda permissions to put items in DynamoDB
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">ingestionLambda</span>.<span style="color:#a6e22e">addToRolePolicy</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">iam</span>.<span style="color:#a6e22e">PolicyStatement</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">effect</span>: <span style="color:#66d9ef">iam.Effect.ALLOW</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">actions</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;dynamodb:PutItem&#34;</span>,
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">resources</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">tableArn</span>],
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Grant Ingestion Lambda permissions to publish events to Custom EventBus
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">ingestionLambda</span>.<span style="color:#a6e22e">addToRolePolicy</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">iam</span>.<span style="color:#a6e22e">PolicyStatement</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">effect</span>: <span style="color:#66d9ef">iam.Effect.ALLOW</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">actions</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;events:PutEvents&#34;</span>,
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">resources</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">customEventBus</span>.<span style="color:#a6e22e">eventBusArn</span>],
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// B. Worker Lambda Role Permissions
+</span></span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">workerLambda</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">lambda</span>.Function(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;WorkerLambda&#34;</span>, { <span style="color:#75715e">/* ... */</span> });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Grant Worker Lambda permissions to query, update items in DynamoDB
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">workerLambda</span>.<span style="color:#a6e22e">addToRolePolicy</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">iam</span>.<span style="color:#a6e22e">PolicyStatement</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">effect</span>: <span style="color:#66d9ef">iam.Effect.ALLOW</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">actions</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;dynamodb:PutItem&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;dynamodb:UpdateItem&#34;</span>,
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">resources</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">table</span>.<span style="color:#a6e22e">tableArn</span>],
+</span></span><span style="display:flex;"><span>}));
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e">// Grant SQS Consumer Lambda permissions to receive and delete messages
+</span></span></span><span style="display:flex;"><span><span style="color:#a6e22e">workerLambda</span>.<span style="color:#a6e22e">addToRolePolicy</span>(<span style="color:#66d9ef">new</span> <span style="color:#a6e22e">iam</span>.<span style="color:#a6e22e">PolicyStatement</span>({
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">effect</span>: <span style="color:#66d9ef">iam.Effect.ALLOW</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">actions</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqs:ReceiveMessage&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqs:DeleteMessage&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#e6db74">&#34;sqs:GetQueueAttributes&#34;</span>
+</span></span><span style="display:flex;"><span>  ],
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">resources</span><span style="color:#f92672">:</span> [<span style="color:#a6e22e">props</span>.<span style="color:#a6e22e">processingQueue</span>.<span style="color:#a6e22e">queueArn</span>],
+</span></span><span style="display:flex;"><span>}));</span></span></code></pre></div>
+<h3 id="2-sqs-timeout-and-visibility-settings">2. SQS Timeout and Visibility Settings<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<p>When integrating SQS with Lambda, the <strong>Visibility Timeout</strong> of the SQS Queue is a crucial reliability parameter.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">processingDlq</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">sqs</span>.<span style="color:#a6e22e">Queue</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;ProcessingDLQ&#34;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">queueName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;processing-dlq&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">retentionPeriod</span>: <span style="color:#66d9ef">cdk.Duration.days</span>(<span style="color:#ae81ff">14</span>), <span style="color:#75715e">// Retain for debugging
+</span></span></span><span style="display:flex;"><span>});
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">processingQueue</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">sqs</span>.<span style="color:#a6e22e">Queue</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;ProcessingQueue&#34;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">queueName</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;processing-queue&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// Crucial: Must be greater than or equal to Lambda&#39;s Timeout
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">visibilityTimeout</span>: <span style="color:#66d9ef">cdk.Duration.seconds</span>(<span style="color:#ae81ff">180</span>), <span style="color:#75715e">// 3 minutes
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">deadLetterQueue</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">queue</span>: <span style="color:#66d9ef">processingDlq</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">maxReceiveCount</span>: <span style="color:#66d9ef">3</span>, <span style="color:#75715e">// Move to DLQ after 3 failures
+</span></span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
+<h4 id="why-visibilitytimeout-must-be-greater-than-lambdas-timeout">Why <code>visibilityTimeout</code> must be greater than Lambda&rsquo;s timeout:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<ul>
+<li><strong>The Concept</strong>: When Lambda polls SQS, it pulls messages and locks them for the duration of the <code>visibilityTimeout</code>.</li>
+<li><strong>The Issue</strong>: If the Lambda function&rsquo;s timeout is set to 30 seconds, but the SQS Visibility Timeout is set to 15 seconds, and a message takes 20 seconds to process:
+<ol>
+<li>The visibility lock expires at 15 seconds.</li>
+<li>SQS makes the message visible again to other pollers.</li>
+<li>Another Lambda instance picks up the exact same message while the first instance is still running.</li>
+<li>This causes duplicate executions and potential race conditions.</li>
+</ol>
+</li>
+<li><strong>The Best Practice</strong>: Set the SQS <code>visibilityTimeout</code> to <strong>at least 6 times</strong> the Lambda function timeout plus any batch window buffer.</li>
+</ul>
+<hr>
+<h2 id="part-4-testing--observability">Part 4: Testing &amp; Observability<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
+<h3 id="1-test-payloads">1. Test Payloads<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="test-a-triggering-ingestion-service-api-gateway-request">Test A: Triggering Ingestion Service (API Gateway Request)<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Use this JSON payload to test the <code>/ingest</code> POST endpoint.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;REQ-2026-999-TEST&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;userId&#34;</span>: <span style="color:#e6db74">&#34;usr_998877&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;idempotencyKey&#34;</span>: <span style="color:#e6db74">&#34;uuid-550e8400-e29b-41d4-a716-446655440000&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dataPayload&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;key&#34;</span>: <span style="color:#e6db74">&#34;val&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;someNumeric&#34;</span>: <span style="color:#ae81ff">100.5</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p><em>Expected Output (First request)</em>:
+<code>201 Created</code> with body <code>{&quot;message&quot;:&quot;Request ingested successfully&quot;,&quot;id&quot;:&quot;REQ-2026-999-TEST&quot;,&quot;status&quot;:&quot;PENDING&quot;}</code></p>
+<p><em>Expected Output (Second request with same body)</em>:
+<code>409 Conflict</code> with body <code>{&quot;error&quot;:&quot;Request already exists or is being processed&quot;}</code> (Idempotence works!).</p>
+<h4 id="test-b-simulating-sqs-dead-letter-queue-dlq-movement">Test B: Simulating SQS Dead-Letter Queue (DLQ) Movement<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To test DLQ ingestion, send a request triggering the processing error. Set the payload <code>failProcessing</code> parameter to <code>true</code>.</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-json" data-lang="json"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;id&#34;</span>: <span style="color:#e6db74">&#34;REQ-2026-FAIL-DLQ&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;userId&#34;</span>: <span style="color:#e6db74">&#34;usr_fail_test&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;idempotencyKey&#34;</span>: <span style="color:#e6db74">&#34;uuid-fail-dlq-test-001&#34;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#f92672">&#34;dataPayload&#34;</span>: {
+</span></span><span style="display:flex;"><span>    <span style="color:#f92672">&#34;failProcessing&#34;</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div>
+<p><em>Expected Flow</em>:</p>
+<ol>
+<li>The Ingestion Lambda executes, registers the request, and publishes the event.</li>
+<li>The Worker Lambda picks up the message from SQS.</li>
+<li>The Worker throws <code>[SIMULATED_FAILURE] Processing failed for request...</code>.</li>
+<li>The message returns to the queue. This repeats 3 times (<code>maxReceiveCount</code>).</li>
+<li>After the 3rd attempt, the message is automatically moved to <code>processing-dlq</code>.</li>
+</ol>
+<hr>
+<h3 id="2-observability--tracing">2. Observability &amp; Tracing<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h3>
+<h4 id="a-structured-logging-with-cloudwatch">A. Structured Logging with CloudWatch<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>Using <code>console.log(JSON.stringify(event))</code> creates <strong>Structured JSON Logs</strong> in CloudWatch. This allows you to run <strong>CloudWatch Logs Insights</strong> queries like:</p>
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-sql" data-lang="sql"><span style="display:flex;"><span>fields <span style="color:#f92672">@</span><span style="color:#66d9ef">timestamp</span>, <span style="color:#f92672">@</span>message, id, error
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> filter <span style="color:#f92672">@</span>message <span style="color:#66d9ef">like</span> <span style="color:#f92672">/</span>Error<span style="color:#f92672">/</span> <span style="color:#66d9ef">or</span> <span style="color:#f92672">@</span>message <span style="color:#66d9ef">like</span> <span style="color:#f92672">/</span>ConditionalCheckFailedException<span style="color:#f92672">/</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> sort <span style="color:#f92672">@</span><span style="color:#66d9ef">timestamp</span> <span style="color:#66d9ef">desc</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">|</span> <span style="color:#66d9ef">limit</span> <span style="color:#ae81ff">20</span></span></span></code></pre></div>
+<h4 id="b-distributed-tracing-with-aws-x-ray">B. Distributed Tracing with AWS X-Ray<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<p>To trace a request end-to-end (API Gateway -&gt; SQS -&gt; Lambda -&gt; EventBridge -&gt; DynamoDB):</p>
+<ol>
+<li><strong>Enable Active Tracing</strong> in CDK for Lambda functions:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">ingestionLambda</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">lambda</span>.Function(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;IngestionLambda&#34;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// ...
+</span></span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">tracing</span>: <span style="color:#66d9ef">lambda.Tracing.ACTIVE</span>
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
+</li>
+<li><strong>Enable Tracing on API Gateway Stage</strong>:
+<div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-text-size-adjust:none;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">api</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">apigateway</span>.<span style="color:#a6e22e">RestApi</span>(<span style="color:#66d9ef">this</span>, <span style="color:#e6db74">&#34;AppRestApi&#34;</span>, {
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">deployOptions</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">tracingEnabled</span>: <span style="color:#66d9ef">true</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>});</span></span></code></pre></div>
+</li>
+<li><strong>Analyze the Trace Map</strong>:
+Navigate to AWS console -&gt; <strong>CloudWatch</strong> -&gt; <strong>X-Ray traces</strong> -&gt; <strong>Service map</strong>. You will see the visual flow showing latency metrics, error rates, and communication links across each hops.</li>
+</ol>
+
+  <footer class="footline">
+              <i class='fa-fw fas fa-calendar'></i> Jan 1, 2026
+  </footer>
+</article>
+        </div>
+      </main>
+    </div>
+    <aside id="R-sidebar" class="default-animation">
+      <div id="R-header-topbar" class="default-animation"></div>
+      <div id="R-header-wrapper" class="default-animation">
+        <a id="R-logo" class="R-default direction-row" href="/en/index.html">
+          <span class="logo-title default-animation">Báo cáo AWS Workshop</span>
+        </a>
+        <search><form action="/en/search/index.html" method="get">
+          <div class="searchbox default-animation">
+            <button class="search-detail" type="submit" title="Search (CTRL+ALT+f)"><i class="fas fa-fw fa-search"></i></button>
+            <label class="a11y-only" for="R-search-by">Search</label>
+            <input data-search-input id="R-search-by" name="search-by" class="search-by" type="search" placeholder="Search...">
+            <button class="search-clear" type="button" data-search-clear="" title="Clear search"><i class="fas fa-fw fa-times" title="Clear search"></i></button>
+          </div>
+        </form></search>
+      </div>
+      <div id="R-homelinks" class="default-animation homelinks">
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-homelinks default-animation">
+          <ul class="space collapsible-menu">
+            <li class="" data-nav-id="/en/index.html"><a class="padding" href="/en/index.html"><i class="fa-fw fas fa-home"></i> Home</a></li>
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-headercontrols default-animation">
+          <ul class="">
+          </ul>
+        </div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+      </div>
+      <div id="R-content-wrapper" class="highlightable">
+        <div class="R-sidebarmenu R-shortcutmenu-main default-animation">
+          <ul class="enlarge morespace collapsible-menu">
+            <li class="" data-nav-id="/en/1-worklog/index.html"><a class="padding default-animation" href="/en/1-worklog/index.html">1. Internship Worklog</a><ul id="R-subsections-16447363d800ec5deaa3b0a76c63c922" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/2-proposal/index.html"><a class="padding" href="/en/2-proposal/index.html"> <b> 2. </b> Proposal</a></li>
+            <li class="" data-nav-id="/en/3-blogsposted/index.html"><a class="padding default-animation" href="/en/3-blogsposted/index.html"> <b> 3. </b> Blogs Posted</a><ul id="R-subsections-139b2bd7ed608dfc4cda535ffb3638d1" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/4-eventparticipated/index.html"><a class="padding default-animation" href="/en/4-eventparticipated/index.html">4. Participated Events</a><ul id="R-subsections-a3223440c4beb7b035882258d4302894" class="collapsible-menu"></ul></li>
+            <li class="parent " data-nav-id="/en/5-workshop/index.html"><a class="padding default-animation" href="/en/5-workshop/index.html"> <b> 5. </b> Workshop</a><ul id="R-subsections-3232083df9b680629be5cc26bdd904c0" class="collapsible-menu">
+            <li class="" data-nav-id="/en/5-workshop/5.1-overview/index.html"><a class="padding" href="/en/5-workshop/5.1-overview/index.html"> <b> 5.1. </b> Workshop Overview</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.1-workshop-overview/index.html"><a class="padding" href="/en/5-workshop/5.1-workshop-overview/index.html"> <b> 5.1. </b> Introduction</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.2-prerequisites/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequisites/index.html"> <b> 5.2. </b> Prerequisites &amp; Setup</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.2-prerequiste/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequiste/index.html"> <b> 5.2. </b> Prerequiste</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.3-module1-storage/index.html"><a class="padding" href="/en/5-workshop/5.3-module1-storage/index.html"> <b> 5.3. </b> Module 1: Storage &amp; Database</a></li>
+            <li class="alwaysopen " data-nav-id="/en/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/en/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Access S3 from VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/5-workshop/5.4-module2-compute/index.html"><a class="padding" href="/en/5-workshop/5.4-module2-compute/index.html"> <b> 5.4. </b> Module 2: Compute &amp; API</a></li>
+            <li class="alwaysopen " data-nav-id="/en/5-workshop/5.4-s3-onprem/index.html"><a class="padding default-animation" href="/en/5-workshop/5.4-s3-onprem/index.html"> <b> 5.4. </b> Access S3 from on-premises</a><ul id="R-subsections-c81e91f8aeb754aea188a2aafe827ae0" class="collapsible-menu"></ul></li>
+            <li class="" data-nav-id="/en/5-workshop/5.5-module3-security/index.html"><a class="padding" href="/en/5-workshop/5.5-module3-security/index.html"> <b> 5.5. </b> Module 3: Security &amp; Roles</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.5-policy/index.html"><a class="padding" href="/en/5-workshop/5.5-policy/index.html"> <b> 5.5. </b> VPC Endpoint Policies</a></li>
+            <li class="active " data-nav-id="/en/5-workshop/5.6-module4-serverless/index.html"><a class="padding" href="/en/5-workshop/5.6-module4-serverless/index.html"> <b> 5.6. </b> Module 4: Serverless Backend</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/en/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Clean up</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/en/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Deployment &amp; Testing</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/en/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Cleanup &amp; Advanced</a></li>
+            <li class="" data-nav-id="/en/5-workshop/5.9-references/index.html"><a class="padding" href="/en/5-workshop/5.9-references/index.html">5.9 </a></li></ul></li>
+            <li class="" data-nav-id="/en/6-selfassessment/index.html"><a class="padding" href="/en/6-selfassessment/index.html">6. Self-Assessment</a></li>
+            <li class="" data-nav-id="/en/7-sharing-and-feedback/index.html"><a class="padding" href="/en/7-sharing-and-feedback/index.html">7. Sharing and Feedback</a></li>
+          </ul>
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-shortcuts default-animation">
+          <ul class="space collapsible-menu">
+          </ul>
+        </div>
+        <div id="R-footer-margin" class="default-animation"></div>
+        <div class="R-menu-divider default-animation">
+          <hr class="padding default-animation">
+        </div>
+        <div class="R-sidebarmenu R-shortcutmenu-footercontrols default-animation">
+          <ul class="">
+			<li class="R-languageswitcher">
+              <div class="padding menu-control">
+                <i class="fa-fw fas fa-language"></i>
+                <span>&nbsp;</span>
+                <div class="control-style">
+                  <label class="a11y-only" for="R-select-language">Language</label>
+                  <select id="R-select-language">
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.6-module4-serverless/index.html" lang="vi-vn">Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.6-module4-serverless/index.html" lang="en" selected data-selected>English</option>
+                  </select>
+                </div>
+                <div class="clear"></div>
+              </div>
+            </li>
+          </ul>
+        </div>
+<div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
+      </div>
+    </aside>
+    <script src="/js/js-yaml/js-yaml.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-color.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-dispatch.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-drag.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-ease.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-interpolate.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-selection.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-timer.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-transition.min.js?1783864412" defer></script>
+    <script src="/js/d3/d3-zoom.min.js?1783864412" defer></script>
+    <script src="/js/mermaid/mermaid.min.js?1783864412" defer></script>
+    <script>
+      window.relearn.themeUseMermaid = JSON.parse("{}");
+    </script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
+    <script src="/js/theme.js?1783864412" defer></script>
+    <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
+  </body>
+</html>

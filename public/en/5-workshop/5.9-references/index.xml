@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.9  :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.9-references/index.html</link>
+    <description>5.9 References&#xD;This section provides a list of external resources and repositories referenced throughout this project.&#xA;Additional Resources&#xD;Web bán ken saxophone Source Code Web bán ken saxophone</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.9-references/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

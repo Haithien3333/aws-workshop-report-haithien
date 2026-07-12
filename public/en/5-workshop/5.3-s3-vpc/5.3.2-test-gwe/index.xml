@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test the Gateway Endpoint :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html</link>
+    <description>Create S3 bucket&#xD;Navigate to S3 management console In the Bucket console, choose Create bucket In the Create bucket console Name the bucket: choose a name that hasn’t been given to any bucket globally (hint: lab number and your name)</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

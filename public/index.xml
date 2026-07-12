@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/index.html</link>
+    <description>Họ và tên: Nguyễn Hải Thiên&#xA;Mã số sinh viên: 2280615299&#xA;Địa chỉ Email: haithien016526@gmail.com&#xA;Trường đại học: Trường Đại học Công Nghệ Thành phố Hồ Chí Minh&#xA;Chuyên ngành: Công nghệ thông tin&#xA;Lớp: 22DTHD7&#xA;Công ty thực tập: Amazon Web Services Việt Nam&#xA;Vị trí thực tập: Workforce Bootcamp - First Cloud AI Journey&#xA;Thời gian thực tập: Từ 17/04/2026 đến 30/07/2026&#xA;Ảnh chân dung cá nhân</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate>Thu, 09 Jul 2026 00:00:00 +0000</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>1. Nhật ký thực tập (Worklog)</title>
+      <link>http://localhost:1313/1-worklog/index.html</link>
+      <pubDate>Mon, 20 Apr 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/1-worklog/index.html</guid>
+      <description>NHẬT KÝ THỰC TẬP THEO TUẦN&#xD;Chương trình: Workforce Bootcamp - First Cloud AI Journey&#xA;Nơi ghi lại chi tiết các công việc, nội dung học tập, các buổi training và kết quả đạt được trong suốt 12 tuần thực tập tại AWS Việt Nam.&#xA;Tóm tắt lộ trình 12 tuần:&#xD;Tuần 1 - Tuần 4: Nghiên cứu tổng quan, làm quen hệ thống, cấu hình IAM, VPC cơ bản. Tuần 5 - Tuần 8: Triển khai các dịch vụ nâng cao (S3, On-premise Network, Endpoint, Policies). Tuần 9 - Tuần 12: Đánh giá bảo mật, tối ưu hóa hệ thống, viết Blog và hoàn thiện báo cáo. Chọn từng tuần ở menu bên trái hoặc bấm vào danh sách bên dưới để xem chi tiết.</description>
+    </item>
+    <item>
+      <title>Bản đề xuất</title>
+      <link>http://localhost:1313/2-proposal/index.html</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/2-proposal/index.html</guid>
+      <description>ĐỀ XUẤT KIẾN TRÚC HỆ THỐNG (SYSTEM ARCHITECTURE PROPOSAL)&#xD;DỰ ÁN: AI E-COMMERCE PLATFORM — AWS SERVERLESS ARCHITECTURE&#xD;1. INTRODUCTION &amp; PROBLEM STATEMENT (Giới thiệu &amp; Đặt vấn đề)&#xD;1.1. Xu hướng công nghệ Cloud-native và Decoupled Architecture&#xD;Bước sang năm 2026, ngành thương mại điện tử (TMĐT) toàn cầu đang chứng kiến sự chuyển dịch mạnh mẽ từ các kiến trúc nguyên khối (Monolithic) truyền thống sang các mô hình Cloud-native và kiến trúc phân rã (Decoupled/Event-Driven Architecture). Sự cạnh tranh khốc liệt đòi hỏi các nền tảng bán lẻ trực tuyến phải phản hồi cực nhanh trước thay đổi của thị trường, có khả năng mở rộng không giới hạn vào các dịp mua sắm cao điểm và giảm thiểu tối đa thời gian chết (downtime).</description>
+    </item>
+    <item>
+      <title>Các bài blogs đã đăng</title>
+      <link>http://localhost:1313/3-blogsposted/index.html</link>
+      <pubDate>Tue, 30 Jun 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/3-blogsposted/index.html</guid>
+      <description>Tại đây sẽ là phần liệt kê, giới thiệu các blogs mà các bạn đã đăng trên AWS Study Group.&#xA;Blog 1 - ĐƠN GIẢN HÓA TÍCH HỢP AWS APPSYNC EVENTS VỚI POWERTOOLS FOR AWS LAMBDA&#xD;Blog này giới thiệu Powertools for AWS Lambda vừa ra mắt tính năng mới AppSyncEventsResolver (hỗ trợ Python, TypeScript và .NET), giúp đơn giản hóa việc tích hợp AWS AppSync Events cho các ứng dụng thời gian thực như ứng dụng chat, bảng điều khiển hoặc hệ thống IoT.</description>
+    </item>
+    <item>
+      <title>4. Sự kiện đã tham gia (Events)</title>
+      <link>http://localhost:1313/4-eventparticipated/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/4-eventparticipated/index.html</guid>
+      <description>CÁC SỰ KIỆN ĐÃ THAM GIA&#xD;Chương trình: Workforce Bootcamp - First Cloud AI Journey&#xA;Trong suốt thời gian thực tập tại AWS Việt Nam, bên cạnh việc tập trung nghiên cứu và thực hành kỹ thuật cá nhân, em đã có cơ hội tham gia vào các sự kiện lớn, các buổi hội thảo công nghệ và chương trình đào tạo chuyên sâu do AWS tổ chức.</description>
+    </item>
+    <item>
+      <title>Workshop</title>
+      <link>http://localhost:1313/5-workshop/index.html</link>
+      <pubDate>Thu, 01 Jan 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/5-workshop/index.html</guid>
+      <description>AWS CDK &amp; Serverless Architecture: Xây dựng ứng dụng Serverless hướng sự kiện&#xD;Chào mừng các bạn đến với bài thực hành AWS! Trong workshop này, bạn sẽ thiết kế và triển khai một kiến trúc Serverless hướng sự kiện (Event-Driven Architecture) hiện đại, có tính co giãn và bảo mật cao bằng AWS Cloud Development Kit (CDK) với TypeScript.</description>
+    </item>
+    <item>
+      <title>6. Tự đánh giá (Self-Assessment)</title>
+      <link>http://localhost:1313/6-selfassessment/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/6-selfassessment/index.html</guid>
+      <description>BẢNG TỰ ĐÁNH GIÁ KẾT QUẢ THỰC TẬP&#xD;Trong suốt thời gian thực tập tại Công ty TNHH Amazon Web Services Việt Nam, em đã nghiêm túc tham gia học tập, thực hành và tự đánh giá năng lực của bản thân dựa trên các tiêu chí chuẩn hóa của chương trình:&#xA;📊 Bảng Đánh Giá Chi Tiết&#xD;STT Tiêu chí đánh giá Mô tả chi tiết Tốt (Good) Khá (Fair) Trung bình (Average) 1 Kiến thức &amp; Kỹ năng chuyên môn Hiểu biết về lĩnh vực, áp dụng kiến thức vào thực tế, thành thạo công cụ, chất lượng công việc 🔲 🔲 ✅ 2 Khả năng học hỏi Khả năng tiếp thu kiến thức mới và học hỏi nhanh chóng 🔲 🔲 ✅ 3 Sự chủ động trong công việc Tự giác, chủ động tìm kiếm và thực hiện nhiệm vụ không đợi nhắc nhở 🔲 🔲 ✅ 4 Tinh thần trách nhiệm Hoàn thành công việc đúng hạn và đảm bảo chất lượng đầu ra ✅ 🔲 🔲 5 Tính kỷ luật Tuân thủ lịch trình, các quy định và quy trình làm việc đề ra ✅ 🔲 🔲 6 Tư duy cầu tiến Sẵn sàng đón nhận các góp ý và chủ động hoàn thiện bản thân ✅ 🔲 🔲 7 Kỹ năng giao tiếp Trình bày ý tưởng rõ ràng, báo cáo tiến độ công việc mạch lạc 🔲 🔲 ✅ 8 Khả năng làm việc nhóm Phối hợp hiệu quả với các thành viên và thế hệ thực tập sinh 🔲 ✅ 🔲 9 Tác phong chuyên nghiệp Tôn trọng đồng nghiệp, đối tác và môi trường làm việc công sở ✅ 🔲 🔲 10 Kỹ năng giải quyết vấn đề Xác định đúng lỗi hệ thống, đề xuất giải pháp xử lý linh hoạt 🔲 ✅ 🔲 11 Đóng góp cho dự án/nhóm Hiệu quả công việc thực tế, đưa ra các ý tưởng cải tiến được ghi nhận 🔲 ✅ 🔲 12 Đánh giá tổng quan Nhìn nhận chung về toàn bộ nỗ lực trong suốt kỳ thực tập 🔲 ✅ 🔲</description>
+    </item>
+    <item>
+      <title>7. Chia sẻ và Đóng góp ý kiến</title>
+      <link>http://localhost:1313/7-sharing-and-feedback/index.html</link>
+      <pubDate>Thu, 09 Jul 2026 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/7-sharing-and-feedback/index.html</guid>
+      <description>CHIA SẺ VÀ ĐÓNG GÓP Ý KIẾN (SHARING AND FEEDBACK)&#xD;Phần này ghi nhận các phản hồi (Feedback) từ các anh chị Mentor hướng dẫn tại AWS và các ý kiến đóng góp cá nhân của em nhằm phát triển chương trình Bootcamp trong tương lai.&#xA;1. Phản hồi từ Mentor (Mentor’s Feedback)&#xD;Trong suốt quá trình thực hiện chuỗi bài Lab và báo cáo tuần, em đã nhận được những đánh giá và chỉ dẫn quý báu từ các anh chị hướng dẫn kỹ thuật:</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>5.3 Lưu trữ S3 và Cấu hình VPC Endpoint :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/5-workshop/5.3-s3-endpoint/index.html</link>
+    <description>Bài Lab 3: Triển khai Amazon S3 và Kết nối Riêng tư bằng VPC Gateway Endpoint&#xD;1. Mục tiêu bài thực hành&#xD;Khởi tạo hệ thống lưu trữ đối tượng an toàn với Amazon S3. Cấu hình VPC Gateway Endpoint để cho phép các máy ảo trong vùng mạng kín (Private Subnet) có thể truy cập trực tiếp dữ liệu trên S3 mà không cần đi qua môi trường Internet công cộng, giúp tối ưu bảo mật và tăng tốc độ truyền tải. 2. Các bước triển khai chi tiết&#xD;Bước 3.1: Khởi tạo Amazon S3 Bucket&#xD;Truy cập dịch vụ S3 trên AWS Console -&gt; Nhấn Create bucket. Đặt tên Bucket (phải viết liền, không dấu, duy nhất toàn cầu): thien-aws-workshop-bucket-2026. Giữ nguyên cấu hình Block Public Access (Chặn hoàn toàn truy cập nặc danh ngoài Internet) để đảm bảo an toàn. Nhấn Create bucket. Bước 3.2: Khởi tạo VPC Endpoint (Gateway) cho S3&#xD;Quay lại dịch vụ VPC -&gt; Tìm đến mục Endpoints ở menu bên trái. Nhấn Create endpoint và điền thông tin: Name: Thien-S3-Endpoint Service category: Chọn AWS services. Services: Tìm kiếm chữ s3 và chọn tệp có Type là Gateway (Ví dụ: com.amazonaws.ap-southeast-1.s3). VPC: Chọn mạng Thien-VPC của bạn. Route Tables: Tích chọn bảng định tuyến của Private Subnet để Hugo/AWS tự động gắn tuyến đường đi qua Endpoint này. Nhấn Create endpoint. 3. Kết quả đạt được &amp; Ảnh minh chứng&#xD;Sau khi cấu hình xong Endpoint, trong bảng Route Table của Private Subnet sẽ tự động xuất hiện một dòng định tuyến có Target dạng vpce-xxxxxx hướng thẳng tới S3.</description>
+    <generator>Hugo</generator>
+    <language>vi-vn</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/5-workshop/5.3-s3-endpoint/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>

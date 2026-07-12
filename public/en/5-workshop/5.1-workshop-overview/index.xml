@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Introduction :: Báo cáo AWS Workshop</title>
+    <link>http://localhost:1313/en/5-workshop/5.1-workshop-overview/index.html</link>
+    <description>VPC endpoints&#xD;VPC endpoints are virtual devices. They are horizontally scaled, redundant, and highly available VPC components. They allow communication between your compute resources and AWS services without imposing availability risks. Compute resources running in VPC can access Amazon S3 using a Gateway endpoint. PrivateLink interface endpoints can be used by compute resources running in VPC or on-premises. Workshop overview&#xD;In this workshop, you will use two VPCs.</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate></lastBuildDate>
+    <atom:link href="http://localhost:1313/en/5-workshop/5.1-workshop-overview/index.xml" rel="self" type="application/rss+xml" />
+  </channel>
+</rss>
