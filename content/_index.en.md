@@ -17,7 +17,8 @@ weight: 1
 
 * **Class:** 22DTHD7
 
-* **Internship Company:** Amazon Web Services Vietnam 
+* **Internship Company:** Công ty TNHH Amazon Web Services Việt Nam
+ 
 
 * **Internship Position:** Workforce Bootcamp - First Cloud AI Journey
 

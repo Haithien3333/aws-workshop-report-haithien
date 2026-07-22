@@ -15,7 +15,8 @@ weight: 1
 
 * **Lớp:** 22DTHD7
 
-* **Công ty thực tập:**  Amazon Web Services Việt Nam
+* **Công ty thực tập:**  Công ty TNHH Amazon Web Services Việt Nam
+
 
 * **Vị trí thực tập:** Workforce Bootcamp - First Cloud AI Journey
 

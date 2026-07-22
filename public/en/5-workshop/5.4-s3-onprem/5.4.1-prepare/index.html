@@ -38,27 +38,27 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
     <link href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" rel="alternate" hreflang="vi-vn">
     <link href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" rel="alternate" hreflang="en">
     <link href="/en/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.xml" rel="alternate" type="application/rss+xml" title="Prepare the environment :: Báo cáo AWS Workshop">
-    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
-    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
-    <script src="/js/search-lunr.js?1783864412" defer></script>
-    <script src="/js/search.js?1783864412" defer></script>
+    <link href="/images/favicon.png?1783865806" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783865806" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783865806" defer></script>
+    <script src="/js/search-lunr.js?1783865806" defer></script>
+    <script src="/js/search.js?1783865806" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1783864412";
+      window.relearn.index_js_url="/searchindex.en.js?1783865806";
     </script>
-    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1783865806" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
-    <link href="/css/theme.css?1783864412" rel="stylesheet">
-    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1783865806" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783865806" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783865806" rel="stylesheet">
+    <link href="/css/theme.css?1783865806" rel="stylesheet">
+    <link href="/css/format-html.css?1783865806" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -169,15 +169,15 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
 <li>One Route 53 Inbound Resolver endpoint that enables &ldquo;VPC Cloud&rdquo; to resolve inbound DNS resolution requests to the Private Hosted Zone</li>
 <li>One Route 53 Outbound Resolver endpoint that enables &ldquo;VPC On-prem&rdquo; to forward DNS requests for S3 to &ldquo;VPC Cloud&rdquo;</li>
 </ul>
-<p><a href="#R-image-d2d95f3d80be69340efa8becca4e91ac" class="lightbox-link"><img alt="route 53 diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-d2d95f3d80be69340efa8becca4e91ac"><img alt="route 53 diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png"></a></p>
+<p><a href="#R-image-d79873172a7b284e2bae2f4c58a979c9" class="lightbox-link"><img alt="route 53 diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d79873172a7b284e2bae2f4c58a979c9"><img alt="route 53 diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png"></a></p>
 <ol>
 <li>Click the following link to open the <a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup" rel="external">AWS CloudFormation console</a>. The required template will be pre-loaded into the menu. Accept all default and click Create stack.</li>
 </ol>
-<p><a href="#R-image-86f4d779609067e05fd2e225713f9606" class="lightbox-link"><img alt="Create stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-86f4d779609067e05fd2e225713f9606"><img alt="Create stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png"></a></p>
-<p><a href="#R-image-794977606a7ca5e4604fba3d20a8ec54" class="lightbox-link"><img alt="Button" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-794977606a7ca5e4604fba3d20a8ec54"><img alt="Button" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png"></a></p>
+<p><a href="#R-image-97c45181f4ad3a2991d23dad96de5a80" class="lightbox-link"><img alt="Create stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-97c45181f4ad3a2991d23dad96de5a80"><img alt="Create stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png"></a></p>
+<p><a href="#R-image-ba55bf4a04557b2f04f0b755ead017a7" class="lightbox-link"><img alt="Button" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-ba55bf4a04557b2f04f0b755ead017a7"><img alt="Button" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png"></a></p>
 <p>It may take a few minutes for stack deployment to complete. You can continue with the next step without waiting for the deployemnt to finish.</p>
 <h4 id="update-on-premise-private-route-table">Update on-premise private route table<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>This workshop uses a strongSwan VPN running on an EC2 instance to simulate connectivty between an on-premises datacenter and the AWS cloud. Most of the required components are provisioned before your start. To finalize the VPN configuration, you will modify the &ldquo;VPC On-prem&rdquo; routing table to direct traffic destined for the cloud to the strongSwan VPN instance.</p>
@@ -189,8 +189,8 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
 <p>Select the instance named infra-vpngw-test. From the Details tab, copy the Instance ID and paste this into your text editor</p>
 </li>
 </ol>
-<p><a href="#R-image-83f2dadc17cd322d1af195fbd2bb49b3" class="lightbox-link"><img alt="ec2 id" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-83f2dadc17cd322d1af195fbd2bb49b3"><img alt="ec2 id" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png"></a></p>
+<p><a href="#R-image-0b141e7d41bdad1e169d3d2376ecc0de" class="lightbox-link"><img alt="ec2 id" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-0b141e7d41bdad1e169d3d2376ecc0de"><img alt="ec2 id" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png"></a></p>
 <ol start="3">
 <li>
 <p>Navigate to the VPC menu by using the Search box at the top of the browser window.</p>
@@ -199,8 +199,8 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
 <p>Click on Route Tables, select the RT Private On-prem route table, select the Routes tab, and click Edit Routes.</p>
 </li>
 </ol>
-<p><a href="#R-image-fabdab83dd62143dce02e2156e7a47fa" class="lightbox-link"><img alt="rt" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fabdab83dd62143dce02e2156e7a47fa"><img alt="rt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png"></a></p>
+<p><a href="#R-image-5925b8593a3cdf608681f755039702df" class="lightbox-link"><img alt="rt" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-5925b8593a3cdf608681f755039702df"><img alt="rt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png"></a></p>
 <ol start="5">
 <li>Click Add route.</li>
 </ol>
@@ -208,8 +208,8 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
 <li>Destination: your Cloud VPC cidr range</li>
 <li>Target: ID of your infra-vpngw-test instance (you saved in your editor at step 1)</li>
 </ul>
-<p><a href="#R-image-4871b3f0018b911efd46f19a820f90e2" class="lightbox-link"><img alt="add route" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4871b3f0018b911efd46f19a820f90e2"><img alt="add route" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png"></a></p>
+<p><a href="#R-image-535c1242593945485f2185254fef649e" class="lightbox-link"><img alt="add route" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-535c1242593945485f2185254fef649e"><img alt="add route" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png"></a></p>
 <ol start="6">
 <li>Click Save changes</li>
 </ol>
@@ -316,8 +316,8 @@ One Route 53 Private Hosted Zone that hosts Alias records for the PrivateLink S3
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
-    <script src="/js/theme.js?1783864412" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783865806" defer></script>
+    <script src="/js/theme.js?1783865806" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

@@ -26,27 +26,27 @@
     <link href="http://localhost:1313/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="vi-vn">
     <link href="http://localhost:1313/en/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="en">
     <link href="/5-workshop/5.5-policy/index.xml" rel="alternate" type="application/rss+xml" title="VPC Endpoint Policies :: Báo cáo AWS Workshop">
-    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
-    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
-    <script src="/js/search-lunr.js?1783864412" defer></script>
-    <script src="/js/search.js?1783864412" defer></script>
+    <link href="/images/favicon.png?1783865805" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783865805" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783865805" defer></script>
+    <script src="/js/search-lunr.js?1783865805" defer></script>
+    <script src="/js/search.js?1783865805" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.vi.js?1783864412";
+      window.relearn.index_js_url="/searchindex.vi.js?1783865805";
     </script>
-    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.vi.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.min.js?1783865805" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783865805" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783865805" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1783865805" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['vi'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
-    <link href="/css/theme.css?1783864412" rel="stylesheet">
-    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1783865805" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783865805" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783865805" rel="stylesheet">
+    <link href="/css/theme.css?1783865805" rel="stylesheet">
+    <link href="/css/format-html.css?1783865805" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -147,26 +147,26 @@
 <p>Khi bạn tạo một Interface Endpoint  hoặc cổng, bạn có thể đính kèm một chính sách điểm cuối để kiểm soát quyền truy cập vào dịch vụ mà bạn đang kết nối. Chính sách VPC Endpoint là chính sách tài nguyên IAM mà bạn đính kèm vào điểm cuối. Nếu bạn không đính kèm chính sách khi tạo điểm cuối, thì AWS sẽ đính kèm chính sách mặc định cho bạn để cho phép toàn quyền truy cập vào dịch vụ thông qua điểm cuối.</p>
 <p>Bạn có thể tạo chính sách chỉ hạn chế quyền truy cập vào các S3 bucket cụ thể. Điều này hữu ích nếu bạn chỉ muốn một số Bộ chứa S3 nhất định có thể truy cập được thông qua điểm cuối.</p>
 <p>Trong phần này, bạn sẽ tạo chính sách VPC Endpoint hạn chế quyền truy cập vào S3 bucket được chỉ định trong chính sách VPC Endpoint.</p>
-<p><a href="#R-image-b43b93bdb2af2ec4c248f37f1dc2a135" class="lightbox-link"><img alt="endpoint diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b43b93bdb2af2ec4c248f37f1dc2a135"><img alt="endpoint diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png"></a></p>
+<p><a href="#R-image-dcbccdf4776219273e87735da32d6e9f" class="lightbox-link"><img alt="endpoint diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-dcbccdf4776219273e87735da32d6e9f"><img alt="endpoint diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png"></a></p>
 <h4 id="kết-nối-tới-ec2-và-xác-minh-kết-nối-tới-s3">Kết nối tới EC2 và xác minh kết nối tới S3.<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <ol>
 <li>Bắt đầu một phiên AWS Session Manager mới trên máy chủ có tên là Test-Gateway-Endpoint. Từ phiên này, xác minh rằng bạn có thể liệt kê nội dung của bucket mà bạn đã tạo trong Phần 1: Truy cập S3 từ VPC.</li>
 </ol>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://&lt;your-bucket-name&gt;</code></pre></div>
-<p><a href="#R-image-a335ba576ac56deb0624c0855389727a" class="lightbox-link"><img alt="test" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-a335ba576ac56deb0624c0855389727a"><img alt="test" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png"></a></p>
+<p><a href="#R-image-6138c58083bc8d2986a453a5c5d1cc2c" class="lightbox-link"><img alt="test" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6138c58083bc8d2986a453a5c5d1cc2c"><img alt="test" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png"></a></p>
 <p>Nội dung của bucket bao gồm hai tệp có dung lượng 1GB đã được tải lên trước đó.</p>
 <ol start="2">
 <li>Tạo một bucket S3 mới; tuân thủ mẫu đặt tên mà bạn đã sử dụng trong Phần 1, nhưng thêm &lsquo;-2&rsquo; vào tên. Để các trường khác là mặc định và nhấp vào <strong>Create</strong>.</li>
 </ol>
-<p><a href="#R-image-c1543f93897740bb7a23596ed032e003" class="lightbox-link"><img alt="create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c1543f93897740bb7a23596ed032e003"><img alt="create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png"></a></p>
+<p><a href="#R-image-186c738245fe8c32ebf59ddab3777bae" class="lightbox-link"><img alt="create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-186c738245fe8c32ebf59ddab3777bae"><img alt="create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png"></a></p>
 <ol start="3">
 <li>Tạo bucket thành công.</li>
 </ol>
-<p><a href="#R-image-18578c17b1bf415126e3277b4c6a78e8" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-18578c17b1bf415126e3277b4c6a78e8"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png"></a></p>
+<p><a href="#R-image-c4ef785eb7623c381a188f25f63447fd" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c4ef785eb7623c381a188f25f63447fd"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png"></a></p>
 <p>Policy mặc định cho phép truy cập vào tất cả các S3 Buckets thông qua VPC endpoint.</p>
 <ol start="4">
 <li>Trong giao diện <strong>Edit Policy</strong>, sao chép và dán theo policy sau, thay thế yourbucketname-2 với tên bucket thứ hai của bạn. Policy này sẽ cho phép truy cập đến bucket mới thông qua VPC endpoint, nhưng không cho phép truy cập đến các bucket còn lại. Chọn <strong>Save</strong> để kích hoạt policy.</li>
@@ -187,18 +187,18 @@
     }
   ]
 }</code></pre></div>
-<p><a href="#R-image-825366c7e915a7afb5dc144b98f6cdbe" class="lightbox-link"><img alt="custom policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-825366c7e915a7afb5dc144b98f6cdbe"><img alt="custom policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png"></a></p>
+<p><a href="#R-image-7f4f5ef4ea980e7e0c08428c9c892e11" class="lightbox-link"><img alt="custom policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f4f5ef4ea980e7e0c08428c9c892e11"><img alt="custom policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png"></a></p>
 <p>Cấu hình policy thành công.</p>
-<p><a href="#R-image-3e79af211e866246489b8020729aa4eb" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-3e79af211e866246489b8020729aa4eb"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png"></a></p>
+<p><a href="#R-image-f311c55db75eab27ec7736d36ad9dda9" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-f311c55db75eab27ec7736d36ad9dda9"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/success.png"></a></p>
 <ol start="5">
 <li>Từ session của bạn trên Test-Gateway-Endpoint instance, kiểm tra truy cập đến S3 bucket bạn tạo ở bước đầu</li>
 </ol>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://&lt;yourbucketname&gt;</code></pre></div>
 <p>Câu lệnh trả về lỗi bởi vì truy cập vào S3 bucket không có quyền trong VPC endpoint policy.</p>
-<p><a href="#R-image-c574594e8dce55fd9e318dc945bc7d78" class="lightbox-link"><img alt="error" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c574594e8dce55fd9e318dc945bc7d78"><img alt="error" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png"></a></p>
+<p><a href="#R-image-2b7a2cb0893bfb3e716bb243350d652f" class="lightbox-link"><img alt="error" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b7a2cb0893bfb3e716bb243350d652f"><img alt="error" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/error.png"></a></p>
 <ol start="6">
 <li>Trở lại home directory của bạn trên EC2 instance <code>cd~</code></li>
 </ol>
@@ -206,15 +206,15 @@
 <li>Tạo file <code>fallocate -l 1G test-bucket2.xyz </code></li>
 <li>Sao chép file lên bucket thứ  2 <code>aws s3 cp test-bucket2.xyz s3://&lt;your-2nd-bucket-name&gt;</code></li>
 </ul>
-<p><a href="#R-image-178e779baf7f94b31f39eb4c039606ae" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-178e779baf7f94b31f39eb4c039606ae"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png"></a></p>
+<p><a href="#R-image-2b1e804d77ce0fa98d3b165be345fbd1" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2b1e804d77ce0fa98d3b165be345fbd1"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2.png"></a></p>
 <p>Thao tác này được cho phép bởi VPC endpoint policy.</p>
-<p><a href="#R-image-2667deb251b50227319ef7978e2da2dd" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-2667deb251b50227319ef7978e2da2dd"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png"></a></p>
+<p><a href="#R-image-6e7b4da390d2e24525989c5f34903a8e" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6e7b4da390d2e24525989c5f34903a8e"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-success.png"></a></p>
 <p>Sau đó chúng ta kiểm tra truy cập vào S3 bucket đầu tiên</p>
 <p><code>aws s3 cp test-bucket2.xyz s3://&lt;your-1st-bucket-name&gt;</code></p>
-<p><a href="#R-image-88a46b2478c632970cf0ce5879bf549d" class="lightbox-link"><img alt="fail" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-88a46b2478c632970cf0ce5879bf549d"><img alt="fail" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png"></a></p>
+<p><a href="#R-image-cdafae6608b13dfc5d7fb61fca036bf0" class="lightbox-link"><img alt="fail" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-cdafae6608b13dfc5d7fb61fca036bf0"><img alt="fail" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test2-fail.png"></a></p>
 <p>Câu lệnh xảy ra lỗi bởi vì bucket không có quyền truy cập bởi VPC endpoint policy.</p>
 <p>Trong phần này, bạn đã tạo chính sách VPC Endpoint cho Amazon S3 và sử dụng AWS CLI để kiểm tra chính sách. Các hoạt động AWS CLI liên quan đến bucket S3 ban đầu của bạn thất bại vì bạn áp dụng một chính sách chỉ cho phép truy cập đến bucket thứ hai mà bạn đã tạo. Các hoạt động AWS CLI nhắm vào bucket thứ hai của bạn thành công vì chính sách cho phép chúng. Những chính sách này có thể hữu ích trong các tình huống khi bạn cần kiểm soát quyền truy cập vào tài nguyên thông qua VPC Endpoint.</p>
 
@@ -316,8 +316,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
-    <script src="/js/theme.js?1783864412" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783865805" defer></script>
+    <script src="/js/theme.js?1783865805" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

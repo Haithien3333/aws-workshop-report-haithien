@@ -30,27 +30,27 @@ By creating a gateway endpoint, you enabled direct communication between EC2 res
     <link href="http://localhost:1313/5-workshop/5.6-cleanup/index.html" rel="alternate" hreflang="vi-vn">
     <link href="http://localhost:1313/en/5-workshop/5.6-cleanup/index.html" rel="alternate" hreflang="en">
     <link href="/en/5-workshop/5.6-cleanup/index.xml" rel="alternate" type="application/rss+xml" title="Clean up :: Báo cáo AWS Workshop">
-    <link href="/images/favicon.png?1783864412" rel="icon" type="image/png">
-    <link href="/css/auto-complete/auto-complete.min.css?1783864412" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1783864412" defer></script>
-    <script src="/js/search-lunr.js?1783864412" defer></script>
-    <script src="/js/search.js?1783864412" defer></script>
+    <link href="/images/favicon.png?1783865806" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1783865806" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1783865806" defer></script>
+    <script src="/js/search-lunr.js?1783865806" defer></script>
+    <script src="/js/search.js?1783865806" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1783864412";
+      window.relearn.index_js_url="/searchindex.en.js?1783865806";
     </script>
-    <script src="/js/lunr/lunr.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1783864412" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1783864412" defer></script>
+    <script src="/js/lunr/lunr.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1783865806" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1783865806" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783864412" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783864412" rel="stylesheet">
-    <link href="/css/theme.css?1783864412" rel="stylesheet">
-    <link href="/css/format-html.css?1783864412" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1783865806" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1783865806" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1783865806" rel="stylesheet">
+    <link href="/css/theme.css?1783865806" rel="stylesheet">
+    <link href="/css/format-html.css?1783865806" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -158,13 +158,13 @@ In this workshop, you learned architecture patterns for accessing Amazon S3 with
 <ol>
 <li>Navigate to Hosted Zones on the left side of Route 53 console. Click the name of <em>s3.us-east-1.amazonaws.com</em> zone. Click Delete and confirm deletion by typing delete.</li>
 </ol>
-<p><a href="#R-image-88d6dd28f80e5ff12678cce0f1592ec0" class="lightbox-link"><img alt="hosted zone" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-zone.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-88d6dd28f80e5ff12678cce0f1592ec0"><img alt="hosted zone" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-zone.png"></a></p>
+<p><a href="#R-image-2614aa3839e2d8abb67172354b1704d3" class="lightbox-link"><img alt="hosted zone" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-zone.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2614aa3839e2d8abb67172354b1704d3"><img alt="hosted zone" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-zone.png"></a></p>
 <ol start="2">
 <li>Disassociate the Route 53 Resolver Rule - myS3Rule from &ldquo;VPC Onprem&rdquo; and Delete it.</li>
 </ol>
-<p><a href="#R-image-1d21a40d1682dd8073cb425dbb1fbbf9" class="lightbox-link"><img alt="hosted zone" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/vpc.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1d21a40d1682dd8073cb425dbb1fbbf9"><img alt="hosted zone" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/vpc.png"></a></p>
+<p><a href="#R-image-15a89ad788b6a5063272356733b054e3" class="lightbox-link"><img alt="hosted zone" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/vpc.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-15a89ad788b6a5063272356733b054e3"><img alt="hosted zone" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/vpc.png"></a></p>
 <ol start="4">
 <li>Open the CloudFormation console  and delete the two CloudFormation Stacks that you created for this lab:</li>
 </ol>
@@ -172,8 +172,8 @@ In this workshop, you learned architecture patterns for accessing Amazon S3 with
 <li>PLOnpremSetup</li>
 <li>PLCloudSetup</li>
 </ul>
-<p><a href="#R-image-cb219d371ef76daba42c917df92c7da6" class="lightbox-link"><img alt="delete stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-stack.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-cb219d371ef76daba42c917df92c7da6"><img alt="delete stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-stack.png"></a></p>
+<p><a href="#R-image-4ae3870beb7af2e4b8dbf579b9282c6c" class="lightbox-link"><img alt="delete stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-stack.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-4ae3870beb7af2e4b8dbf579b9282c6c"><img alt="delete stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-stack.png"></a></p>
 <ol start="5">
 <li>Delete S3 buckets</li>
 </ol>
@@ -181,8 +181,8 @@ In this workshop, you learned architecture patterns for accessing Amazon S3 with
 <li>Open S3 console</li>
 <li>Choose the bucket we created for the lab, click and confirm empty. Click delete and confirm delete.</li>
 </ul>
-<p><a href="#R-image-7e8f62cddded558fb8fe28c9f3ab9d64" class="lightbox-link"><img alt="delete s3" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-s3.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-7e8f62cddded558fb8fe28c9f3ab9d64"><img alt="delete s3" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-s3.png"></a></p>
+<p><a href="#R-image-3f8842b997e61987af29867a9aa3a983" class="lightbox-link"><img alt="delete s3" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-s3.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-3f8842b997e61987af29867a9aa3a983"><img alt="delete s3" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.6-Cleanup/delete-s3.png"></a></p>
 
   <footer class="footline">
               <i class='fa-fw fas fa-calendar'></i> Jan 1, 2024
@@ -282,8 +282,8 @@ In this workshop, you learned architecture patterns for accessing Amazon S3 with
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783864412" defer></script>
-    <script src="/js/theme.js?1783864412" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1783865806" defer></script>
+    <script src="/js/theme.js?1783865806" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>
