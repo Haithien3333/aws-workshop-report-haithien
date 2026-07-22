@@ -5,27 +5,29 @@
     <meta name="viewport" content="height=device-height, width=device-width, initial-scale=1.0, minimum-scale=1.0">
     <meta name="generator" content="Hugo 0.164.0">
     <meta name="generator" content="Relearn 9.0.3+36307e4ed23582638ab689240ac7b427217803ee">
-    <meta name="description" content="Using Gateway endpointIn this section, you will create a Gateway eendpoint to access Amazon S3 from an EC2 instance. The Gateway endpoint will allow upload an object to S3 buckets without using the Public Internet. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.">
+    <meta name="description" content="5.9 demoThis section provides a list of external resources and repositories referenced throughout this project.
+Additional demoWeb bán ken saxophone demo Web bán ken saxophone">
     <meta name="author" content="">
     <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Access S3 from VPC :: Báo cáo AWS Workshop">
-    <meta name="twitter:description" content="Using Gateway endpointIn this section, you will create a Gateway eendpoint to access Amazon S3 from an EC2 instance. The Gateway endpoint will allow upload an object to S3 buckets without using the Public Internet. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.">
-    <meta property="og:url" content="http://localhost:1313/en/5-workshop/5.3-s3-vpc/index.html">
+    <meta name="twitter:title" content="5.9 Demo :: Báo cáo AWS Workshop">
+    <meta name="twitter:description" content="5.9 demoThis section provides a list of external resources and repositories referenced throughout this project.
+Additional demoWeb bán ken saxophone demo Web bán ken saxophone">
+    <meta property="og:url" content="http://localhost:1313/en/5-workshop/5.9-demo/index.html">
     <meta property="og:site_name" content="Báo cáo AWS Workshop">
-    <meta property="og:title" content="Access S3 from VPC :: Báo cáo AWS Workshop">
-    <meta property="og:description" content="Using Gateway endpointIn this section, you will create a Gateway eendpoint to access Amazon S3 from an EC2 instance. The Gateway endpoint will allow upload an object to S3 buckets without using the Public Internet. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.">
+    <meta property="og:title" content="5.9 Demo :: Báo cáo AWS Workshop">
+    <meta property="og:description" content="5.9 demoThis section provides a list of external resources and repositories referenced throughout this project.
+Additional demoWeb bán ken saxophone demo Web bán ken saxophone">
     <meta property="og:locale" content="en">
     <meta property="og:type" content="website">
-    <meta itemprop="name" content="Access S3 from VPC :: Báo cáo AWS Workshop">
-    <meta itemprop="description" content="Using Gateway endpointIn this section, you will create a Gateway eendpoint to access Amazon S3 from an EC2 instance. The Gateway endpoint will allow upload an object to S3 buckets without using the Public Internet. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.">
-    <meta itemprop="datePublished" content="2024-01-01T00:00:00+00:00">
-    <meta itemprop="dateModified" content="2024-01-01T00:00:00+00:00">
-    <meta itemprop="wordCount" content="75">
-    <title>Access S3 from VPC :: Báo cáo AWS Workshop</title>
-    <link href="http://localhost:1313/5-workshop/5.3-s3-vpc/index.html" rel="alternate" hreflang="x-default">
-    <link href="http://localhost:1313/5-workshop/5.3-s3-vpc/index.html" rel="alternate" hreflang="vi-vn">
-    <link href="http://localhost:1313/en/5-workshop/5.3-s3-vpc/index.html" rel="alternate" hreflang="en">
-    <link href="/en/5-workshop/5.3-s3-vpc/index.xml" rel="alternate" type="application/rss+xml" title="Access S3 from VPC :: Báo cáo AWS Workshop">
+    <meta itemprop="name" content="5.9 Demo :: Báo cáo AWS Workshop">
+    <meta itemprop="description" content="5.9 demoThis section provides a list of external resources and repositories referenced throughout this project.
+Additional demoWeb bán ken saxophone demo Web bán ken saxophone">
+    <meta itemprop="wordCount" content="27">
+    <title>5.9 Demo :: Báo cáo AWS Workshop</title>
+    <link href="http://localhost:1313/5-workshop/5.9-demo/index.html" rel="alternate" hreflang="x-default">
+    <link href="http://localhost:1313/5-workshop/5.9-demo/index.html" rel="alternate" hreflang="vi-vn">
+    <link href="http://localhost:1313/en/5-workshop/5.9-demo/index.html" rel="alternate" hreflang="en">
+    <link href="/en/5-workshop/5.9-demo/index.xml" rel="alternate" type="application/rss+xml" title="5.9 Demo :: Báo cáo AWS Workshop">
     <link href="/images/favicon.png?1784737899" rel="icon" type="image/png">
     <link href="/css/auto-complete/auto-complete.min.css?1784737899" rel="stylesheet">
     <script src="/js/auto-complete/auto-complete.min.js?1784737899" defer></script>
@@ -51,7 +53,7 @@
       window.relearn = window.relearn || {};
       // configuration
       window.relearn.min = ``;
-      window.relearn.path='\/en\/5-workshop\/5.3-s3-vpc\/index.html';
+      window.relearn.path='\/en\/5-workshop\/5.9-demo\/index.html';
       window.relearn.relBasePath='..\/..\/..';
       window.relearn.relBaseUri='..\/..\/..';
       window.relearn.absBaseUri='http:\/\/localhost:1313';
@@ -96,7 +98,7 @@
       window.relearn.markVariant();
     </script>
   </head>
-  <body class="mobile-support html" data-origin="/en/5-workshop/5.3-s3-vpc/index.html">
+  <body class="mobile-support html" data-origin="/en/5-workshop/5.9-demo/index.html">
     <div id="R-body" class="default-animation">
       <div id="R-body-overlay"></div>
       <nav id="R-topbar" class="default-animation">
@@ -109,19 +111,24 @@
             <div class="topbar-button topbar-button-toc default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="Table of Contents (CTRL&#43;ALT&#43;t)"><i class="fa-fw fas fa-table-list"></i></button></span>
               <div class="topbar-content">
-                <div class="topbar-content-wrapper"> 
+                <div class="topbar-content-wrapper">
+<nav class="TableOfContents">
+  <ul>
+    <li><a href="#additional-demo">Additional demo</a></li>
+  </ul>
+</nav>
                 </div>
               </div>
             </div>
           </div>
-          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/index.html"><span itemprop="name">AWS Workshop Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">Access S3 from VPC</span><meta itemprop="position" content="3"></li>
+          <ol class="topbar-breadcrumbs breadcrumbs highlightable" itemscope itemtype="http://schema.org/BreadcrumbList"><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/index.html"><span itemprop="name">AWS Workshop Report</span></a><meta itemprop="position" content="1">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><a itemprop="item" href="/en/5-workshop/index.html"><span itemprop="name">Workshop</span></a><meta itemprop="position" content="2">&nbsp;>&nbsp;</li><li itemscope itemtype="https://schema.org/ListItem" itemprop="itemListElement" class=""><span itemprop="name">5.9 Demo</span><meta itemprop="position" content="3"></li>
           </ol>
           <div class="topbar-area topbar-area-end" data-area="end">
             <div class="topbar-button topbar-button-prev default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.3-module1-storage/index.html" title="Module 1: Storage & Database (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.8-cleanup-advanced/index.html" title="Cleanup & Advanced (🡐)"><i class="fa-fw fas fa-chevron-left"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-next default-animation" data-content-empty="disable" data-width-s="show" data-width-m="show" data-width-l="show">
-<span class="btn cstyle button link noborder notitle interactive"><a href="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html" title="Create a gateway endpoint (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
+<span class="btn cstyle button link noborder notitle interactive"><a href="/en/6-selfassessment/index.html" title="6. Self-Assessment (🡒)"><i class="fa-fw fas fa-chevron-right"></i></a></span>
             </div>
             <div class="topbar-button topbar-button-more default-animation" data-content-empty="hide" data-width-s="show" data-width-m="show" data-width-l="show">
 <span class="btn cstyle button link noborder notitle interactive"><button onclick="toggleTopbarFlyout(this)" type="button" title="More"><i class="fa-fw fas fa-ellipsis-v"></i></button></span>
@@ -142,20 +149,17 @@
   <header class="headline">
   </header>
 
-<h1 id="access-s3-from-vpc">Access S3 from VPC</h1>
+<h1 id="59-demo">5.9 Demo</h1>
 
-<h4 id="using-gateway-endpoint">Using Gateway endpoint<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
-<p>In this section, you will create <strong>a Gateway eendpoint</strong> to access <strong>Amazon S3</strong> from <strong>an EC2 instance</strong>. <strong>The Gateway endpoint</strong> will allow upload an object to S3 buckets without using <strong>the Public Internet</strong>. To create an endpoint, you must specify the VPC in which you want to create the endpoint, and the service (in this case, S3) to which you want to establish the connection.</p>
-<p><a href="#R-image-872ddc750cca204d638ca18d31bdd7c4" class="lightbox-link"><img alt="overview" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/diagram2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-872ddc750cca204d638ca18d31bdd7c4"><img alt="overview" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.3-S3-vpc/diagram2.png"></a></p>
-<h4 id="content">Content<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
+<h1 id="59-demo">5.9 demo<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h1>
+<p>This section provides a list of external resources and repositories referenced throughout this project.</p>
+<h2 id="additional-demo">Additional demo<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h2>
 <ul>
-<li><a href="3.1-create-gwe/">Create gateway endpoint</a></li>
-<li><a href="3.2-test-gwe/">Test gateway endpoint</a></li>
+<li><a href="https://soniccart.dev" rel="external"> Web bán ken saxophone</a></li>
+<li><a href="https://drive.google.com/drive/folders/1faZN2vwPEc-jZtAJJNaS1CeMHHpmpHqd?usp=sharing" rel="external"> demo Web bán ken saxophone</a></li>
 </ul>
 
   <footer class="footline">
-              <i class='fa-fw fas fa-calendar'></i> Jan 1, 2024
   </footer>
 </article>
         </div>
@@ -209,9 +213,7 @@
             <li class="" data-nav-id="/en/5-workshop/5.2-prerequisites/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequisites/index.html"> <b> 5.2. </b> Prerequisites &amp; Setup</a></li>
             <li class="" data-nav-id="/en/5-workshop/5.2-prerequiste/index.html"><a class="padding" href="/en/5-workshop/5.2-prerequiste/index.html"> <b> 5.2. </b> Prerequiste</a></li>
             <li class="" data-nav-id="/en/5-workshop/5.3-module1-storage/index.html"><a class="padding" href="/en/5-workshop/5.3-module1-storage/index.html"> <b> 5.3. </b> Module 1: Storage &amp; Database</a></li>
-            <li class="active parent alwaysopen " data-nav-id="/en/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/en/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Access S3 from VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu">
-            <li class="" data-nav-id="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html"><a class="padding" href="/en/5-workshop/5.3-s3-vpc/5.3.1-create-gwe/index.html"> <b> 5.3.1 </b> Create a gateway endpoint</a></li>
-            <li class="" data-nav-id="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html"><a class="padding" href="/en/5-workshop/5.3-s3-vpc/5.3.2-test-gwe/index.html"> <b> 5.3.2 </b> Test the Gateway Endpoint</a></li></ul></li>
+            <li class="alwaysopen " data-nav-id="/en/5-workshop/5.3-s3-vpc/index.html"><a class="padding default-animation" href="/en/5-workshop/5.3-s3-vpc/index.html"> <b> 5.3. </b> Access S3 from VPC</a><ul id="R-subsections-ebb22552c70d57dfe877dbd20872e75b" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/en/5-workshop/5.4-module2-compute/index.html"><a class="padding" href="/en/5-workshop/5.4-module2-compute/index.html"> <b> 5.4. </b> Module 2: Compute &amp; API</a></li>
             <li class="alwaysopen " data-nav-id="/en/5-workshop/5.4-s3-onprem/index.html"><a class="padding default-animation" href="/en/5-workshop/5.4-s3-onprem/index.html"> <b> 5.4. </b> Access S3 from on-premises</a><ul id="R-subsections-c81e91f8aeb754aea188a2aafe827ae0" class="collapsible-menu"></ul></li>
             <li class="" data-nav-id="/en/5-workshop/5.5-module3-security/index.html"><a class="padding" href="/en/5-workshop/5.5-module3-security/index.html"> <b> 5.5. </b> Module 3: Security &amp; Roles</a></li>
@@ -220,7 +222,7 @@
             <li class="" data-nav-id="/en/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/en/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Clean up</a></li>
             <li class="" data-nav-id="/en/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/en/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Deployment &amp; Testing</a></li>
             <li class="" data-nav-id="/en/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/en/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Cleanup &amp; Advanced</a></li>
-            <li class="" data-nav-id="/en/5-workshop/5.9-demo/index.html"><a class="padding" href="/en/5-workshop/5.9-demo/index.html">5.9 Demo</a></li></ul></li>
+            <li class="active " data-nav-id="/en/5-workshop/5.9-demo/index.html"><a class="padding" href="/en/5-workshop/5.9-demo/index.html">5.9 Demo</a></li></ul></li>
             <li class="" data-nav-id="/en/6-selfassessment/index.html"><a class="padding" href="/en/6-selfassessment/index.html">6. Self-Assessment</a></li>
             <li class="" data-nav-id="/en/7-sharing-and-feedback/index.html"><a class="padding" href="/en/7-sharing-and-feedback/index.html">7. Sharing and Feedback</a></li>
           </ul>
@@ -242,8 +244,8 @@
                 <div class="control-style">
                   <label class="a11y-only" for="R-select-language">Language</label>
                   <select id="R-select-language">
-                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.3-s3-vpc/index.html" lang="vi-vn">Tiếng Việt</option>
-                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.3-s3-vpc/index.html" lang="en" selected data-selected>English</option>
+                    <option id="R-select-language-vi" value="vi" data-url="/5-workshop/5.9-demo/index.html" lang="vi-vn">Tiếng Việt</option>
+                    <option id="R-select-language-en" value="en" data-url="/en/5-workshop/5.9-demo/index.html" lang="en" selected data-selected>English</option>
                   </select>
                 </div>
                 <div class="clear"></div>

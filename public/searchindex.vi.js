@@ -1,8 +1,8 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "",
-    "content": "Họ và tên: Nguyễn Hải Thiên\nMã số sinh viên: 2280615299\nĐịa chỉ Email: haithien016526@gmail.com\nTrường đại học: Trường Đại học Công Nghệ Thành phố Hồ Chí Minh\nChuyên ngành: Công nghệ thông tin\nLớp: 22DTHD7\nCông ty thực tập: Amazon Web Services Việt Nam\nVị trí thực tập: Workforce Bootcamp - First Cloud AI Journey\nThời gian thực tập: Từ 17/04/2026 đến 30/07/2026\nẢnh chân dung cá nhân",
-    "description": "Họ và tên: Nguyễn Hải Thiên\nMã số sinh viên: 2280615299\nĐịa chỉ Email: haithien016526@gmail.com\nTrường đại học: Trường Đại học Công Nghệ Thành phố Hồ Chí Minh\nChuyên ngành: Công nghệ thông tin\nLớp: 22DTHD7\nCông ty thực tập: Amazon Web Services Việt Nam\nVị trí thực tập: Workforce Bootcamp - First Cloud AI Journey\nThời gian thực tập: Từ 17/04/2026 đến 30/07/2026\nẢnh chân dung cá nhân",
+    "content": "Họ và tên: Nguyễn Hải Thiên\nMã số sinh viên: 2280615299\nĐịa chỉ Email: haithien016526@gmail.com\nTrường đại học: Trường Đại học Công Nghệ Thành phố Hồ Chí Minh\nChuyên ngành: Công nghệ thông tin\nLớp: 22DTHD7\nCông ty thực tập: Công ty TNHH Amazon Web Services Việt Nam\nVị trí thực tập: Workforce Bootcamp - First Cloud AI Journey\nThời gian thực tập: Từ 17/04/2026 đến 30/07/2026\nẢnh chân dung cá nhân",
+    "description": "Họ và tên: Nguyễn Hải Thiên\nMã số sinh viên: 2280615299\nĐịa chỉ Email: haithien016526@gmail.com\nTrường đại học: Trường Đại học Công Nghệ Thành phố Hồ Chí Minh\nChuyên ngành: Công nghệ thông tin\nLớp: 22DTHD7\nCông ty thực tập: Công ty TNHH Amazon Web Services Việt Nam\nVị trí thực tập: Workforce Bootcamp - First Cloud AI Journey\nThời gian thực tập: Từ 17/04/2026 đến 30/07/2026\nẢnh chân dung cá nhân",
     "tags": [],
     "title": "Báo cáo AWS Workshop",
     "uri": "/index.html"
@@ -329,11 +329,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Báo cáo AWS Workshop \u003e Workshop",
-    "content": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone Source Code Web bán ken saxophone",
-    "description": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone Source Code Web bán ken saxophone",
+    "content": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "description": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone demo Web bán ken saxophone",
     "tags": [],
     "title": "5.9 ",
-    "uri": "/5-workshop/5.9-references/index.html"
+    "uri": "/5-workshop/5.9-demo/index.html"
   },
   {
     "breadcrumb": "Báo cáo AWS Workshop \u003e 1. Nhật ký thực tập (Worklog)",

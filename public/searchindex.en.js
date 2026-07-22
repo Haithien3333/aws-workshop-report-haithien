@@ -1,8 +1,8 @@
 var relearn_searchindex = [
   {
     "breadcrumb": "",
-    "content": "Internship Information\rFull Name: Nguyễn Hải Thiên\nStudent ID: 2280615299\nEmail Address: haithien016526@gmail.com\nUniversity: Ho Chi Minh City University of Technology (HUTECH)\nMajor: Information Technology\nClass: 22DTHD7\nInternship Company: Amazon Web Services Vietnam\nInternship Position: Workforce Bootcamp - First Cloud AI Journey\nInternship Duration: April 17, 2026 – July 30, 2026\nPersonal Portrait",
-    "description": "Internship Information\rFull Name: Nguyễn Hải Thiên\nStudent ID: 2280615299\nEmail Address: haithien016526@gmail.com\nUniversity: Ho Chi Minh City University of Technology (HUTECH)\nMajor: Information Technology\nClass: 22DTHD7\nInternship Company: Amazon Web Services Vietnam\nInternship Position: Workforce Bootcamp - First Cloud AI Journey\nInternship Duration: April 17, 2026 – July 30, 2026\nPersonal Portrait",
+    "content": "Internship Information\rFull Name: Nguyễn Hải Thiên\nStudent ID: 2280615299\nEmail Address: haithien016526@gmail.com\nUniversity: Ho Chi Minh City University of Technology (HUTECH)\nMajor: Information Technology\nClass: 22DTHD7\nInternship Company: Công ty TNHH Amazon Web Services Việt Nam\nInternship Position: Workforce Bootcamp - First Cloud AI Journey\nInternship Duration: April 17, 2026 – July 30, 2026\nPersonal Portrait",
+    "description": "Internship Information\rFull Name: Nguyễn Hải Thiên\nStudent ID: 2280615299\nEmail Address: haithien016526@gmail.com\nUniversity: Ho Chi Minh City University of Technology (HUTECH)\nMajor: Information Technology\nClass: 22DTHD7\nInternship Company: Công ty TNHH Amazon Web Services Việt Nam\nInternship Position: Workforce Bootcamp - First Cloud AI Journey\nInternship Duration: April 17, 2026 – July 30, 2026\nPersonal Portrait",
     "tags": [],
     "title": "AWS Workshop Report",
     "uri": "/en/index.html"
@@ -329,11 +329,11 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "AWS Workshop Report \u003e Workshop",
-    "content": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone Source Code Web bán ken saxophone",
-    "description": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone Source Code Web bán ken saxophone",
+    "content": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "description": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone demo Web bán ken saxophone",
     "tags": [],
     "title": "5.9 ",
-    "uri": "/en/5-workshop/5.9-references/index.html"
+    "uri": "/en/5-workshop/5.9-demo/index.html"
   },
   {
     "breadcrumb": "AWS Workshop Report \u003e 1. Internship Worklog",

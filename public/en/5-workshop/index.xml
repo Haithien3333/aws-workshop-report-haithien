@@ -108,10 +108,10 @@
     </item>
     <item>
       <title>5.9 </title>
-      <link>http://localhost:1313/en/5-workshop/5.9-references/index.html</link>
+      <link>http://localhost:1313/en/5-workshop/5.9-demo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/en/5-workshop/5.9-references/index.html</guid>
-      <description>5.9 References&#xD;This section provides a list of external resources and repositories referenced throughout this project.&#xA;Additional Resources&#xD;Web bán ken saxophone Source Code Web bán ken saxophone</description>
+      <guid>http://localhost:1313/en/5-workshop/5.9-demo/index.html</guid>
+      <description>5.9 demo&#xD;This section provides a list of external resources and repositories referenced throughout this project.&#xA;Additional demo&#xD;Web bán ken saxophone demo Web bán ken saxophone</description>
     </item>
   </channel>
 </rss>

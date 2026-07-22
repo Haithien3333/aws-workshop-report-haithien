@@ -107,11 +107,11 @@
       <description>Dọn dẹp tài nguyên &amp; Chủ đề nâng cao&#xD;1. Dọn dẹp tài nguyên&#xD;Để tránh các chi phí phát sinh ngoài ý muốn, hãy phá hủy toàn bộ tài nguyên khi kết thúc bài thực hành:</description>
     </item>
     <item>
-      <title>5.9 </title>
-      <link>http://localhost:1313/5-workshop/5.9-references/index.html</link>
+      <title>5.9 Demo hệ thống</title>
+      <link>http://localhost:1313/5-workshop/5.9-demo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/5-workshop/5.9-references/index.html</guid>
-      <description>5.9 Tài liệu tham khảo&#xD;Phần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.&#xA;Tài nguyên bổ sung&#xD;Web bán ken saxophone Source Code Web bán ken saxophone</description>
+      <guid>http://localhost:1313/5-workshop/5.9-demo/index.html</guid>
+      <description>5.9 demo&#xD;Phần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.&#xA;demo&#xD;Web bán ken saxophone demo Web bán ken saxophone</description>
     </item>
   </channel>
 </rss>
