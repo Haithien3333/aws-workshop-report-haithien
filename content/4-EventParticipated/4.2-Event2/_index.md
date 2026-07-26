@@ -3,11 +3,8 @@ title: "Báo cáo FCAJ Community Day "
 date: 2026-05-30
 weight: 7
 chapter: false
-pre: " <b> 5.7. </b> "
+pre: " <b> 4.2 </b> "
 ---
-
-# Báo cáo tham gia: FCAJ Community Day 
-
 ## 1. Thông tin sự kiện
 * **Tên sự kiện:** FCAJ Community Day
 * **Thời gian:** 30/05/2026

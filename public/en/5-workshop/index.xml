@@ -107,7 +107,7 @@
       <description>Cleanup &amp; Advanced Topics&#xD;1. Cleanup Resources&#xD;To prevent charges, always destroy the resources after you finish testing:&#xA;cdk destroy --all&#xD;2. Infrastructure Testing (Jest)&#xD;Verify stack resources properties automatically. Create test/infra.test.ts:</description>
     </item>
     <item>
-      <title>5.9 </title>
+      <title>5.9 Demo</title>
       <link>http://localhost:1313/en/5-workshop/5.9-demo/index.html</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/en/5-workshop/5.9-demo/index.html</guid>

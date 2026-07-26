@@ -7,5 +7,19 @@
     <generator>Hugo</generator>
     <language>vi-vn</language>
     <atom:link href="http://localhost:1313/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loại :: Reports</title>
+      <link>http://localhost:1313/categories/reports/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/reports/index.html</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Loại :: Tech Events</title>
+      <link>http://localhost:1313/categories/tech-events/index.html</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/categories/tech-events/index.html</guid>
+      <description></description>
+    </item>
   </channel>
 </rss>

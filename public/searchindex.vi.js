@@ -329,10 +329,10 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "Báo cáo AWS Workshop \u003e Workshop",
-    "content": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone demo Web bán ken saxophone",
-    "description": "5.9 Tài liệu tham khảo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\nTài nguyên bổ sung\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "content": "5.9 demo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\ndemo\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "description": "5.9 demo\rPhần này bao gồm các nguồn tài nguyên và tài liệu bên ngoài được sử dụng trong suốt dự án.\ndemo\rWeb bán ken saxophone demo Web bán ken saxophone",
     "tags": [],
-    "title": "5.9 ",
+    "title": "5.9 Demo hệ thống",
     "uri": "/5-workshop/5.9-demo/index.html"
   },
   {

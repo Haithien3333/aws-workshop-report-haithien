@@ -329,10 +329,10 @@ var relearn_searchindex = [
   },
   {
     "breadcrumb": "AWS Workshop Report \u003e Workshop",
-    "content": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone demo Web bán ken saxophone",
-    "description": "5.9 References\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional Resources\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "content": "5.9 demo\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional demo\rWeb bán ken saxophone demo Web bán ken saxophone",
+    "description": "5.9 demo\rThis section provides a list of external resources and repositories referenced throughout this project.\nAdditional demo\rWeb bán ken saxophone demo Web bán ken saxophone",
     "tags": [],
-    "title": "5.9 ",
+    "title": "5.9 Demo",
     "uri": "/en/5-workshop/5.9-demo/index.html"
   },
   {

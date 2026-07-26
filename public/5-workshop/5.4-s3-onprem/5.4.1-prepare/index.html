@@ -34,27 +34,27 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
     <link href="http://localhost:1313/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" rel="alternate" hreflang="vi-vn">
     <link href="http://localhost:1313/en/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.html" rel="alternate" hreflang="en">
     <link href="/5-workshop/5.4-s3-onprem/5.4.1-prepare/index.xml" rel="alternate" type="application/rss+xml" title="Chuẩn bị tài nguyên :: Báo cáo AWS Workshop">
-    <link href="/images/favicon.png?1784737374" rel="icon" type="image/png">
-    <link href="/css/auto-complete/auto-complete.min.css?1784737374" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1784737374" defer></script>
-    <script src="/js/search-lunr.js?1784737374" defer></script>
-    <script src="/js/search.js?1784737374" defer></script>
+    <link href="/images/favicon.png?1785078982" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1785078982" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1785078982" defer></script>
+    <script src="/js/search-lunr.js?1785078982" defer></script>
+    <script src="/js/search.js?1785078982" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.vi.js?1784737374";
+      window.relearn.index_js_url="/searchindex.vi.js?1785078982";
     </script>
-    <script src="/js/lunr/lunr.min.js?1784737374" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1784737374" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1784737374" defer></script>
-    <script src="/js/lunr/lunr.vi.min.js?1784737374" defer></script>
+    <script src="/js/lunr/lunr.min.js?1785078982" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1785078982" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1785078982" defer></script>
+    <script src="/js/lunr/lunr.vi.min.js?1785078982" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['vi'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1784737374" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1784737374" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1784737374" rel="stylesheet">
-    <link href="/css/theme.css?1784737374" rel="stylesheet">
-    <link href="/css/format-html.css?1784737374" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1785078982" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1785078982" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1785078982" rel="stylesheet">
+    <link href="/css/theme.css?1785078982" rel="stylesheet">
+    <link href="/css/format-html.css?1785078982" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -165,15 +165,15 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
 <li>Một Route 53 Inbound Resolver endpoint cho phép &ldquo;VPC Cloud&rdquo; giải quyết các yêu cầu resolve DNS gửi đến Private Hosted Zone</li>
 <li>Một Route 53 Outbound Resolver endpoint cho phép &ldquo;VPC On-prem&rdquo; chuyển tiếp các yêu cầu DNS cho S3 sang &ldquo;VPC Cloud&rdquo;</li>
 </ul>
-<p><a href="#R-image-72e5c63a76d4e54e245c2894914cdfd2" class="lightbox-link"><img alt="route 53 diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-72e5c63a76d4e54e245c2894914cdfd2"><img alt="route 53 diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png"></a></p>
+<p><a href="#R-image-65d19415e69f82c6baa77aaf6647880c" class="lightbox-link"><img alt="route 53 diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-65d19415e69f82c6baa77aaf6647880c"><img alt="route 53 diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/route53.png"></a></p>
 <ol>
 <li>Click link sau để mở <a href="https://us-east-1.console.aws.amazon.com/cloudformation/home?region=us-east-1#/stacks/quickcreate?templateURL=https://s3.amazonaws.com/reinvent-endpoints-builders-session/R53CF.yaml&stackName=PLOnpremSetup" rel="external">AWS CloudFormation console</a>. Mẫu yêu cầu sẽ được tải sẵn vào menu. Chấp nhận tất cả mặc định và nhấp vào Tạo stack.</li>
 </ol>
-<p><a href="#R-image-0a24ca5cc32de43da0ae76c437228bef" class="lightbox-link"><img alt="Create stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-0a24ca5cc32de43da0ae76c437228bef"><img alt="Create stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png"></a></p>
-<p><a href="#R-image-603883f90bc1249e69813a67aa0eaa29" class="lightbox-link"><img alt="Button" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-603883f90bc1249e69813a67aa0eaa29"><img alt="Button" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png"></a></p>
+<p><a href="#R-image-a4e4d4c975e48bb8219458b2b3073f9d" class="lightbox-link"><img alt="Create stack" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a4e4d4c975e48bb8219458b2b3073f9d"><img alt="Create stack" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack.png"></a></p>
+<p><a href="#R-image-c69a07b71174b6f46cd0f375dad8b463" class="lightbox-link"><img alt="Button" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-c69a07b71174b6f46cd0f375dad8b463"><img alt="Button" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/create-stack-button.png"></a></p>
 <p>Có thể mất vài phút để triển khai stack hoàn tất. Bạn có thể tiếp tục với bước tiếp theo mà không cần đợi quá trình triển khai kết thúc.</p>
 <h4 id="cập-nhật-bảng-định-tuyến-private-on-premise">Cập nhật bảng định tuyến private on-premise<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Sao chép liên kết vào bảng tạm"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>Workshop này sử dụng StrongSwan VPN chạy trên EC2 instance để mô phỏng khả năng kết nối giữa trung tâm dữ liệu truyền thống và môi trường cloud AWS. Hầu hết các thành phần bắt buộc đều được cung cấp trước khi bạn bắt đầu. Để hoàn tất cấu hình VPN, bạn sẽ sửa đổi bảng định tuyến &ldquo;VPC on-prem&rdquo; để hướng lưu lượng đến cloud đi qua StrongSwan VPN instance.</p>
@@ -185,8 +185,8 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
 <p>Chọn instance tên infra-vpngw-test. Từ Details tab, copy Instance ID và paste vào text editor của bạn để sử dụng ở những bước tiếp theo</p>
 </li>
 </ol>
-<p><a href="#R-image-be06645cc7e4512ec616d436052e81f5" class="lightbox-link"><img alt="ec2 id" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-be06645cc7e4512ec616d436052e81f5"><img alt="ec2 id" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png"></a></p>
+<p><a href="#R-image-7f66b01347275a99d3d6b20b1e36c373" class="lightbox-link"><img alt="ec2 id" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-7f66b01347275a99d3d6b20b1e36c373"><img alt="ec2 id" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/ec2-onprem-id.png"></a></p>
 <ol start="3">
 <li>
 <p>Đi đến VPC menu bằng cách gõ &ldquo;VPC&rdquo; vào Search box</p>
@@ -195,8 +195,8 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
 <p>Click vào Route Tables, chọn RT Private On-prem route table, chọn Routes tab, và click Edit Routes.</p>
 </li>
 </ol>
-<p><a href="#R-image-4bd3f1e30572028844d0197a240c46eb" class="lightbox-link"><img alt="rt" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-4bd3f1e30572028844d0197a240c46eb"><img alt="rt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png"></a></p>
+<p><a href="#R-image-d4ce36b31998a43effb035b30534e6f4" class="lightbox-link"><img alt="rt" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-d4ce36b31998a43effb035b30534e6f4"><img alt="rt" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/rt.png"></a></p>
 <ol start="5">
 <li>Click Add route.</li>
 </ol>
@@ -204,8 +204,8 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
 <li>Destination: CIDR block của Cloud VPC</li>
 <li>Target: ID của infra-vpngw-test instance (bạn đã lưu lại ở bước trên)</li>
 </ul>
-<p><a href="#R-image-f0141b027378c6d30fd04ab7367160bd" class="lightbox-link"><img alt="add route" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f0141b027378c6d30fd04ab7367160bd"><img alt="add route" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png"></a></p>
+<p><a href="#R-image-32bfe433ba48cfc0dad6a3fe632e2871" class="lightbox-link"><img alt="add route" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-32bfe433ba48cfc0dad6a3fe632e2871"><img alt="add route" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.4-S3-onprem/add-route.png"></a></p>
 <ol start="6">
 <li>Click Save changes</li>
 </ol>
@@ -278,7 +278,7 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
             <li class="" data-nav-id="/5-workshop/5.6-cleanup/index.html"><a class="padding" href="/5-workshop/5.6-cleanup/index.html"> <b> 5.6. </b> Dọn dẹp tài nguyên</a></li>
             <li class="" data-nav-id="/5-workshop/5.7-deployment-testing/index.html"><a class="padding" href="/5-workshop/5.7-deployment-testing/index.html"> <b> 5.7. </b> Triển khai &amp; Kiểm thử</a></li>
             <li class="" data-nav-id="/5-workshop/5.8-cleanup-advanced/index.html"><a class="padding" href="/5-workshop/5.8-cleanup-advanced/index.html"> <b> 5.8. </b> Dọn dẹp &amp; Nâng cao</a></li>
-            <li class="" data-nav-id="/5-workshop/5.9-demo/index.html"><a class="padding" href="/5-workshop/5.9-demo/index.html">5.9 </a></li></ul></li>
+            <li class="" data-nav-id="/5-workshop/5.9-demo/index.html"><a class="padding" href="/5-workshop/5.9-demo/index.html">5.9 Demo hệ thống</a></li></ul></li>
             <li class="" data-nav-id="/6-selfassessment/index.html"><a class="padding" href="/6-selfassessment/index.html">6. Tự đánh giá (Self-Assessment)</a></li>
             <li class="" data-nav-id="/7-sharing-and-feedback/index.html"><a class="padding" href="/7-sharing-and-feedback/index.html">7. Chia sẻ và Đóng góp ý kiến</a></li>
           </ul>
@@ -312,8 +312,8 @@ Triển khai CloudFormation stackMẫu CloudFormation sẽ tạo các dịch v�
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1784737374" defer></script>
-    <script src="/js/theme.js?1784737374" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1785078982" defer></script>
+    <script src="/js/theme.js?1785078982" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

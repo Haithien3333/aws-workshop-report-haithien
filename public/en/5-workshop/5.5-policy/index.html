@@ -26,27 +26,27 @@
     <link href="http://localhost:1313/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="vi-vn">
     <link href="http://localhost:1313/en/5-workshop/5.5-policy/index.html" rel="alternate" hreflang="en">
     <link href="/en/5-workshop/5.5-policy/index.xml" rel="alternate" type="application/rss+xml" title="VPC Endpoint Policies :: Báo cáo AWS Workshop">
-    <link href="/images/favicon.png?1784737899" rel="icon" type="image/png">
-    <link href="/css/auto-complete/auto-complete.min.css?1784737899" rel="stylesheet">
-    <script src="/js/auto-complete/auto-complete.min.js?1784737899" defer></script>
-    <script src="/js/search-lunr.js?1784737899" defer></script>
-    <script src="/js/search.js?1784737899" defer></script>
+    <link href="/images/favicon.png?1785078990" rel="icon" type="image/png">
+    <link href="/css/auto-complete/auto-complete.min.css?1785078990" rel="stylesheet">
+    <script src="/js/auto-complete/auto-complete.min.js?1785078990" defer></script>
+    <script src="/js/search-lunr.js?1785078990" defer></script>
+    <script src="/js/search.js?1785078990" defer></script>
     <script>
       window.relearn = window.relearn || {};
-      window.relearn.index_js_url="/searchindex.en.js?1784737899";
+      window.relearn.index_js_url="/searchindex.en.js?1785078990";
     </script>
-    <script src="/js/lunr/lunr.min.js?1784737899" defer></script>
-    <script src="/js/lunr/lunr.stemmer.support.min.js?1784737899" defer></script>
-    <script src="/js/lunr/lunr.multi.min.js?1784737899" defer></script>
-    <script src="/js/lunr/lunr.en.min.js?1784737899" defer></script>
+    <script src="/js/lunr/lunr.min.js?1785078990" defer></script>
+    <script src="/js/lunr/lunr.stemmer.support.min.js?1785078990" defer></script>
+    <script src="/js/lunr/lunr.multi.min.js?1785078990" defer></script>
+    <script src="/js/lunr/lunr.en.min.js?1785078990" defer></script>
     <script>
       window.relearn = window.relearn || {};
       window.relearn.contentLangs=['en'];
     </script>
-    <link href="/fonts/fontawesome/css/all.min.css?1784737899" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1784737899" rel="stylesheet"></noscript>
-    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1784737899" rel="stylesheet">
-    <link href="/css/theme.css?1784737899" rel="stylesheet">
-    <link href="/css/format-html.css?1784737899" rel="stylesheet" id="R-format-style">
+    <link href="/fonts/fontawesome/css/all.min.css?1785078990" rel="stylesheet" media="print" onload="this.media='all';this.onload=null;"><noscript><link href="/fonts/fontawesome/css/all.min.css?1785078990" rel="stylesheet"></noscript>
+    <link href="/css/perfect-scrollbar/perfect-scrollbar.min.css?1785078990" rel="stylesheet">
+    <link href="/css/theme.css?1785078990" rel="stylesheet">
+    <link href="/css/format-html.css?1785078990" rel="stylesheet" id="R-format-style">
     <script>
       window.relearn = window.relearn || {};
       // configuration
@@ -147,29 +147,29 @@
 <p>When you create an interface or gateway endpoint, you can attach an endpoint policy to it that controls access to the service to which you are connecting. A VPC endpoint policy is an IAM resource policy that you attach to an endpoint. If you do not attach a policy when you create an endpoint, AWS attaches a default policy for you that allows full access to the service through the endpoint.</p>
 <p>You can create a policy that restricts access to specific S3 buckets only. This is useful if you only want certain S3 Buckets to be accessible through the endpoint.</p>
 <p>In this section you will create a VPC endpoint policy that restricts access to the S3 bucket specified in the VPC endpoint policy.</p>
-<p><a href="#R-image-428bffb14406e81f3e5464d0a88d33b3" class="lightbox-link"><img alt="endpoint diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-428bffb14406e81f3e5464d0a88d33b3"><img alt="endpoint diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png"></a></p>
+<p><a href="#R-image-2de5910b10015e2658ac718b45b2eac1" class="lightbox-link"><img alt="endpoint diagram" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-2de5910b10015e2658ac718b45b2eac1"><img alt="endpoint diagram" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/s3-bucket-policy.png"></a></p>
 <h4 id="connect-to-an-ec2-instance-and-verify-connectivity-to-s3">Connect to an EC2 instance and verify connectivity to S3<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <ol>
 <li>Start a new AWS Session Manager session on the instance named Test-Gateway-Endpoint. From the session, verify that you can list the contents of the bucket you created in Part 1: Access S3 from VPC:</li>
 </ol>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://\&lt;your-bucket-name\&gt;</code></pre></div>
-<p><a href="#R-image-1e37a2385373838b97ae9a1a3fc0e547" class="lightbox-link"><img alt="test" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1e37a2385373838b97ae9a1a3fc0e547"><img alt="test" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png"></a></p>
+<p><a href="#R-image-50c6c95e604c0a13f77fa9668c96d8a9" class="lightbox-link"><img alt="test" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-50c6c95e604c0a13f77fa9668c96d8a9"><img alt="test" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/test1.png"></a></p>
 <p>The bucket contents include the two 1 GB files uploaded in earlier.</p>
 <ol start="2">
 <li>Create a new S3 bucket; follow the naming pattern you used in Part 1, but add a &lsquo;-2&rsquo; to the name. Leave other fields as default and click create</li>
 </ol>
-<p><a href="#R-image-fe0785dc3d71a82dea029f29702b871f" class="lightbox-link"><img alt="create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-fe0785dc3d71a82dea029f29702b871f"><img alt="create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png"></a></p>
+<p><a href="#R-image-09b08b92f508bc140d61a75e381d6ef2" class="lightbox-link"><img alt="create bucket" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-09b08b92f508bc140d61a75e381d6ef2"><img alt="create bucket" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket.png"></a></p>
 <p>Successfully create bucket</p>
-<p><a href="#R-image-1dd30c23f36ff277343dae1a66efa125" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-1dd30c23f36ff277343dae1a66efa125"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png"></a></p>
+<p><a href="#R-image-05d6cd42bbe3d69684322a2887aa9969" class="lightbox-link"><img alt="Success" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-05d6cd42bbe3d69684322a2887aa9969"><img alt="Success" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/create-bucket-success.png"></a></p>
 <ol start="3">
 <li>Navigate to: Services &gt; VPC &gt; Endpoints, then select the Gateway VPC endpoint you created earlier. Click the Policy tab. Click Edit policy.</li>
 </ol>
-<p><a href="#R-image-f6b39a8187e5c4019934f81c38123db6" class="lightbox-link"><img alt="policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy1.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-f6b39a8187e5c4019934f81c38123db6"><img alt="policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy1.png"></a></p>
+<p><a href="#R-image-443e48c32b53c2e217c49d2d298dc018" class="lightbox-link"><img alt="policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy1.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-443e48c32b53c2e217c49d2d298dc018"><img alt="policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy1.png"></a></p>
 <p>The default policy allows access to all S3 Buckets through the VPC endpoint.</p>
 <ol start="4">
 <li>In Edit Policy console, copy &amp; Paste the following policy, then replace yourbucketname-2 with your 2nd bucket name. This policy will allow access through the VPC endpoint to your new bucket, but not any other bucket in Amazon S3. Click Save to apply the policy.</li>
@@ -190,18 +190,18 @@
     }
   ]
 }</code></pre></div>
-<p><a href="#R-image-b56ff6528bcfb967aeb798dad9c7d8c8" class="lightbox-link"><img alt="custom policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-b56ff6528bcfb967aeb798dad9c7d8c8"><img alt="custom policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png"></a></p>
+<p><a href="#R-image-048f9ca37683ab6a987a30dec9525d70" class="lightbox-link"><img alt="custom policy" class="lazy lightbox figure-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-048f9ca37683ab6a987a30dec9525d70"><img alt="custom policy" class="lazy lightbox lightbox-image" loading="lazy" src="/images/5-Workshop/5.5-Policy/policy2.png"></a></p>
 <p>Successfully customize policy</p>
-<p><a href="#R-image-ab257df04a7938a615ea23b35a6672fa" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-ab257df04a7938a615ea23b35a6672fa"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/success.png"></a></p>
+<p><a href="#R-image-34b0715b6a2858095e6ed8caca145f1b" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-34b0715b6a2858095e6ed8caca145f1b"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/success.png"></a></p>
 <ol start="5">
 <li>From your session on the Test-Gateway-Endpoint instance, test access to the S3 bucket you created in Part 1: Access S3 from VPC</li>
 </ol>
 <div class="highlight actionbar-wrapper wrap-code" dir="auto"><pre tabindex="0"><code>aws s3 ls s3://&lt;yourbucketname&gt;</code></pre></div>
 <p>This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy:</p>
-<p><a href="#R-image-c2f92fda52c56a971443be7add3050a0" class="lightbox-link"><img alt="error" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/error.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-c2f92fda52c56a971443be7add3050a0"><img alt="error" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/error.png"></a></p>
+<p><a href="#R-image-502295d374412336e0f9546eeac2cf46" class="lightbox-link"><img alt="error" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/error.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-502295d374412336e0f9546eeac2cf46"><img alt="error" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/error.png"></a></p>
 <ol start="6">
 <li>Return to your home directory on your EC2 instance <code>cd~</code></li>
 </ol>
@@ -209,16 +209,16 @@
 <li>Create a file <code>fallocate -l 1G test-bucket2.xyz </code></li>
 <li>Copy file to 2nd bucket <code>aws s3 cp test-bucket2.xyz s3://&lt;your-2nd-bucket-name&gt;</code></li>
 </ul>
-<p><a href="#R-image-e1617dadbd0ac63b0a4ba4fc51a22a39" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e1617dadbd0ac63b0a4ba4fc51a22a39"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2.png"></a></p>
+<p><a href="#R-image-6065bee55305fdb27c1d4b9dd23f18c9" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6065bee55305fdb27c1d4b9dd23f18c9"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2.png"></a></p>
 <p>This operation succeeds because it is permitted by the VPC endpoint policy.</p>
-<p><a href="#R-image-e725879fb0c7b0dac01bbba4effd1cf3" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-success.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-e725879fb0c7b0dac01bbba4effd1cf3"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-success.png"></a></p>
+<p><a href="#R-image-a7cd9a926d1fb3b63eb1e1e56b308aec" class="lightbox-link"><img alt="success" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-success.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-a7cd9a926d1fb3b63eb1e1e56b308aec"><img alt="success" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-success.png"></a></p>
 <ul>
 <li>Then we test access to the first bucket by copy the file to 1st bucket <code>aws s3 cp test-bucket2.xyz s3://&lt;your-1st-bucket-name&gt;</code></li>
 </ul>
-<p><a href="#R-image-5da00e0206da517facb1c039e54fcee9" class="lightbox-link"><img alt="fail" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-fail.png" style="height: auto;width: auto;"></a>
-<a href="javascript:history.back();" class="lightbox-back" id="R-image-5da00e0206da517facb1c039e54fcee9"><img alt="fail" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-fail.png"></a></p>
+<p><a href="#R-image-6bf60227b6b0fefa5481a9d6f962b894" class="lightbox-link"><img alt="fail" class="lazy lightbox figure-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-fail.png" style="height: auto;width: auto;"></a>
+<a href="javascript:history.back();" class="lightbox-back" id="R-image-6bf60227b6b0fefa5481a9d6f962b894"><img alt="fail" class="lazy lightbox lightbox-image" loading="lazy" src="/static/images/5-Workshop/5.5-Policy/test2-fail.png"></a></p>
 <p>This command will return an error because access to this bucket is not permitted by your new VPC endpoint policy.</p>
 <h4 id="part-3-summary">Part 3 Summary:<span class="btn cstyle anchor copyanchor scrollanchor link noborder notitle interactive"><button type="button" title="Copy link to clipboard"><i class="fa-fw fas fa-link fa-lg"></i></button></span></h4>
 <p>In this section, you created a VPC endpoint policy for Amazon S3, and used the AWS CLI to test the policy. AWS CLI actions targeted to your original S3 bucket failed because you applied a policy that only allowed access to the second bucket you created. AWS CLI actions targeted for your second bucket succeeded because the policy allowed them. These policies can be useful in situations where you need to control access to resources through VPC endpoints.</p>
@@ -321,8 +321,8 @@
 <div id="R-footer" class="default-animation"><p>Built with <a href="https://github.com/McShelby/hugo-theme-relearn" title="love"><i class="fas fa-heart"></i></a> by <a href="https://gohugo.io/">Hugo</a></p></div>
       </div>
     </aside>
-    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1784737899" defer></script>
-    <script src="/js/theme.js?1784737899" defer></script>
+    <script src="/js/perfect-scrollbar/perfect-scrollbar.min.js?1785078990" defer></script>
+    <script src="/js/theme.js?1785078990" defer></script>
     <div id="toast-container" role="status" aria-live="polite" aria-atomic="false"></div>
   </body>
 </html>

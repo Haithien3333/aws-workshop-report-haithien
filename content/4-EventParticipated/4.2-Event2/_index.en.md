@@ -3,10 +3,10 @@ title: "FCAJ Community Day Report "
 date: 2026-05-30
 weight: 7
 chapter: false
-pre: " <b> 5.7. </b> "
+pre: " <b> 4.2 </b> "
 ---
 
-# FCAJ Community Day Participation Report 
+
 
 ## 1. Event Information
 * **Event Name:** FCAJ Community Day

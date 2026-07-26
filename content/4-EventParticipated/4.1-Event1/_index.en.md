@@ -3,61 +3,49 @@ title: "FCAJ Community Day Report"
 date: 2026-05-09
 weight: 6
 chapter: false
-pre: " <b> 5.6. </b> "
+pre: " <b> 4.1 </b> "
 ---
 
-# FCAJ Community Day Participation Report
+## GENERAL EVENT INFORMATION
 
-## 1. Event Information
-* **Event Name:** FCAJ Community Day
-* **Date:** May 9, 2026
-* **Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, District 1, Ho Chi Minh City.
-* **Role:** Attendee
+* **Event Name:** AWS First Cloud Journey AI Event
+* **Date:** May 09, 2026
+* **Core Focus:** Updating AI technology trends, skills, and mindsets for young tech professionals (*AI-Ready Freshers*), optimizing language model outputs through automation techniques (*Automated Prompt Engineering*), and methods for integrating Agile & AI into the programming environment (*BMAD Method*).
 
-## 2. Event Overview
-This was my first FCAJ Community Day as part of the AWS First Cloud Journey program. The event was organized to connect interns, mentors, and individuals interested in Cloud Computing.
-
-* **Main Content:** Speakers introduced the AWS First Cloud Journey program, shared learning roadmaps, discussed approaches to AWS services, and provided development guidance for the internship period.
-* **Mentor Insights:** Mentors shared their personal learning experiences, tips for building personal projects, time management strategies, and essential skills required to adapt to a professional working environment.
-* **Networking:** The Q&A session at the end of the event provided interns with the opportunity to exchange ideas, ask questions, and learn from experienced professionals.
-
-## 3. Key Takeaways
-Through this Community Day, I gained a deeper understanding of the following:
-* **Technical Knowledge:** I clearly understood the objectives of the FCAJ program, the learning roadmap, and the roles of fundamental AWS services in building cloud systems.
-* **Professional Skills:** I learned how to plan my studies effectively, proactively seek out resources, actively engage in practice, and collaborate in teams to maximize learning efficiency.
-
-## 4. Reflections & Conclusion
-This first Community Day was an incredibly rewarding experience that motivated me to begin my AWS learning journey. I was particularly impressed by the mentors' enthusiasm and the open, supportive learning environment of the FCAJ program.
-
-**Conclusion:** This event provided me with a clear overview of the FCAJ program and the Cloud Computing field. The knowledge and insights shared serve as a vital foundation for me to continue learning, effectively complete my workshops, and succeed in my upcoming projects during my internship.---
-title: "FCAJ Community Day Report"
-date: 2026-05-09
-weight: 6
-chapter: false
-pre: " <b> 5.6. </b> "
 ---
 
-# FCAJ Community Day Participation Report
+## I. OVERVIEW OF MAIN TOPICS AT THE EVENT
 
-## 1. Event Information
-* **Event Name:** FCAJ Community Day
-* **Date:** May 9, 2026
-* **Location:** 26th Floor, Bitexco Financial Tower, 02 Hai Trieu Street, District 1, Ho Chi Minh City.
-* **Role:** Attendee
+The event provided a comprehensive and practical overview of how to apply Artificial Intelligence (AI) into the software development workflow and shaped the mindset for tech engineers in the new era:
 
-## 2. Event Overview
-This was my first FCAJ Community Day as part of the AWS First Cloud Journey program. The event was organized to connect interns, mentors, and individuals interested in Cloud Computing.
+1. **AI-Ready Freshers: Skills and Mindset in the AI Era**
+   * Reshaping the core skill set and mindset necessary for young developers entering the job market in the AI era.
+   * Building the habit of *"Addicted to Learning Like You’re Addicted to Social Media"* (Knowing how to turn learning and updating technology into a constant passion, similar to the habit of scrolling through social media).
 
-* **Main Content:** Speakers introduced the AWS First Cloud Journey program, shared learning roadmaps, discussed approaches to AWS services, and provided development guidance for the internship period.
-* **Mentor Insights:** Mentors shared their personal learning experiences, tips for building personal projects, time management strategies, and essential skills required to adapt to a professional working environment.
-* **Networking:** The Q&A session at the end of the event provided interns with the opportunity to exchange ideas, ask questions, and learn from experienced professionals.
+2. **Automated Prompt Engineering: Enhancing LLM Output Quality (Presented by Nguyen Tuan Thinh - DevOps/Cloud Engineer)**
+   * Exploring how to automate the prompt design and optimization process (Prompt Engineering).
+   * Solutions to enhance the quality of responses from Large Language Models (LLMs), minimizing noise, and optimizing performance when working with AI.
 
-## 3. Key Takeaways
-Through this Community Day, I gained a deeper understanding of the following:
-* **Technical Knowledge:** I clearly understood the objectives of the FCAJ program, the learning roadmap, and the roles of fundamental AWS services in building cloud systems.
-* **Professional Skills:** I learned how to plan my studies effectively, proactively seek out resources, actively engage in practice, and collaborate in teams to maximize learning efficiency.
+3. **BMAD Method: A New Era of Context Engineering**
+   * Solutions for integrating the entire Agile team and AI directly into the developer's Integrated Development Environment (IDE).
+   * Breakthroughs in *Context Engineering* to accelerate project deployment speed and optimize collaboration between humans and AI assistants.
 
-## 4. Reflections & Conclusion
-This first Community Day was an incredibly rewarding experience that motivated me to begin my AWS learning journey. I was particularly impressed by the mentors' enthusiasm and the open, supportive learning environment of the FCAJ program.
+---
 
-**Conclusion:** This event provided me with a clear overview of the FCAJ program and the Cloud Computing field. The knowledge and insights shared serve as a vital foundation for me to continue learning, effectively complete my workshops, and succeed in my upcoming projects during my internship.
+## II. KEY LESSONS & PERSONAL TAKEAWAYS
+
+Through the in-depth sharing sessions of the event on May 09, 2026, the core values retained include:
+
+* **Proactive learning mindset:** Clearly recognizing the crucial need to continuously update new technological knowledge at a high frequency, treating AI as a powerful companion rather than being left behind.
+* **Enhancing capabilities to work with LLMs:** Grasping automated prompt optimization techniques to maximize the potential of AI systems in software development and cloud operations (Cloud/DevOps) tasks.
+* **Approaching modern methodologies:** Understanding how to apply methods that integrate Agile processes with AI assistants in the IDE (*BMAD Method*) to improve team and individual productivity.
+
+---
+
+## III. FUTURE ACTION PLAN
+
+* Immediately applying Prompt optimization and Context Engineering techniques into real-world software development projects.
+* Developing a plan for daily self-study and skill training based on the *AI-Ready* personnel orientation.
+* Continuing to follow and participate in upcoming event series of the *AWS First Cloud Journey AI* community.
+
+---
